@@ -1,0 +1,60 @@
+{
+  "extends": ["eslint:recommended", "plugin:prettier/recommended", "next/core-web-vitals"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+    "no-unused-vars": "error",
+    "prefer-const": "warn",
+    "comma-dangle": "error",
+    "function-paren-newline": "off",
+    "object-shorthand": "warn",
+    "no-multi-spaces": "error",
+    "no-restricted-imports": "warn",
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignorePattern": "d=\"([\\s\\S]*?)\""
+      }
+    ],
+    "max-lines": [
+      "error",
+      {
+        "max": 600,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ]
+      }
+    ]
+  }
+}
