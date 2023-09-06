@@ -1,3 +1,4 @@
-export default function Home() {
+const Main = () => {
   return <div>fdsogosdfsafasfasf</div>
 }
+export default Main

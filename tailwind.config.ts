@@ -38,6 +38,9 @@ const config: Config = {
         red: {
           400: '#DC2323'
         }
+      },
+      fontSize: {
+        '3xl': 32
       }
     }
   },

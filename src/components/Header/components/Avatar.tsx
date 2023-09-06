@@ -17,6 +17,7 @@ const Avatar = ( { avatar, folderImg, name } : AvatarInterface) => {
             <div className="avatar__name">{name}</div>
         </div>
     )
+
 }
 
 export default Avatar
