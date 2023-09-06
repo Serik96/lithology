@@ -1,18 +1,40 @@
 {
-  "extends": ["eslint:recommended", "next/core-web-vitals"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals"
+  ],
+  "plugins": ["@typescript-eslint", "import", "react"],
+  "globals": {
+    "React": "writable",
+    "document": true,
+    "window": true
+  },
   "rules": {
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
-    "no-unused-vars": "error",
+    "import/prefer-default-export": "off",
+    "no-plusplus": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "prefer-const": "warn",
     "function-paren-newline": "off",
     "object-shorthand": "warn",
     "no-multi-spaces": "error",
     "no-restricted-imports": "warn",
+    "quotes": ["error", "single"],
+    "indent": [
+      "error",
+      2
+    ],
     "max-len": [
       "error",
       {
-        "code": 120,
+        "code": 90,
         "ignorePattern": "d=\"([\\s\\S]*?)\""
       }
     ],
@@ -36,6 +58,10 @@
     "import/order": [
       "error",
       {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
         "groups": [
           "builtin",
           "external",
