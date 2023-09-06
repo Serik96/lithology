@@ -1,1 +1,5 @@
 /config/
+ecosystem.config.js
+next.config.js
+sentry.*.config.js
+**/*.d.ts
