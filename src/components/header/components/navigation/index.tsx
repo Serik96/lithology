@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { navLinks } from '@/const/navigation';
 
-const Index = () => {
+const Navigation = () => {
   return (
     <nav className="header__nav">
       <ul className="header__list">
@@ -19,4 +19,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Navigation;
