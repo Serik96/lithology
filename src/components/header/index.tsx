@@ -1,24 +1,26 @@
-import '@/components/header/header.css';
+import '@/components/header/header.scss';
 import Link from 'next/link';
 
-import NotificationIcon from '@/icons/NotificationIcon';
-import Avatar from '@/components/header/components/Avatar';
-import Navigation from '@/components/header/components/Navigation';
+import Avatar from '@/components/header/components/avatar';
+import Navigation from '@/components/header/components/navigation';
+import { NOTIFICATION_URL } from '@/const/routes';
+import { tempData } from '@/const/tmp-data';
+import { NotificationIcon } from '@/icons';
 
 const Header = () => {
-  const count = 7;
-
   return (
-    <header className='header'>
-      <div className='header__wrapper'>
+    <header className="header">
+      <div className="header__wrapper">
         <Avatar
-          avatar={'/img/avatar.png'}
-          folderImg={'/img/folderImage.png'}
-          name={'Anastasya L.'}
+          avatar={tempData.avatar.img}
+          folderImg={tempData.avatar.folderImg}
+          name={tempData.avatar.name}
         />
-        <Link className='header__notification' href='/notifications'>
+        <Link className="header__notification" href={NOTIFICATION_URL}>
           <NotificationIcon />
-          {`${count} notifications`}
+          {`${tempData.notifications.count} notification${
+            tempData.notifications.count > 1 ? 's' : ''
+          }`}
         </Link>
         <Navigation />
       </div>

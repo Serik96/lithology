@@ -1,4 +1,4 @@
 const Main = () => {
-  return <div>fdsogosdfsafasfasf</div>
-}
-export default Main
+  return <div>fdsogosdfsafasfasf</div>;
+};
+export default Main;

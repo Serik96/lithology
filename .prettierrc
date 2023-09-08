@@ -3,7 +3,6 @@
   "semi": true,
   "endOfLine": "auto",
   "jsxBracketSameLine": false,
-  "jsxSingleQuote": true,
   "trailingComma": "all",
   "singleQuote": true,
   "printWidth": 90,

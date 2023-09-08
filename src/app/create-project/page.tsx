@@ -1,8 +1,8 @@
-import Breadcrumbs from '@/components/UI/breadcrumbs/breadcrumbs';
+import Breadcrumbs from '@/components/ui/breadcrumbs';
 
 const CreateProject = () => {
   return (
-    <div className='create'>
+    <div className="create">
       <Breadcrumbs />
     </div>
   );
