@@ -1,8 +1,8 @@
-import './footer.css';
+import './footer.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Socials from '@/components/Footer/components/Socials';
+import Socials from '@/components/footer/components/socials';
 import { config } from '@/config';
 import { cleanPhone } from '@/helpers/phone-helper';
 
@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="footer__heading">
           Let&apos;s go over the details
           <Image
-            src={'/img/triangle.svg'}
+            src={'/temp/triangle.svg'}
             alt={'triangle icon'}
             width={40}
             height={38}

@@ -1,14 +1,14 @@
-import './globals.css'
-import React from 'react'
-import { Roboto } from 'next/font/google'
+import '@/app/globals.scss';
+import { Roboto } from 'next/font/google';
+import React from 'react';
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Footer from '@/components/footer';
+import Header from '@/components/header';
 
 const roboto = Roboto({
   weight: '400',
-  subsets: ['latin']
-})
+  subsets: ['latin'],
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -21,5 +21,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </div>
       </body>
     </html>
-  )
+  );
 }

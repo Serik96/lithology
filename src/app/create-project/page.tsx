@@ -1,5 +1,11 @@
-const CreateProject = () => {
-  return <div> posgpojsdpojg</div>
-}
+import Breadcrumbs from '@/components/ui/breadcrumbs';
 
-export default CreateProject
+const CreateProject = () => {
+  return (
+    <div className="create">
+      <Breadcrumbs />
+    </div>
+  );
+};
+
+export default CreateProject;
