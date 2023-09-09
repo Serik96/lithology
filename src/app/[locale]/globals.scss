@@ -4,6 +4,7 @@
 }
 
 body {
+  color: var(--black-400);
   font-family: var(--font-body);
 }
 
@@ -15,4 +16,31 @@ ul, p {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--orange-400);
+  }
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input, textarea,
+button, a,
+select {
+  color: var(--black-400);
+  font-family: var(--font-body);
+  outline: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: calc(100% - 96px);
+  max-width: var(--container);
 }
