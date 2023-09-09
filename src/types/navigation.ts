@@ -1,7 +1,9 @@
-import React from 'react';
-
 export type TNavLink = {
   label: string;
   href: string;
-  icon: React.FC;
+  icon: {
+    src: string;
+    width: number;
+    height: number;
+  };
 };

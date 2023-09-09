@@ -1,0 +1,13 @@
+{
+  "notifications": {
+    "notification": "notification"
+  },
+  "icons": {
+    "notification": "notifcations icon"
+  },
+  "footer": {
+    "heading": "Let's go over the details",
+    "privacy": "© Drone. All Rights Reserved 2023.",
+    "check-socials": "Check our social media"
+  }
+}

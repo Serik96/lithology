@@ -27,11 +27,7 @@ export function replaceParams(str: string, params: TStringObject): string {
   return replaceBulk(str, paramsWithBraces);
 }
 
-export function base64toBlob(
-  b64Data: string,
-  contentType = '',
-  sliceSize = 512,
-) {
+export function base64toBlob(b64Data: string, contentType = '', sliceSize = 512) {
   const x = b64Data.indexOf(',');
   if (x !== -1) {
     if (!contentType) {
@@ -89,4 +85,8 @@ export function slash(path: string, ending = true): string {
 
 export function unslash(path: string, ending = true): string {
   return path.replace(ending ? /\/+$/g : /^\/+/g, '');
+}
+
+export function digitCase(word: string, num: number) {
+  return num < 1 ? word : word + 's';
 }
