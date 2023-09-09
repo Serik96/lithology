@@ -1,6 +1,9 @@
 'use client';
+
+import '@/app/[locale]/variables.scss';
 import '@/app/[locale]/globals.scss';
-import { Roboto } from 'next/font/google';
+
+import { Inter, Poppins } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import React from 'react';
@@ -8,9 +11,16 @@ import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { RootLayoutProps } from '@/interfaces/RootLayoutProps';
 
-const roboto = Roboto({
-  weight: '400',
+const inter = Inter({
+  weight: ['400', '500'],
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-inter',
+});
+
+const poppins = Poppins({
+  weight: ['400', '500'],
   subsets: ['latin'],
+  variable: '--font-poppins',
 });
 
 export default async function RootLayout({ children, params }: RootLayoutProps) {
@@ -26,8 +36,8 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   }
 
   return (
-    <html lang={locale}>
-      <body className={roboto.className}>
+    <html lang={locale} className={[inter.variable, poppins.variable].join(' ')}>
+      <body>
         <NextIntlClientProvider locale={params.locale} messages={messages}>
           <Header />
           {children}
