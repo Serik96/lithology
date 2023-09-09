@@ -53,7 +53,7 @@ export class SimpleContainer {
     };
   }
 
-  static asCollection(): ReturnType<typeof this['getRecord']>[] {
+  static asCollection(): ReturnType<(typeof this)['getRecord']>[] {
     const col = [];
 
     for (const [name, id] of Object.entries(this.ids)) {

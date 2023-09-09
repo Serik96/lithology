@@ -1,5 +1,5 @@
-import * as React from 'react';
 import { useRouter } from 'next/router';
+import { FC } from 'react';
 
 interface ButtonProps {
   href: string;
@@ -7,7 +7,7 @@ interface ButtonProps {
   onClick: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, onClick, href }) => {
+const Button: FC<ButtonProps> = ({ text, onClick, href }) => {
   const router = useRouter();
 
   const handleClick = () => {

@@ -2,11 +2,10 @@ import {
   CABINET_URL,
   CREATE_PROJECT_URL,
   FOLDERS_URL,
-  PRICE_URL,
   SETTINGS_URL,
 } from '@/const/routes';
-import { AddIcon, FolderIcon, HomeIcon, SettingsIcon, WalletIcon } from '@/icons';
-import { TNavLink } from '@/types/navigation';
+import { AddIcon, FolderIcon, HomeIcon, SettingsIcon } from '@/icons';
+import { TNavLink } from '@/types';
 
 export const navLinks: TNavLink[] = [
   {
@@ -28,10 +27,5 @@ export const navLinks: TNavLink[] = [
     label: 'Settings',
     href: SETTINGS_URL,
     icon: SettingsIcon,
-  },
-  {
-    label: 'Price',
-    href: PRICE_URL,
-    icon: WalletIcon,
   },
 ];
