@@ -1,4 +1,4 @@
-import { TStringObject } from '../types';
+import { TStringObject } from '@/types';
 
 export function replaceBulk(
   str: string,
@@ -6,7 +6,7 @@ export function replaceBulk(
   ignoreCase = false,
 ): string {
   const regexes = [];
-  const map = {};
+  const map: TStringObject = {};
   const flags = ['g'];
   ignoreCase && flags.push('i');
 
@@ -53,11 +53,11 @@ export function base64toBlob(b64Data: string, contentType = '', sliceSize = 512)
   return new Blob(byteArrays, { type: contentType });
 }
 
-export function complexStr(ar: any[], glue = ', '): string {
+export function complexStr(ar: unknown[], glue = ', '): string {
   return ar.filter(Boolean).join(glue);
 }
 
-export const cn = (...args): string => {
+export const cn = (...args: unknown[]): string => {
   const classes = [];
 
   for (const cssClass of args) {
@@ -87,6 +87,25 @@ export function unslash(path: string, ending = true): string {
   return path.replace(ending ? /\/+$/g : /^\/+/g, '');
 }
 
-export function digitCase(word: string, num: number) {
-  return num < 1 ? word : word + 's';
+export function digitCase(
+  x: number,
+  s1: string,
+  s2: string,
+  s3: Nullable<string> = null,
+  returnOnlySuffix = false,
+): string {
+  if (s3 === null) {
+    s3 = s2;
+  }
+
+  const x0: number = x;
+  x = x % 100;
+
+  if (x % 10 === 1 && x !== 11) {
+    return returnOnlySuffix ? s1 : `${x0} ${s1}`;
+  } else if (x % 10 >= 2 && x % 10 <= 4 && x !== 12 && x !== 13 && x !== 14) {
+    return returnOnlySuffix ? s2 : `${x0} ${s2}`;
+  } else {
+    return returnOnlySuffix ? s3 : `${x0} ${s3}`;
+  }
 }

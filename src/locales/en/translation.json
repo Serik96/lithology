@@ -1,6 +1,11 @@
 {
   "notifications": {
-    "notification": "notification"
+    "notification": "notification",
+    "endings": {
+      "s1": "",
+      "s2": "s",
+      "s3": "s"
+    }
   },
   "icons": {
     "notification": "notifcations icon"

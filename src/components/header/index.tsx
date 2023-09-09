@@ -12,6 +12,11 @@ import { NotificationIcon } from '@/icons';
 
 const Header = () => {
   const t = useTranslations();
+  const endings = {
+    s1: t('notifications.endings.s1'),
+    s2: t('notifications.endings.s2'),
+    s3: t('notifications.endings.s3'),
+  };
 
   return (
     <header className="header">
@@ -23,10 +28,16 @@ const Header = () => {
         />
         <Link className="header__notification" href={NOTIFICATION_URL}>
           <Image className={'icon'} alt={t('icons.notification')} {...NotificationIcon} />
-          {`${tempData.notifications.count} ${digitCase(
-            t('notifications.notification'),
-            tempData.notifications.count,
-          )}`}
+          {`${tempData.notifications.count} ${
+            t('notifications.notification') +
+            digitCase(
+              tempData.notifications.count,
+              endings.s1,
+              endings.s2,
+              endings.s3,
+              true,
+            )
+          }`}
         </Link>
         <Navigation />
       </div>
