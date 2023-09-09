@@ -4,9 +4,16 @@
 
   .avatar__wrapper {
     position: relative;
- 
+
     .avatar__img {
       border-radius: 100%;
+    }
+
+    .avatar__folder {
+      position: absolute;
+      right: -12px;
+      bottom: -12px;
+      background-color: red;
     }
   }
 }

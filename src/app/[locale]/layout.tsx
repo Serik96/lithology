@@ -1,7 +1,7 @@
 'use client';
 
-import '@/app/[locale]/variables.scss';
-import '@/app/[locale]/globals.scss';
+import '@/styles/variables.scss';
+import '@/styles/globals.scss';
 
 import { Inter, Poppins } from 'next/font/google';
 import { notFound } from 'next/navigation';
