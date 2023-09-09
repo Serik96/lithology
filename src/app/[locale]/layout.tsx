@@ -35,7 +35,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     notFound();
   }
 
-  const loading = true;
+  const loading = false;
 
   return (
     <html lang={locale} className={[inter.variable, poppins.variable].join(' ')}>
