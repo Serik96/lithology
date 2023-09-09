@@ -1,4 +1,3 @@
-import '@/components/header/header.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 

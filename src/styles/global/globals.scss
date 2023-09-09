@@ -4,6 +4,7 @@
 }
 
 body {
+  @include bodyFontRegularM;
   color: var(--black-400);
   font-family: var(--font-body);
   background-color: var(--amber-300);
@@ -17,6 +18,22 @@ ul, p {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+}
+
+h1 {
+  @include fontHeadingXXL;
+}
+
+h2 {
+  @include fontHeadingXL;
+}
+
+h3 {
+  @include fontHeadingL;
+}
+
+h4, h5, h6 {
+  @include fontHeadingM;
 }
 
 a {

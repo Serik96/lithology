@@ -1,4 +1,3 @@
-import './avatar.scss';
 import Image from 'next/image';
 import React from 'react';
 import { TAvatar } from '@/types';

@@ -1,6 +1,6 @@
 'use client';
 
-import './footer.scss';
+import '../../styles/components/footer.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
