@@ -13,7 +13,9 @@ const nextConfig = {
         {
           loader: 'sass-loader',
           options: {
-            includePaths: [path.join(__dirname, 'src')],
+            sassOptions: {
+              includePaths: [path.join(__dirname, 'src')],
+            },
           },
         },
       ],
