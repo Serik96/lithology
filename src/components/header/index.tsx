@@ -35,7 +35,7 @@ const Header = () => {
               endings.s1,
               endings.s2,
               endings.s3,
-              true,
+              true, 
             )
           }`}
         </Link>
