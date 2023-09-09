@@ -8,7 +8,7 @@ import { NextIntlClientProvider, useLocale } from 'next-intl';
 import React from 'react';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
-import Loader from '@/components/UI/loader';
+import Loader from '@/components/ui/loader';
 import { RootLayoutProps } from '@/interfaces/RootLayoutProps';
 
 const inter = Inter({
@@ -35,20 +35,21 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     notFound();
   }
 
-
-  const loading = true
+  const loading = true;
 
   return (
     <html lang={locale} className={[inter.variable, poppins.variable].join(' ')}>
       <body>
         <NextIntlClientProvider locale={params.locale} messages={messages}>
-          {loading ?
-            <Loader /> :
-            (<div className="container">
+          {loading ? (
+            <Loader />
+          ) : (
+            <div className="container">
               <Header />
-              {children}   
+              {children}
               <Footer />
-            </div>)}
+            </div>
+          )}
         </NextIntlClientProvider>
       </body>
     </html>
