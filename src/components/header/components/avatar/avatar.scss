@@ -1,0 +1,12 @@
+.avatar {
+  display: flex;
+  align-items: center;
+
+  .avatar__wrapper {
+    position: relative;
+ 
+    .avatar__img {
+      border-radius: 100%;
+    }
+  }
+}
