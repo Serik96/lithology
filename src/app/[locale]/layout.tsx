@@ -39,9 +39,11 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     <html lang={locale} className={[inter.variable, poppins.variable].join(' ')}>
       <body>
         <NextIntlClientProvider locale={params.locale} messages={messages}>
-          <Header />
-          {children}
-          <Footer />
+          <div className="container">
+            <Header />
+            {children}
+            <Footer />
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>
