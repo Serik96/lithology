@@ -1,13 +1,12 @@
-import '@/styles/index.scss';
+'use client';
 
+import '@/styles/index.scss';
 import { Inter, Poppins } from 'next/font/google';
 import React from 'react';
-import Footer from '@/components/footer';
-import Header from '@/components/header';
-import Loader from '@/components/ui/loader';
-import { RootLayoutProps } from '@/interfaces/RootLayoutProps';
-// import { getDictionary } from './dictionaries';
-
+import { Provider } from 'react-redux';
+import AppProvider from '@/app/[lang]/app-provider';
+import { RootLayoutProps } from '@/interfaces';
+import { store } from '@/store/store';
 
 const inter = Inter({
   weight: ['400', '500'],
@@ -21,21 +20,13 @@ const poppins = Poppins({
   variable: '--font-poppins',
 });
 
-
-export default function RootLayout({ children, params: {lang} }: RootLayoutProps) {
-  const loading = false;
-
+export default function RootLayout({ children, params: { lang } }: RootLayoutProps) {
   return (
     <html lang={lang} className={[inter.variable, poppins.variable].join(' ')}>
-      <body>{loading ? (
-        <Loader />
-      ) : (
-        <div className="container">
-          <Header />
-          {children}
-          <Footer />
-        </div>
-      )}
+      <body>
+        <Provider store={store}>
+          <AppProvider params={{ lang }}>{children}</AppProvider>
+        </Provider>
       </body>
     </html>
   );

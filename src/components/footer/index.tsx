@@ -6,15 +6,13 @@ import { config } from '@/config';
 import { cleanPhone } from '@/helpers/phone-helper';
 
 const Footer = () => {
-  // const t = useTranslations();
-
   return (
     <footer className="footer">
       <div className="footer__top">
         <div className="footer__heading">
           {/*{t('footer.heading')}*/}
           <Image
-            src={'/temp/triangle.svg'}
+            src={'/public/temp/triangle.svg'}
             alt={'triangle icon'}
             width={40}
             height={38}

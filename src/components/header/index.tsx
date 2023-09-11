@@ -1,6 +1,6 @@
+'use client';
 import Link from 'next/link';
 
-// import { useTranslations } from 'use-intl';
 import Avatar from '@/components/header/components/avatar';
 import Navigation from '@/components/header/components/navigation';
 import { NOTIFICATION_URL } from '@/const/routes';
