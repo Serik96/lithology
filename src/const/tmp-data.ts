@@ -5,6 +5,6 @@ export const tempData = {
     name: 'Anastasya L.',
   },
   notifications: {
-    count: 7,
+    count: 41,
   },
 };

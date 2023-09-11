@@ -1,4 +1,7 @@
 import { findKey } from '@/helpers/object-helper';
+import { TStringObject } from '@/types';
+
+type TId = Record<string, number>;
 
 export type TSimpleContainerRecord = {
   id: number;
@@ -8,35 +11,35 @@ export type TSimpleContainerRecord = {
 };
 
 export class SimpleContainer {
-  static ids = {};
-  static titles = {};
-  static descriptions = {};
+  static ids: TId = {};
+  static titles: TStringObject = {};
+  static descriptions: TStringObject = {};
 
-  static nameExists(name) {
+  static nameExists(name: string) {
     return !!this.getIdByName(name);
   }
 
-  static idExists(id) {
+  static idExists(id: number) {
     return !!this.getName(id);
   }
 
-  static getName(id) {
+  static getName(id: number) {
     return findKey(this.ids, i => i === id);
   }
 
-  static getTitle(id) {
+  static getTitle(id: number) {
     return this.titles[id];
   }
 
-  static getDescription(id) {
+  static getDescription(id: number) {
     return this.descriptions[id];
   }
 
-  static getIdByName(name) {
+  static getIdByName(name: string) {
     return this.ids[name];
   }
 
-  static getIdByTitle(title) {
+  static getIdByTitle(title: string) {
     if (typeof this.titles[title] !== 'undefined') {
       return title;
     }
@@ -44,7 +47,7 @@ export class SimpleContainer {
     return findKey(this.titles, t => t === title);
   }
 
-  static getRecord(id, name): TSimpleContainerRecord {
+  static getRecord(id: number, name: string): TSimpleContainerRecord {
     return {
       id,
       name,

@@ -1,18 +1,21 @@
 import '../../styles/components/footer.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import Socials from '@/components/footer/components/socials';
 import { config } from '@/config';
 import { cleanPhone } from '@/helpers/phone-helper';
 
 const Footer = () => {
+  const t = useTranslations('footer');
+
   return (
     <footer className="footer">
       <div className="footer__top">
         <div className="footer__heading">
-          {/*{t('footer.heading')}*/}
+          {t('heading')}
           <Image
-            src={'/public/temp/triangle.svg'}
+            src={'/temp/triangle.svg'}
             alt={'triangle icon'}
             width={40}
             height={38}

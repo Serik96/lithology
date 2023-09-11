@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "Главная"
+  },
+  "footer": {
+    "heading": "перейдём к деталям",
+    "privacy": "© Drone. All Rights Reserved 2023.",
+    "check-socials": "Check our social media"
+  },
+  "icons": {
+    "notification": "Уведомления"
+  },
+  "notifications": {
+    "title": "{count, plural, one {# уведомление} few {# уведомления} other {# уведомлений}}"
+  }
+}

@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
 
+const withNextIntl = require('next-intl/plugin')('./src/i18n.ts');
+
 const nextConfig = {
   webpack(config) {
     config.module.rules.push({
@@ -19,8 +21,14 @@ const nextConfig = {
       ],
     });
 
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack'],
+    });
+
     return config;
   },
 };
 
-module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);
