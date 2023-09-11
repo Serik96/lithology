@@ -5,12 +5,12 @@ interface ButtonProps {
   href: string;
   text: string;
   onClick: () => void;
-}
-
+} 
+   
 const Button: FC<ButtonProps> = ({ text, onClick, href }) => {
   const router = useRouter();
 
-  const handleClick = () => {
+  const handleClick = () => { 
     if (href) router.push(href);
     else onClick();
   };
@@ -23,3 +23,4 @@ const Button: FC<ButtonProps> = ({ text, onClick, href }) => {
 };
 
 export default Button;
+  
