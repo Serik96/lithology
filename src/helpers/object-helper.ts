@@ -1,10 +1,12 @@
-import { TObject, TStringNumberObject, TStringObject } from '../types';
+import { TObject, TStringNumberObject, TStringObject } from '@/types';
 
-export const findKey = (obj: TObject, predicate) =>
-  Object.keys(obj).find(key => predicate(obj[key], key, obj));
+export const findKey = (
+  obj: TObject,
+  predicate: (arg1: unknown, arg2: string, arg3: TObject) => boolean,
+) => Object.keys(obj).find(key => predicate(obj[key], key, obj));
 
 export const strValuesToNum = (obj: TStringObject): TStringNumberObject =>
-  Object.entries(obj).reduce((o, [key, value]) => {
+  Object.entries(obj).reduce((o: TObject, [key, value]) => {
     const n = Number(value);
     o[key] = isNaN(n) ? value : n;
 
