@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { navLinks } from '@/const/navigation';
+import { navLinks } from '@/components/header/navigation/const';
 
 const Navigation = () => {
   return (

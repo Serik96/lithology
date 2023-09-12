@@ -5,7 +5,7 @@ import {
   SETTINGS_URL,
 } from '@/const/routes';
 import { AddIcon, FolderIcon, HomeIcon, SettingsIcon } from '@/icons';
-import { TNavLink } from '@/types';
+import { TNavLink } from './types';
 
 export const navLinks: TNavLink[] = [
   {
