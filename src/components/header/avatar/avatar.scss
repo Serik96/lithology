@@ -1,0 +1,26 @@
+@import "src/styles/global/mixins";
+
+.avatar {
+  display: flex;
+  align-items: center;
+
+  .avatar__wrapper {
+    position: relative;
+    margin-right: 14px;
+
+    .avatar__img {
+      border-radius: 100%;
+    }
+
+    .avatar__folder {
+      position: absolute;
+      right: -6px;
+      bottom: -4px;
+      border-radius: 4px;
+    }
+  }
+
+  .avatar__name {
+    @include bodyFontRegularS;
+  }
+}

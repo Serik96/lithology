@@ -1,0 +1,57 @@
+/* Typography mixins */
+
+/* Body typography */
+@mixin bodyFontRegularS {
+  font-size: var(--text-b-s);
+  line-height: 22px;
+}
+ 
+@mixin bodyFontRegularM {
+  font-size: var(--text-m-s);
+  line-height: 24px;
+}
+
+@mixin bodyFontRegularL {
+  font-size: var(--text-b-l);
+  line-height: 28px;
+}
+
+@mixin bodyFontMediumS {
+  @include bodyFontMediumS;
+  font-weight: var(--text-weight-medium);
+}
+
+@mixin bodyFontMediumM {
+  @include bodyFontMediumM;
+  font-weight: var(--text-weight-medium);
+}
+
+@mixin bodyFontMediumL {
+  @include bodyFontMediumL;
+  font-weight: var(--text-weight-medium);
+}
+
+/* heading typography */
+@mixin fontHeadingM {
+  font-size: var(--text-h-m);
+  font-weight: var(--text-weight-medium);
+  line-height: 32px;
+}
+
+@mixin fontHeadingL {
+  font-size: var(--text-h-l);
+  font-weight: var(--text-weight-medium);
+  line-height: 40px;
+}
+
+@mixin fontHeadingXL {
+  font-size: var(--text-h-xl);
+  font-weight: var(--text-weight-medium);
+  line-height: 48px;
+}
+
+@mixin fontHeadingXXL {
+  font-size: var(--text-h-xxl);
+  font-weight: var(--text-weight-medium);
+  line-height: 56px;
+}

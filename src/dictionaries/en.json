@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "Main page"
+  },
+  "footer": {
+    "heading": "Let's go over the details",
+    "privacy": "© Drone. All Rights Reserved 2023.",
+    "check-socials": "Check our social media"
+  },
+  "icons": {
+    "notification": "notifcations icon"
+  },
+  "notifications": {
+    "title": "{count, plural, =1 {# notification} other {# notifications}}."
+  }
+}
