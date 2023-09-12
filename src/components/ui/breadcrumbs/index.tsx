@@ -1,5 +1,5 @@
-const Index = () => {
-  return <div className={'breadcrumbs__wrapper'}></div>;
+const Breadcrumbs = () => {
+  return <div className="breadcrumbs__wrapper"></div>;
 };
 
-export default Index;
+export default Breadcrumbs;

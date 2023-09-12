@@ -1,8 +1,8 @@
-import '../../styles/components/footer.scss';
+import './footer.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import Socials from '@/components/footer/components/socials';
+import Socials from '@/components/footer/socials';
 import { config } from '@/config';
 import { cleanPhone } from '@/helpers/phone-helper';
 

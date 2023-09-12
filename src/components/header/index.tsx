@@ -1,10 +1,11 @@
+import './header.scss';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import Avatar from '@/components/header/components/avatar';
-import Navigation from '@/components/header/components/navigation';
 import { NOTIFICATION_URL } from '@/const/routes';
 import { tempData } from '@/const/tmp-data';
 import { NotificationIcon } from '@/icons';
+import Avatar from './avatar';
+import Navigation from './navigation';
 
 const Header = () => {
   const t = useTranslations();
