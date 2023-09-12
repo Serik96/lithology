@@ -36,5 +36,6 @@ export const useRouteChange = (onUrlChanged: TRouteChangeCallback) => {
       router.events.off('routeChangeComplete', onUrlChanged);
       router.beforePopState(() => true);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // router
 };

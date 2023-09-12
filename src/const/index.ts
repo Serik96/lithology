@@ -1,3 +1,3 @@
 export * from './currency';
-export * from './locales';
+export * from './lang';
 export * from './routes';
