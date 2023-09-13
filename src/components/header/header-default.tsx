@@ -1,25 +1,27 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { routes } from '@/const/routes';
-import { tempData } from '@/const/tmp-data';
 import { NotificationIcon } from '@/icons';
+import { TUser } from '@/types';
 import Avatar from './avatar';
 import s from './header.module.scss';
 import Navigation from './navigation';
 
-export const HeaderDefault = () => {
+type TProps = {
+  user: TUser;
+  folderImg: string;
+  notificationCount: number;
+};
+
+export const HeaderDefault = ({ user, folderImg, notificationCount }: TProps) => {
   const t = useTranslations();
 
   return (
     <>
-      <Avatar
-        avatar={tempData.avatar.img}
-        folderImg={tempData.avatar.folderImg}
-        name={tempData.avatar.name}
-      />
-      <Link className={s.header__notification} href={routes.project.notifications}>
+      <Avatar avatar={user.avatar} folderImg={folderImg} name={user.first_name} />
+      <Link className={s.notification} href={routes.project.notifications}>
         <NotificationIcon />
-        {t('notifications.title', { count: tempData.notifications.count })}
+        {t('notifications.title', { count: notificationCount })}
       </Link>
       <Navigation />
     </>

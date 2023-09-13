@@ -1,16 +1,16 @@
 @import "src/styles/global/mixins";
 
-.textfield__wrapper {
+.textField {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 8px;
 
-  .textfield__label {
+  .label {
     @include bodyFontRegularS;
   }
 
-  .textfield__input {
+  .input {
     width: 100%;
   }
 }

@@ -1,13 +1,13 @@
 @import "src/styles/global/mixins";
 
-.header__nav {
+.nav {
   margin-left: auto;
 
-  .header__list {
+  .list {
     display: flex;
     gap: 8px;
 
-    .header__list_link {
+    .link {
       @include bodyFontRegularS;
       display: flex;
       align-items: center;

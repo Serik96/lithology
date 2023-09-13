@@ -1,32 +1,27 @@
 import { useRouter } from 'next/navigation';
-import { FC, ReactNode } from 'react';
+import { FC, PropsWithChildren } from 'react';
+import { cn } from '@/helpers';
 import s from './button.module.scss';
 
-type TProps = {
+type TProps = PropsWithChildren<{
   href?: string;
   onClick?: () => void;
-  children: ReactNode;
   className?: string;
-};
+}>;
 
-export const Button: FC<TProps> = ({
-  children,
-  onClick = () => {},
-  href,
-  className = '',
-}) => {
+export const Button: FC<TProps> = ({ children, onClick, href, className }) => {
   const router = useRouter();
 
   const handleClick = () => {
+    onClick?.();
+
     if (href) {
       void router.push(href);
     }
-
-    onClick();
   };
 
   return (
-    <button className={[s.btn, className].join(' ')} onClick={handleClick}>
+    <button className={cn(s.btn, className)} onClick={handleClick}>
       {children}
     </button>
   );

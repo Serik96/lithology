@@ -1,9 +1,10 @@
 {
+  "litholog": "Litholog",
   "auth": {
     "email": "E-mail",
     "password": "Password",
-    "forgotPswd": "Forgot password?",
-    "questionForReg": "You don't have an account?"
+    "forgot-password": "Forgot password?",
+    "question-for-reg": "You don't have an account?"
   },
   "home": {
     "title": "Main page"
@@ -24,7 +25,7 @@
     "main": "Main",
     "news": "News",
     "support": "Support",
-    "signin": "Sign In",
+    "sign-in": "Sign In",
     "register": "Register"
   },
   "notifications": {

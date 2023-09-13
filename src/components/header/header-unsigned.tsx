@@ -5,7 +5,7 @@ export const HeaderUnsigned = () => {
   return (
     <>
       <Logo />
-      <Navigation isUnsignedNav />
+      <Navigation isUnsigned />
     </>
   );
 };

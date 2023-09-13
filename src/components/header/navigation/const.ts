@@ -42,7 +42,7 @@ export const unsignedNavLinks: TNavLink[] = [
     icon: null,
   },
   {
-    label: 'navigation.signin',
+    label: 'navigation.sign-in',
     href: routes.project.signin,
     icon: ProfileIcon,
   },

@@ -4,7 +4,7 @@ import s from './header.module.scss';
 const Header = () => {
   return (
     <header className={s.header}>
-      <div className={s.header__wrapper}>
+      <div className={s.wrapper}>
         <HeaderUnsigned />
       </div>
     </header>

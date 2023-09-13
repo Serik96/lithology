@@ -11,6 +11,6 @@ export const routes = {
     support: '/support',
     signin: '/sign-in',
     register: '/register',
-    reset_pswd: '/reset-password',
+    reset_password: '/reset-password',
   },
 };

@@ -3,16 +3,17 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { Button, TextField } from '@/components/ui';
 import { routes } from '@/const';
-import s from './signin.module.scss';
+import { cn } from '@/helpers';
+import s from './sign-in.module.scss';
 
 const SignIn = () => {
   const t = useTranslations();
 
   return (
-    <div className={s.signin__wrapper}>
-      <form className={s.signin__form}>
-        <h1 className={s.signin__heading}>{t('navigation.signin')}</h1>
-        <div className={s.signin__form_fields}>
+    <div className={s.signIn}>
+      <form className={s.form}>
+        <h1 className={s.heading}>{t('navigation.sign-in')}</h1>
+        <div className={s.formFields}>
           <TextField label={t('auth.email')} placeholder={t('auth.email')} />
           <TextField
             type="password"
@@ -20,23 +21,20 @@ const SignIn = () => {
             placeholder={t('auth.password')}
           />
         </div>
-        <Button className={s.signin__btn}>{t('navigation.signin')}</Button>
+        <Button className={s.btn}>{t('navigation.sign-in')}</Button>
 
-        <div className={s.signin__register}>
-          {t('auth.questionForReg')}
+        <div className={s.register}>
+          {t('auth.question-for-reg')}
           &nbsp;
-          <Link
-            className={[s.signin__reset, 'link_active'].join(' ')}
-            href={routes.project.register}
-          >
+          <Link className={cn(s.reset, 'link_active')} href={routes.project.register}>
             {t('navigation.register')}
           </Link>
         </div>
         <Link
-          href={routes.project.reset_pswd}
-          className={[s.signin__reset_pswd, 'link_active'].join(' ')}
+          href={routes.project.reset_password}
+          className={cn(s.resetPassword, 'link_active')}
         >
-          {t('auth.forgotPswd')}
+          {t('auth.forgot-password')}
         </Link>
       </form>
     </div>
