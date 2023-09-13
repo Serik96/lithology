@@ -21,19 +21,24 @@ const SignIn = () => {
           />
         </div>
         <Button className={s.signin__btn}>{t('navigation.signin')}</Button>
-      </form>
-      <div className={s.signin__register}>
-        {t('auth.questionForReg')}
-        <Link className="link_active" href={routes.project.register}>
-          {t('navigation.register')}
+
+        <div className={s.signin__register}>
+          {t('auth.questionForReg')}
+          &nbsp;
+          <Link
+            className={[s.signin__reset, 'link_active'].join(' ')}
+            href={routes.project.register}
+          >
+            {t('navigation.register')}
+          </Link>
+        </div>
+        <Link
+          href={routes.project.reset_pswd}
+          className={[s.signin__reset_pswd, 'link_active'].join(' ')}
+        >
+          {t('auth.forgotPswd')}
         </Link>
-      </div>
-      <Link
-        href={routes.project.reset_pswd}
-        className={[s.signin__forgot, 'link_active'].join(' ')}
-      >
-        {t('auth.forgotPswd')}
-      </Link>
+      </form>
     </div>
   );
 };

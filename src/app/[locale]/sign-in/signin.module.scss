@@ -1,7 +1,47 @@
+@import "src/styles/global/mixins";
+
+body {
+  background-image: url("public/img/auth-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .signin__wrapper {
   min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .signin__form {
+    width: 100%;
+    max-width: 389px;
+    background-color: var(--amber-200);
+    border-radius: 4px;
+    padding: 40px 32px;
+
+    .signin__heading {
+      @include fontHeadingXL;
+      margin-bottom: 24px;
+    }
+
+    .signin__form_fields {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .signin__register {
+      margin: 40px 0 24px 0;
+    }
+
+    .signin__register,
+    .signin__reset_pswd {
+      @include bodyFontMediumS;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
 }

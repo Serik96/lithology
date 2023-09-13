@@ -84,3 +84,14 @@ input, textarea {
     background-color: var(--amber-400);
   }
 }
+
+
+.link {
+  &_active {
+    color: var(--orange-400);
+
+    &:hover {
+      color: var(--black-400);
+    }
+  }
+}

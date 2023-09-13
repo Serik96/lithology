@@ -1,7 +1,7 @@
 @import "src/styles/global/mixins";
 
 .btn {
-  @include bodyFontMediumL;
+  @include bodyFontMediumM;
   width: 100%;
   color: var(--white-400);
   padding: 20px 16px;
