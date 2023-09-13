@@ -5,7 +5,7 @@
   font-size: var(--text-b-s);
   line-height: 22px;
 }
- 
+
 @mixin bodyFontRegularM {
   font-size: var(--text-m-s);
   line-height: 24px;
@@ -17,17 +17,17 @@
 }
 
 @mixin bodyFontMediumS {
-  @include bodyFontMediumS;
+  @include bodyFontRegularS;
   font-weight: var(--text-weight-medium);
 }
 
 @mixin bodyFontMediumM {
-  @include bodyFontMediumM;
+  @include bodyFontRegularM;
   font-weight: var(--text-weight-medium);
 }
 
 @mixin bodyFontMediumL {
-  @include bodyFontMediumL;
+  @include bodyFontRegularL;
   font-weight: var(--text-weight-medium);
 }
 
