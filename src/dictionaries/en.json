@@ -1,4 +1,10 @@
 {
+  "auth": {
+    "email": "E-mail",
+    "password": "Password",
+    "forgotPswd": "Forgot password?",
+    "questionForReg": "You don't have an account?"
+  },
   "home": {
     "title": "Main page"
   },
@@ -9,6 +15,17 @@
   },
   "icons": {
     "notification": "notifcations icon"
+  },
+  "navigation": {
+    "create": "Create project",
+    "home": "Home",
+    "folders": "Folders",
+    "settings": "Settings",
+    "main": "Main",
+    "news": "News",
+    "support": "Support",
+    "signin": "Sign In",
+    "register": "Register"
   },
   "notifications": {
     "title": "{count, plural, =1 {# notification} other {# notifications}}."
