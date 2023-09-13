@@ -2,12 +2,12 @@
 
 .header__nav {
   margin-left: auto;
-  
+
   .header__list {
     display: flex;
     gap: 8px;
 
-    .header__list-link {
+    .header__list_link {
       @include bodyFontRegularS;
       display: flex;
       align-items: center;

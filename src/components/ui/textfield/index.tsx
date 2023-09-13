@@ -1,5 +1,5 @@
-import './textfield.scss';
 import React, { ChangeEvent, useState } from 'react';
+import s from './textfield.module.scss';
 
 type TProps = {
   label?: string;
@@ -23,14 +23,14 @@ export const TextField: React.FC<TProps> = ({
   };
 
   return (
-    <div className={'textfield__wrapper'}>
-      {label && <label className={'textfield__label'}>{label}</label>}
+    <div className={s.textfield__wrapper}>
+      {label && <label className={s.textfield__label}>{label}</label>}
       <input
         type={type}
         value={valueState}
         onChange={handleChange}
         placeholder={placeholder}
-        className={'textfield__input'}
+        className={s.textfield__input}
       />
     </div>
   );

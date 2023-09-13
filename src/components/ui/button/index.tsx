@@ -1,6 +1,6 @@
-import './button.scss';
 import { useRouter } from 'next/navigation';
 import { FC, ReactNode } from 'react';
+import s from './button.module.scss';
 
 type TProps = {
   href?: string;
@@ -26,7 +26,7 @@ export const Button: FC<TProps> = ({
   };
 
   return (
-    <button className={['btn', className].join(' ')} onClick={handleClick}>
+    <button className={[s.btn, className].join(' ')} onClick={handleClick}>
       {children}
     </button>
   );
