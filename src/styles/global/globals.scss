@@ -64,7 +64,7 @@ select {
   max-width: var(--container);
 }
 
-svg {
+.icon {
   width: 1.429em;
   height: 1.429em;
 }
@@ -79,8 +79,7 @@ input, textarea {
   &:hover,
   &:focus,
   &:active,
-  &:-webkit-autofill,
-  &:-internal-autofill-selected {
+  &:-webkit-autofill {
     background-color: var(--amber-400);
   }
 }
