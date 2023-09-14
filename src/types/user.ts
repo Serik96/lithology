@@ -6,7 +6,7 @@ export type TUser = {
   first_name: string;
   last_name: string;
   position: string;
-  avatar: string | null;
+  avatar: Nullable<string>;
   description: string;
   price_plan_id: number;
 };

@@ -10,16 +10,16 @@ type TProps = {
 };
 
 export const TextField: React.FC<TProps> = ({
-  label = '',
-  value = '',
-  placeholder = '',
+  label,
+  value,
+  placeholder,
   type = 'text',
-  onChange = () => {},
+  onChange,
 }) => {
   const [valueState, setValueState] = useState(value);
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValueState(event.target.value);
-    onChange(event.target.value);
+    onChange?.(event.target.value);
   };
 
   return (

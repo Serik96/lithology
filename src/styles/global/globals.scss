@@ -86,12 +86,10 @@ input, textarea {
 }
 
 
-.link {
-  &_active {
-    color: var(--orange-400);
+.link_active {
+  color: var(--orange-400);
 
-    &:hover {
-      color: var(--black-400);
-    }
+  &:hover {
+    color: var(--black-400);
   }
 }

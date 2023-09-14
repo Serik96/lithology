@@ -3,10 +3,10 @@ import { useTranslations } from 'next-intl';
 import { config } from '@/config';
 import s from './socials.module.scss';
 
-const Index = () => {
+const Socials = () => {
   const t = useTranslations();
   return (
-    <div className={s.social}>
+    <div className={s.socials}>
       <ul className={s.list}>
         <li>{t('footer.check-socials')}</li>
         {config.footer.mediaLinks.map((e, i) => (
@@ -21,4 +21,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Socials;

@@ -24,7 +24,7 @@ const SignIn = () => {
         <Button className={s.btn}>{t('navigation.sign-in')}</Button>
 
         <div className={s.register}>
-          {t('auth.question-for-reg')}
+          {t('auth.sign-in.question-for-reg')}
           &nbsp;
           <Link className={cn(s.reset, 'link_active')} href={routes.project.register}>
             {t('navigation.register')}
@@ -34,7 +34,7 @@ const SignIn = () => {
           href={routes.project.reset_password}
           className={cn(s.resetPassword, 'link_active')}
         >
-          {t('auth.forgot-password')}
+          {t('auth.sign-in.forgot-password')}
         </Link>
       </form>
     </div>

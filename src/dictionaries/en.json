@@ -3,8 +3,10 @@
   "auth": {
     "email": "E-mail",
     "password": "Password",
-    "forgot-password": "Forgot password?",
-    "question-for-reg": "You don't have an account?"
+    "sign-in": {
+      "forgot-password": "Forgot password?",
+      "question-for-reg": "You don't have an account?"
+    }
   },
   "home": {
     "title": "Main page"
