@@ -6,12 +6,12 @@ type TProps = {
   value?: string;
   type?: string;
   placeholder?: string;
-  onChange?: (value: string | number) => void;
+  onChange?: (value: string) => void;
 };
 
 export const TextField: React.FC<TProps> = ({
   label,
-  value,
+  value = '',
   placeholder,
   type = 'text',
   onChange,
