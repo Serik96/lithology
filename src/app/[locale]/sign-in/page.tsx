@@ -26,12 +26,12 @@ const SignIn = () => {
         <div className={s.register}>
           {t('auth.sign-in.question-for-reg')}
           &nbsp;
-          <Link className={cn(s.reset, 'link_active')} href={routes.project.register}>
+          <Link className={cn(s.reset, 'link_active')} href={routes.auth.register}>
             {t('navigation.register')}
           </Link>
         </div>
         <Link
-          href={routes.project.reset_password}
+          href={routes.auth.reset_password}
           className={cn(s.resetPassword, 'link_active')}
         >
           {t('auth.sign-in.forgot-password')}

@@ -28,22 +28,22 @@ export const navLinks: TNavLink[] = [
 export const unsignedNavLinks: TNavLink[] = [
   {
     label: 'navigation.main',
-    href: routes.project.main,
+    href: routes.public.main,
     icon: null,
   },
   {
     label: 'navigation.news',
-    href: routes.project.news,
+    href: routes.public.news,
     icon: null,
   },
   {
     label: 'navigation.support',
-    href: routes.project.support,
+    href: routes.public.support,
     icon: null,
   },
   {
     label: 'navigation.sign-in',
-    href: routes.project.signin,
+    href: routes.auth.sign_in,
     icon: ProfileIcon,
   },
 ];
