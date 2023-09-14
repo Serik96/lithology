@@ -1,4 +1,11 @@
 {
+  "litholog": "Litholog",
+  "auth": {
+    "email": "E-mail",
+    "password": "Password",
+    "forgot-password": "Forgot password?",
+    "question-for-reg": "You don't have an account?"
+  },
   "home": {
     "title": "Главная"
   },
@@ -9,6 +16,17 @@
   },
   "icons": {
     "notification": "Уведомления"
+  },
+  "navigation": {
+    "create": "Create project",
+    "home": "Home",
+    "folders": "Folders",
+    "settings": "Settings",
+    "main": "Main",
+    "news": "News",
+    "support": "Support",
+    "sign-in": "Sign In",
+    "register": "Register"
   },
   "notifications": {
     "title": "{count, plural, one {# уведомление} few {# уведомления} other {# уведомлений}}"

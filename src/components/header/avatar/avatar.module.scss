@@ -4,15 +4,15 @@
   display: flex;
   align-items: center;
 
-  .avatar__wrapper {
+  .avatarWrapper {
     position: relative;
     margin-right: 14px;
 
-    .avatar__img {
+    .avatarImg {
       border-radius: 100%;
     }
 
-    .avatar__folder {
+    .avatarFolder {
       position: absolute;
       right: -6px;
       bottom: -4px;
@@ -20,7 +20,7 @@
     }
   }
 
-  .avatar__name {
+  .avatarName {
     @include bodyFontRegularS;
   }
 }

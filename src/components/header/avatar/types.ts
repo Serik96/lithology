@@ -1,5 +1,5 @@
 export type TAvatar = {
-  avatar: string;
-  folderImg: string;
+  avatar: Nullable<string>;
+  folderImg: Nullable<string>;
   name: string;
 };

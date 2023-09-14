@@ -1,13 +1,15 @@
-import { useRouter } from 'next/router';
-import { FC } from 'react';
+import { useRouter } from 'next/navigation';
+import { FC, PropsWithChildren } from 'react';
+import { cn } from '@/helpers';
+import s from './button.module.scss';
 
-type TProps = {
-  href: string;
-  text: string;
+type TProps = PropsWithChildren<{
+  href?: string;
   onClick?: () => void;
-};
+  className?: string;
+}>;
 
-const Button: FC<TProps> = ({ text, onClick, href }) => {
+export const Button: FC<TProps> = ({ children, onClick, href, className }) => {
   const router = useRouter();
 
   const handleClick = () => {
@@ -18,13 +20,9 @@ const Button: FC<TProps> = ({ text, onClick, href }) => {
     }
   };
 
-  // @todo внутри папки размести файл стилей, сейчас прописан несуществующий класс
   return (
-    <button className="btn" onClick={handleClick}>
-      {text}
+    <button className={cn(s.btn, className)} onClick={handleClick}>
+      {children}
     </button>
   );
 };
-
-// @todo не используй export default, так трудно искать использования элементов
-export default Button;

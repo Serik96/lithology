@@ -1,31 +1,49 @@
-import {
-  CABINET_URL,
-  CREATE_PROJECT_URL,
-  FOLDERS_URL,
-  SETTINGS_URL,
-} from '@/const/routes';
-import { AddIcon, FolderIcon, HomeIcon, SettingsIcon } from '@/icons';
+import { routes } from '@/const/routes';
+import { AddIcon, FolderIcon, HomeIcon, ProfileIcon, SettingsIcon } from '@/icons';
 import { TNavLink } from './types';
 
 export const navLinks: TNavLink[] = [
   {
-    label: 'Create project',
-    href: CREATE_PROJECT_URL,
+    label: 'navigation.create',
+    href: routes.project.create,
     icon: AddIcon,
   },
   {
-    label: 'Home',
-    href: CABINET_URL,
+    label: 'navigation.home',
+    href: routes.project.cabinet,
     icon: HomeIcon,
   },
   {
-    label: 'Folders',
-    href: FOLDERS_URL,
+    label: 'navigation.folders',
+    href: routes.project.folders,
     icon: FolderIcon,
   },
   {
-    label: 'Settings',
-    href: SETTINGS_URL,
+    label: 'navigation.settings',
+    href: routes.project.settings,
     icon: SettingsIcon,
+  },
+];
+
+export const unsignedNavLinks: TNavLink[] = [
+  {
+    label: 'navigation.main',
+    href: routes.public.main,
+    icon: null,
+  },
+  {
+    label: 'navigation.news',
+    href: routes.public.news,
+    icon: null,
+  },
+  {
+    label: 'navigation.support',
+    href: routes.public.support,
+    icon: null,
+  },
+  {
+    label: 'navigation.sign-in',
+    href: routes.auth.sign_in,
+    icon: ProfileIcon,
   },
 ];

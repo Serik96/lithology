@@ -1,0 +1,20 @@
+@import "src/styles/global/mixins";
+
+.nav {
+  margin-left: auto;
+
+  .list {
+    display: flex;
+    gap: 8px;
+
+    .link {
+      @include bodyFontRegularS;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: 32px;
+      border: 1px solid var(--gray-100);
+    }
+  }
+}

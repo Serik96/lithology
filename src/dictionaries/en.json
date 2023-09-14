@@ -1,4 +1,13 @@
 {
+  "litholog": "Litholog",
+  "auth": {
+    "email": "E-mail",
+    "password": "Password",
+    "sign-in": {
+      "forgot-password": "Forgot password?",
+      "question-for-reg": "You don't have an account?"
+    }
+  },
   "home": {
     "title": "Main page"
   },
@@ -9,6 +18,17 @@
   },
   "icons": {
     "notification": "notifcations icon"
+  },
+  "navigation": {
+    "create": "Create project",
+    "home": "Home",
+    "folders": "Folders",
+    "settings": "Settings",
+    "main": "Main",
+    "news": "News",
+    "support": "Support",
+    "sign-in": "Sign In",
+    "register": "Register"
   },
   "notifications": {
     "title": "{count, plural, =1 {# notification} other {# notifications}}."

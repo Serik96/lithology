@@ -63,3 +63,32 @@ select {
   width: calc(100% - 96px);
   max-width: var(--container);
 }
+
+.icon {
+  width: 1.429em;
+  height: 1.429em;
+}
+
+input, textarea {
+  @include bodyFontRegularS;
+  border-radius: 4px;
+  border: 1px solid var(--gray-400);
+  background-color: var(--amber-400);
+  padding: 9px 16px;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:-webkit-autofill {
+    background-color: var(--amber-400);
+  }
+}
+
+
+.link_active {
+  color: var(--orange-400);
+
+  &:hover {
+    color: var(--black-400);
+  }
+}
