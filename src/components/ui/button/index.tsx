@@ -7,9 +7,16 @@ type TProps = PropsWithChildren<{
   href?: string;
   onClick?: () => void;
   className?: string;
+  variant?: string;
 }>;
 
-export const Button: FC<TProps> = ({ children, onClick, href, className }) => {
+export const Button: FC<TProps> = ({
+  children,
+  onClick,
+  href,
+  className,
+  variant = '',
+}) => {
   const router = useRouter();
 
   const handleClick = () => {
@@ -21,7 +28,7 @@ export const Button: FC<TProps> = ({ children, onClick, href, className }) => {
   };
 
   return (
-    <button className={cn(s.btn, className)} onClick={handleClick}>
+    <button className={cn(s.btn, className, s?.[variant])} onClick={handleClick}>
       {children}
     </button>
   );

@@ -55,3 +55,11 @@
   font-weight: var(--text-weight-medium);
   line-height: 56px;
 }
+
+
+/* Global mixins */
+
+@mixin icon {
+  width: 1.5em;
+  height: 1.5em;
+}

@@ -65,8 +65,7 @@ select {
 }
 
 .icon {
-  width: 1.429em;
-  height: 1.429em;
+  @include icon;
 }
 
 input, textarea {
@@ -84,6 +83,11 @@ input, textarea {
   }
 }
 
+a {
+  svg {
+    @include icon;
+  }
+}
 
 .link_active {
   color: var(--orange-400);

@@ -12,4 +12,17 @@
   justify-content: space-between;
   border: none;
   cursor: pointer;
+
+  &.outlined {
+    width: fit-content;
+    border: 1px solid var(--orange-400);
+    background-color: transparent;
+    color: var(--orange-400);
+    padding: 4px 12px;
+    gap: 6px;
+  }
+
+  svg {
+    @include icon;
+  }
 }

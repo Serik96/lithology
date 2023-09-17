@@ -6,7 +6,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.signIn {
+.signUp {
   min-height: calc(100vh - 116px);
   width: 100%;
   display: flex;
@@ -33,16 +33,12 @@ body {
       margin-bottom: 32px;
     }
 
-    .register {
-      margin: 40px 0 24px 0;
-    }
-
-    .register,
-    .resetPassword {
+    .signIn {
       @include bodyFontMediumS;
       display: block;
       width: 100%;
       text-align: center;
+      margin-top: 40px;
     }
   }
 }

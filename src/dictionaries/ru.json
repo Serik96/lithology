@@ -1,21 +1,25 @@
 {
   "litholog": "Litholog",
   "auth": {
+    "sign-up": "Sign up",
     "email": "E-mail",
     "password": "Password",
-    "forgot-password": "Forgot password?",
-    "question-for-reg": "You don't have an account?"
+    "has-account": "Do you have an account?",
+    "sign-in": {
+      "forgot-password": "Forgot password?",
+      "question-for-reg": "You don't have an account?"
+    }
   },
   "home": {
-    "title": "Главная"
+    "title": "Main page"
   },
   "footer": {
-    "heading": "перейдём к деталям",
+    "heading": "Let's go over the details",
     "privacy": "© Drone. All Rights Reserved 2023.",
     "check-socials": "Check our social media"
   },
   "icons": {
-    "notification": "Уведомления"
+    "notification": "notifcations icon"
   },
   "navigation": {
     "create": "Create project",
@@ -25,8 +29,9 @@
     "main": "Main",
     "news": "News",
     "support": "Support",
-    "sign-in": "Sign In",
-    "register": "Register"
+    "sign-in": "Sign in",
+    "register": "Register",
+    "back": "Back"
   },
   "notifications": {
     "title": "{count, plural, one {# уведомление} few {# уведомления} other {# уведомлений}}"

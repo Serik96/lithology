@@ -1,0 +1,29 @@
+.breadcrumbs,
+.list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.breadcrumbs {
+  .list {
+    .listItem {
+      &:not(:last-child) {
+        .listLink {
+          color: var(--gray-200);
+
+          &:hover {
+            color: var(--black-400);
+          }
+        }
+      }
+
+      &:last-child {
+        .listLink {
+          color: var(--black-400);
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
