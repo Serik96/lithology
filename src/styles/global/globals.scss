@@ -74,6 +74,7 @@ input, textarea {
   border: 1px solid var(--gray-400);
   background-color: var(--amber-400);
   padding: 9px 16px;
+  transition: all 0.2s;
 
   &:hover,
   &:focus,
@@ -81,12 +82,25 @@ input, textarea {
   &:-webkit-autofill {
     background-color: var(--amber-400);
   }
+
+  &:hover {
+    border: 1px solid var(--black-400);
+  }
+
+  &:focus {
+    border: 1px solid var(--gray-400);
+  }
 }
 
 a {
   svg {
     @include icon;
   }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
 }
 
 .link_active {

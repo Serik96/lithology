@@ -5,6 +5,7 @@ import { Button, TextField } from '@/components/ui';
 import Breadcrumbs from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
 import { cn } from '@/helpers';
+import { ArrowSquareRight } from '@/icons';
 import { navSignIn } from './const';
 import s from './sign-in.module.scss';
 
@@ -25,7 +26,10 @@ const SignIn = () => {
               placeholder={t('auth.password')}
             />
           </div>
-          <Button className={s.btn}>{t('navigation.sign-in')}</Button>
+          <Button className={s.btn}>
+            {t('navigation.sign-in')}
+            <ArrowSquareRight />
+          </Button>
 
           <div className={s.register}>
             {t('auth.sign-in.question-for-reg')}
