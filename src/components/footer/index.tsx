@@ -32,10 +32,8 @@ const Footer = () => {
           </Link>
         </div>
         <div className={s.terms}>
-          <Link href={''}>{t('terms-of-use')}</Link>
-          <Link href={''}>
-            {t('privacy-policy')}
-          </Link>
+          <Link href={'#'}>{t('terms-of-use')}</Link>
+          <Link href={'#'}>{t('privacy-policy')}</Link>
         </div>
         <Socials />
       </div>

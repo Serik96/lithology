@@ -3,9 +3,9 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { navResetPassword } from '@/app/[locale]/reset-password/const';
+import { Button, TextField } from '@/components/ui';
 import Breadcrumbs from '@/components/ui/breadcrumbs';
-import { Button, TextField } from '../../../components/ui';
-import { ArrowSquareRight } from '../../../icons';
+import { ArrowSquareRight } from '@/icons';
 import s from './reset-password.module.scss';
 
 const ResetPassword = () => {
@@ -27,20 +27,23 @@ const ResetPassword = () => {
             </Button>
           </div>
         </form>
-        <Image
-          className={s.stickerImg}
-          width={326}
-          height={326}
-          alt={t('litholog')}
-          src='/img/stickers/man-sticker-1.gif'
-        />
-        <Image
-          className={s.stickerBg}
-          width={894}
-          height={395}
-          alt={t('litholog')}
-          src='/img/stickers/sticker-bg-1.svg'
-        />
+        <div className={s.sticker}>
+          <Image
+            className={s.stickerImg}
+            width={326}
+            height={326}
+            alt={t('icons.sticker')}
+            src="/img/stickers/man-sticker-1.gif"
+          />
+
+          <Image
+            className={s.stickerLine}
+            width={971}
+            height={123}
+            alt={t('icons.line')}
+            src={'/img/stickers/sticker-line.svg'}
+          />
+        </div>
       </div>
     </>
   );

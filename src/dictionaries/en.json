@@ -21,7 +21,9 @@
     "privacy-policy": "Privacy Policy"
   },
   "icons": {
-    "notification": "notification"
+    "notification": "notification",
+    "sticker": "sticker",
+    "line": "line"
   },
   "navigation": {
     "create": "Create report",

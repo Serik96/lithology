@@ -1,10 +1,12 @@
 import React, { ChangeEvent, useState } from 'react';
+import { cn } from '@/helpers';
 import s from './textfield.module.scss';
 
 type TProps = {
   label?: string;
   value?: string;
   type?: string;
+  className?: string;
   placeholder?: string;
   onChange?: (value: string) => void;
 };
@@ -14,6 +16,7 @@ export const TextField: React.FC<TProps> = ({
   value = '',
   placeholder,
   type = 'text',
+  className,
   onChange,
 }) => {
   const [valueState, setValueState] = useState(value);
@@ -30,7 +33,7 @@ export const TextField: React.FC<TProps> = ({
         value={valueState}
         onChange={handleChange}
         placeholder={placeholder}
-        className={s.input}
+        className={cn(s.input, className)}
       />
     </div>
   );

@@ -4,36 +4,42 @@
   border-top: 1px solid var(--gray-100);
   display: flex;
   flex-direction: column;
+  padding-top: 48px;
+  padding-bottom: 96px;
 
   .top {
     @include fontHeadingL;
 
     .heading {
-      margin-top: 19px;
+      position: relative;
+      width: fit-content;
 
       .headingIcon {
-        margin-top: 19px;
+        position: absolute;
+        top: -27px;
+        right: -35px;
       }
     }
   }
 
   .bot {
-    margin-top: 70px;
-    margin-bottom: 96px;
+    @include bodyFontMediumS;
     display: flex;
-    gap: 64px;
-
-    .privacy {
-
-    }
+    align-items: center;
+    margin-top: 80px;
 
     .contact {
+      margin: 0 64px;
+    }
 
+    .contact,
+    .terms {
+      display: flex;
+      gap: 16px;
     }
 
     .terms {
-
+      margin-right: auto;
     }
   }
-
 }

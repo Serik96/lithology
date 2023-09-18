@@ -1,7 +1,10 @@
 .socials {
-  justify-content: right;
-
   .list {
     display: flex;
+    gap: 16px;
+
+    .link {
+      display: flex;
+    }
   }
 }
