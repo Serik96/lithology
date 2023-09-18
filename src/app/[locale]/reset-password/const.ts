@@ -1,13 +1,13 @@
 import { routes } from '@/const';
 import { TBreadcrumbs } from '@/types';
 
-export const navRegister: TBreadcrumbs[] = [
+export const navResetPassword: TBreadcrumbs[] = [
   {
     label: 'navigation.home',
     href: routes.public.main,
   },
   {
-    label: 'navigation.register',
-    href: routes.auth.register,
+    label: 'navigation.change-password',
+    href: routes.auth.reset_password,
   },
 ];

@@ -1,4 +1,4 @@
-export type TBreacrumbs = {
+export type TBreadcrumbs = {
   label: string;
   href: string;
 };

@@ -1,11 +1,5 @@
 @import "src/styles/global/mixins";
 
-body {
-  background-image: url("public/img/auth-bg.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .signIn {
   min-height: calc(100vh - 116px);
   width: 100%;

@@ -31,7 +31,8 @@
     "support": "Support",
     "sign-in": "Sign in",
     "register": "Register",
-    "back": "Back"
+    "back": "Back",
+    "change-password": "Change password"
   },
   "notifications": {
     "title": "{count, plural, one {# уведомление} few {# уведомления} other {# уведомлений}}"

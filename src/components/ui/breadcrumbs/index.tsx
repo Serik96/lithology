@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui';
 import { ArrowLeft } from '@/icons';
-import { TBreacrumbs } from '@/types';
+import { TBreadcrumbs } from '@/types';
 import s from './breadcrumbs.module.scss';
 
 type TProps = {
-  navLinks: TBreacrumbs[];
+  navLinks: TBreadcrumbs[];
 };
 
 const Breadcrumbs = ({ navLinks }: TProps) => {
