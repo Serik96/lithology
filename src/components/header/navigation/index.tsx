@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import { navLinks, unsignedNavLinks } from '@/components/header/navigation/const';
+import { cn } from '@/helpers';
 import s from './navigation.module.scss';
 
 type TProps = {
@@ -17,10 +18,12 @@ const Navigation = ({ isUnsigned = false }: TProps) => {
       <ul className={s.list}>
         {links.map(e => {
           const Icon = e.icon;
+          const active = e?.isActive ? s.active : '';
+          const onlyIcon = e.label ? '' : s.onlyIcon;
 
           return (
             <li key={`header__list-item_${e.href}`}>
-              <Link href={e.href} className={s.link}>
+              <Link href={e.href} className={cn(s.link, active, onlyIcon)}>
                 {Icon && <Icon />}
                 {t(e.label)}
               </Link>

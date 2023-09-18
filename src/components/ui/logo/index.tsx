@@ -5,10 +5,10 @@ import s from './logo.module.scss';
 
 export const Logo = () => {
   const t = useTranslations();
- 
+
   return (
     <Link href="/" className={s.logo}>
-      <Image width={122} height={31} alt={t('litholog')} src="/img/logo.svg" />
+      <Image width={142} height={43} alt={t('litholog')} src="/img/logo.svg" />
     </Link>
   );
 };

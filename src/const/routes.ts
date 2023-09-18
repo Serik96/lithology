@@ -1,6 +1,7 @@
 export const routes = {
   project: {
-    create: '/create-project',
+    create: '/create-report',
+    projects: '/projects',
     notifications: '/notifications',
     folders: '/folders',
     settings: '/settings',
