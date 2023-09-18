@@ -2,10 +2,10 @@
 
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { navResetPassword } from '@/app/[locale]/reset-password/const';
 import { Button, TextField } from '@/components/ui';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowSquareRight } from '@/icons';
+import { navResetPassword } from './const';
 import s from './reset-password.module.scss';
 
 const ResetPassword = () => {
