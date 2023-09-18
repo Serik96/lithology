@@ -1,5 +1,5 @@
 type TValue = Nullable<number | string>;
-
+ 
 export const eq = (v1?: TValue, v2?: TValue, strict = false): boolean => {
   if (!v1 && !v2) {
     return strict ? v1 === v2 : true;

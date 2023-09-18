@@ -1,4 +1,4 @@
-import { TStringObject } from '@/types';
+import { TStringObject } from "@/types";
 
 export function replaceBulk(
   str: string,
@@ -7,14 +7,14 @@ export function replaceBulk(
 ): string {
   const regexes = [];
   const map: TStringObject = {};
-  const flags = ['g'];
-  ignoreCase && flags.push('i');
+  const flags = ["g"];
+  ignoreCase && flags.push("i");
 
   for (const [find, replace] of Object.entries(findReplaces)) {
-    regexes.push(find.replace(/([-[\]{}()*+?.\\^$|#,])/g, '\\$1'));
+    regexes.push(find.replace(/([-[\]{}()*+?.\\^$|#,])/g, "\\$1"));
     map[find] = replace;
   }
-  const regex = new RegExp(regexes.join('|'), flags.join(''));
+  const regex = new RegExp(regexes.join("|"), flags.join(""));
 
   return str.replace(regex, matched => map[matched]);
 }
@@ -27,8 +27,8 @@ export function replaceParams(str: string, params: TStringObject): string {
   return replaceBulk(str, paramsWithBraces);
 }
 
-export function base64toBlob(b64Data: string, contentType = '', sliceSize = 512) {
-  const x = b64Data.indexOf(',');
+export function base64toBlob(b64Data: string, contentType = "", sliceSize = 512) {
+  const x = b64Data.indexOf(",");
   if (x !== -1) {
     if (!contentType) {
       contentType = b64Data.substring(5, x);
@@ -53,7 +53,7 @@ export function base64toBlob(b64Data: string, contentType = '', sliceSize = 512)
   return new Blob(byteArrays, { type: contentType });
 }
 
-export function complexStr(ar: unknown[], glue = ', '): string {
+export function complexStr(ar: unknown[], glue = ", "): string {
   return ar.filter(Boolean).join(glue);
 }
 
@@ -68,15 +68,15 @@ export const cn = (...args: unknown[]): string => {
     }
   }
 
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 };
 
 export function slash(path: string, ending = true): string {
-  if (ending && !path.endsWith('/')) {
+  if (ending && !path.endsWith("/")) {
     return `${path}/`;
   }
 
-  if (!ending && !path.startsWith('/')) {
+  if (!ending && !path.startsWith("/")) {
     return `/${path}`;
   }
 
@@ -84,7 +84,7 @@ export function slash(path: string, ending = true): string {
 }
 
 export function unslash(path: string, ending = true): string {
-  return path.replace(ending ? /\/+$/g : /^\/+/g, '');
+  return path.replace(ending ? /\/+$/g : /^\/+/g, "");
 }
 
 export function digitCase(

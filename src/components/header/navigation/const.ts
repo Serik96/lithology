@@ -1,10 +1,10 @@
-import { routes } from '@/const/routes';
-import { AddIcon, FolderIcon, HomeIcon, ProfileIcon, SettingsIcon } from '@/icons';
-import { TNavLink } from './types';
+import { routes } from "@/const/routes";
+import { AddIcon, FolderIcon, HomeIcon, ProfileIcon, SettingsIcon } from "@/icons";
+import { TNavLink } from "./types";
 
 export const navLinks: TNavLink[] = [
   {
-    label: 'navigation.create',
+    label: "navigation.create",
     href: routes.project.create,
     icon: AddIcon,
     isActive: true,
@@ -28,23 +28,23 @@ export const navLinks: TNavLink[] = [
 
 export const unsignedNavLinks: TNavLink[] = [
   {
-    label: 'navigation.main',
+    label: "navigation.main",
     href: routes.public.main,
     icon: null,
   },
   {
-    label: 'navigation.news',
+    label: "navigation.news",
     href: routes.public.news,
     icon: null,
   },
   {
-    label: 'navigation.support',
+    label: "navigation.support",
     href: routes.public.support,
     icon: null,
   },
   {
-    label: 'navigation.sign-in',
-    href: routes.auth.sign_in,
+    label: "navigation.sign-in",
+    href: routes.auth.signIn,
     icon: ProfileIcon,
   },
 ];

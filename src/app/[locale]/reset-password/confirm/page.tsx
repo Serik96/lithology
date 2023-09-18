@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { useTranslations } from 'next-intl';
-import { Button } from '@/components/ui';
-import Breadcrumbs from '@/components/ui/breadcrumbs';
-import { routes } from '@/const';
-import { ArrowSquareRight } from '@/icons';
-import s from './confirm.module.scss';
-import { navConfirm } from './const';
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui";
+import Breadcrumbs from "@/components/ui/breadcrumbs";
+import { routes } from "@/const";
+import { ArrowSquareRight } from "@/icons";
+import s from "./confirm.module.scss";
+import { navConfirm } from "./const";
 
 const Confirm = () => {
   const t = useTranslations();
@@ -17,10 +17,10 @@ const Confirm = () => {
       <Breadcrumbs navLinks={navConfirm} />
       <div className={s.confirmEmail}>
         <div className={s.wrapper}>
-          <h1 className={s.heading}>{t('reset-page-heading')}</h1>
-          <p className={s.description}>{t('email-sended')}</p>
-          <Button href={routes.auth.sign_in} className={s.btn}>
-            {t('backToSignIn')}
+          <h1 className={s.heading}>{t("reset-page-heading")}</h1>
+          <p className={s.description}>{t("email-sent")}</p>
+          <Button href={routes.auth.signIn} className={s.btn}>
+            {t("back-to-sign-in")}
             <ArrowSquareRight />
           </Button>
         </div>
@@ -29,7 +29,7 @@ const Confirm = () => {
             className={s.stickerImg}
             width={221}
             height={226}
-            alt={t('icons.sticker')}
+            alt={t("icons.sticker")}
             src="/img/stickers/mail-sticker.png"
           />
 
@@ -37,8 +37,8 @@ const Confirm = () => {
             className={s.stickerLine}
             width={971}
             height={123}
-            alt={t('icons.line')}
-            src={'/img/stickers/sticker-line.svg'}
+            alt={t("icons.line")}
+            src={"/img/stickers/sticker-line.svg"}
           />
         </div>
       </div>

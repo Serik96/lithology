@@ -1,4 +1,4 @@
-import { routes } from '@/const';
+import { routes } from "@/const";
 
 export const boolToNum = (value?: boolean | null): number | null =>
   value === null || value === undefined ? null : Number(value);
@@ -9,6 +9,6 @@ export const isPrivatePage = (pathname: string) => {
 };
 
 export const isPageWithoutFooter = (pathname: string) => {
-  const privateRoutes = [routes.auth.sign_in, routes.auth.registration];
+  const privateRoutes = [routes.auth.signIn, routes.auth.registration];
   return privateRoutes.includes(pathname);
 };

@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import '@/styles/index.scss';
-import { notFound } from 'next/navigation';
-import { NextIntlClientProvider, useLocale } from 'next-intl';
-import React, { PropsWithChildren } from 'react';
-import { Provider } from 'react-redux';
-import AppProvider from '@/app/[locale]/app-provider';
-import { locales } from '@/const';
-import { dictionaries } from '@/dictionaries';
-import { store } from '@/store/store';
+import "@/styles/index.scss";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider, useLocale } from "next-intl";
+import React, { PropsWithChildren } from "react";
+import { Provider } from "react-redux";
+import AppProvider from "@/app/[locale]/app-provider";
+import { locales } from "@/const";
+import { dictionaries } from "@/dictionaries";
+import { store } from "@/store/store";
 
 type TProps = PropsWithChildren<{
   params: {

@@ -20,6 +20,7 @@ export const useWindowSize = (): TWindowSize => {
         isMobile: window.innerWidth < mobileBreakpoint,
       });
     }
+
     window.addEventListener('resize', updateSize);
     updateSize();
 

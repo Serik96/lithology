@@ -18,7 +18,7 @@ export const scrollToEl = (selector: string) => {
   if (!el) {
     return;
   }
-  const header = document.querySelector('header');
+  const header = document.querySelector("header");
   const headerRect = header?.getBoundingClientRect();
   const headerHeight = (headerRect?.height ?? 60) * 1.1;
   const elRect = el.getBoundingClientRect();
@@ -28,7 +28,7 @@ export const scrollToEl = (selector: string) => {
   window.scroll({
     top,
     left: 0,
-    behavior: 'smooth',
+    behavior: "smooth",
   });
 };
 
@@ -40,7 +40,7 @@ export const scrollToElById = id => {
     window.scroll({
       top: window.scrollY + fieldRect.top - 120,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
     setTimeout(() => {
       field.focus();
