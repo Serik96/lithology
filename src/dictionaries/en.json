@@ -25,7 +25,10 @@
   "icons": {
     "notification": "notification",
     "sticker": "sticker",
-    "line": "line"
+    "line": "line",
+    "instagram": "Litholog instagram",
+    "youtube": "Litholog youtube",
+    "facebook": "Litholog facebook"
   },
   "navigation": {
     "create": "Create report",
