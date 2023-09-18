@@ -3,7 +3,7 @@ import { Logo } from '@/components/ui';
 import { routes } from '@/const/routes';
 import { NotificationIcon } from '@/icons';
 import s from './header.module.scss';
-import Navigation from './navigation';
+import { Navigation } from './navigation';
 
 type TProps = {
   notificationCount: number;

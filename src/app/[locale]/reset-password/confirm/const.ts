@@ -8,10 +8,10 @@ export const navConfirm: TBreadcrumbs[] = [
   },
   {
     label: 'navigation.reset-password',
-    href: routes.auth.reset_password,
+    href: routes.auth.resetPassword,
   },
   {
     label: 'navigation.reset-confirm',
-    href: routes.auth.reset_password + routes.auth.confirm,
+    href: routes.auth.resetPasswordConfirm,
   },
 ];

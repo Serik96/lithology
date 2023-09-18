@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { Button, TextField } from '@/components/ui';
-import Breadcrumbs from '@/components/ui/breadcrumbs';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
 import { cn } from '@/helpers';
 import { ArrowSquareRight } from '@/icons';
@@ -39,7 +39,7 @@ const SignIn = () => {
             </Link>
           </div>
           <Link
-            href={routes.auth.reset_password}
+            href={routes.auth.resetPassword}
             className={cn(s.resetPassword, 'link_active')}
           >
             {t('auth.sign-in.forgot-password')}

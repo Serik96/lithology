@@ -5,7 +5,7 @@ import { tempData } from '@/const/tmp-data';
 import { isPrivatePage } from '@/helpers';
 import s from './header.module.scss';
 
-const Header = () => {
+export const Header = () => {
   const pathname = usePathname();
   const isPrivate = isPrivatePage(pathname);
 
@@ -21,5 +21,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

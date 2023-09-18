@@ -9,7 +9,7 @@ type TProps = {
   isUnsigned?: boolean;
 };
 
-const Navigation = ({ isUnsigned = false }: TProps) => {
+export const Navigation = ({ isUnsigned = false }: TProps) => {
   const links = isUnsigned ? unsignedNavLinks : navLinks;
   const t = useTranslations();
 
@@ -34,5 +34,3 @@ const Navigation = ({ isUnsigned = false }: TProps) => {
     </nav>
   );
 };
-
-export default Navigation;

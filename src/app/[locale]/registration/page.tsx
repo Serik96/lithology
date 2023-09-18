@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { Button, TextField } from '@/components/ui';
-import Breadcrumbs from '@/components/ui/breadcrumbs';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
 import { cn } from '@/helpers';
 import { ArrowSquareRight } from '@/icons';
@@ -33,7 +33,7 @@ const Registration = () => {
           <div className={s.signIn}>
             {t('auth.has-account')}
             &nbsp;
-            <Link className={cn(s.reset, 'link_active')} href={routes.auth.sign_in}>
+            <Link className={cn(s.reset, 'link_active')} href={routes.auth.signIn}>
               {t('navigation.sign-in')}
             </Link>
           </div>

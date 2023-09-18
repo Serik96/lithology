@@ -14,10 +14,12 @@ export const routes = {
     support: '/support',
   },
   auth: {
-    sign_in: '/sign-in',
+    signIn: '/sign-in',
     registration: '/registration',
-    reset_password: '/reset-password',
-    change_password: '/change-password',
+    resetPassword: '/reset-password',
+    resetPasswordConfirm: '/reset-password/confirm',
+    changePassword: '/change-password',
+    changePasswordConfirm: '/change-password/confirm',
     confirm: '/confirm',
   },
 };

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Button, TextField } from '@/components/ui';
-import Breadcrumbs from '@/components/ui/breadcrumbs';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowSquareRight } from '@/icons';
 import s from './change-password.module.scss';
 import { navChangePassword } from './const';
@@ -20,12 +20,12 @@ const ChangePassword = () => {
           <div className={s.formBody}>
             <div className={s.formFields}>
               <TextField
-                type={'password'}
+                type="password"
                 label={t('auth.old-password')}
                 placeholder={t('auth.old-password')}
               />
               <TextField
-                type={'password'}
+                type="password"
                 label={t('auth.new-password')}
                 placeholder={t('auth.new-password')}
               />
@@ -50,7 +50,7 @@ const ChangePassword = () => {
             width={971}
             height={123}
             alt={t('icons.line')}
-            src={'/img/stickers/sticker-line.svg'}
+            src="/img/stickers/sticker-line.svg"
           />
         </div>
       </div>

@@ -44,7 +44,7 @@ export const unsignedNavLinks: TNavLink[] = [
   },
   {
     label: 'navigation.sign-in',
-    href: routes.auth.sign_in,
+    href: routes.auth.signIn,
     icon: ProfileIcon,
   },
 ];

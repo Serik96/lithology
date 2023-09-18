@@ -8,6 +8,6 @@ export const navResetPassword: TBreadcrumbs[] = [
   },
   {
     label: 'navigation.reset-password',
-    href: routes.auth.reset_password,
+    href: routes.auth.resetPassword,
   },
 ];

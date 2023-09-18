@@ -6,3 +6,5 @@ export * from './simple-container';
 export * from './string-helper';
 export * from './url-helper';
 export * from './util';
+export * from './phone-helper';
+export * from './route';

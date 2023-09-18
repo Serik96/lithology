@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { navResetPassword } from '@/app/[locale]/reset-password/const';
 import { Button, TextField } from '@/components/ui';
-import Breadcrumbs from '@/components/ui/breadcrumbs';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowSquareRight } from '@/icons';
 import s from './reset-password.module.scss';
 
@@ -41,7 +41,7 @@ const ResetPassword = () => {
             width={971}
             height={123}
             alt={t('icons.line')}
-            src={'/img/stickers/sticker-line.svg'}
+            src="/img/stickers/sticker-line.svg"
           />
         </div>
       </div>

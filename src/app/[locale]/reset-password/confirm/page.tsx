@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui';
-import Breadcrumbs from '@/components/ui/breadcrumbs';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
 import { ArrowSquareRight } from '@/icons';
 import s from './confirm.module.scss';
@@ -18,9 +18,9 @@ const Confirm = () => {
       <div className={s.confirmEmail}>
         <div className={s.wrapper}>
           <h1 className={s.heading}>{t('reset-page-heading')}</h1>
-          <p className={s.description}>{t('email-sended')}</p>
-          <Button href={routes.auth.sign_in} className={s.btn}>
-            {t('backToSignIn')}
+          <p className={s.description}>{t('email-sent')}</p>
+          <Button href={routes.auth.signIn} className={s.btn}>
+            {t('back-to-sign-in')}
             <ArrowSquareRight />
           </Button>
         </div>
@@ -38,7 +38,7 @@ const Confirm = () => {
             width={971}
             height={123}
             alt={t('icons.line')}
-            src={'/img/stickers/sticker-line.svg'}
+            src="/img/stickers/sticker-line.svg"
           />
         </div>
       </div>
