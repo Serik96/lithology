@@ -7,7 +7,7 @@ import { cleanPhone } from '@/helpers/phone-helper';
 import s from './footer.module.scss';
 
 const Footer = () => {
-  const t = useTranslations();
+  const t = useTranslations('footer');
 
   return (
     <footer className={s.footer}>
@@ -24,11 +24,17 @@ const Footer = () => {
         </div>
       </div>
       <div className={s.bot}>
-        <div className={s.privacy}>{t('footer.privacy')}</div>
+        <div className={s.privacy}>{t('privacy')}</div>
         <div className={s.contact}>
           <Link href={`mailto:${config.footer.email}`}>{config.footer.email}</Link>
           <Link href={`tel:${cleanPhone(config.footer.phone, '+')}`}>
             {config.footer.phone}
+          </Link>
+        </div>
+        <div className={s.terms}>
+          <Link href={''}>{t('terms-of-use')}</Link>
+          <Link href={''}>
+            {t('privacy-policy')}
           </Link>
         </div>
         <Socials />
