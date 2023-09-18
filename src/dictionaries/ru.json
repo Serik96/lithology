@@ -12,8 +12,10 @@
       "question-for-reg": "You don't have an account?"
     }
   },
-  "home": {
-    "title": "Main page"
+  "main": {
+    "title": "Best lothology service ever",
+    "description": "Fishtext is used by designers, planners and frontenders when they need to quickly populate mockups or prototypes with content.",
+    "play-img-label": "Play image"
   },
   "footer": {
     "heading": "Let's go over the details",

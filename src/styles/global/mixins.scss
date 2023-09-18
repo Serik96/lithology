@@ -7,7 +7,7 @@
 }
 
 @mixin bodyFontRegularM {
-  font-size: var(--text-m-s);
+  font-size: var(--text-b-m);
   line-height: 24px;
 }
 
@@ -56,6 +56,11 @@
   line-height: 56px;
 }
 
+@mixin fontHeadingXXXL {
+  font-size: var(--text-h-xxxl);
+  font-weight: var(--text-weight-base);
+  line-height: 64px;
+}
 
 /* Global mixins */
 
