@@ -18,12 +18,13 @@ export const Navigation = ({ isUnsigned = false }: TProps) => {
       <ul className={s.list}>
         {links.map(e => {
           const Icon = e.icon;
-          const active = e?.isActive ? s.active : '';
-          const onlyIcon = e.label ? '' : s.onlyIcon;
 
           return (
             <li key={`header__list-item_${e.href}`}>
-              <Link href={e.href} className={cn(s.link, active, onlyIcon)}>
+              <Link
+                href={e.href}
+                className={cn(s.link, e.isActive && s.active, !e.label && s.onlyIcon)}
+              >
                 {Icon && <Icon />}
                 {t(e.label)}
               </Link>

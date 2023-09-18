@@ -1,5 +1,5 @@
-import { Navigation } from '@/components/header/navigation';
 import { Logo } from '@/components/ui/logo';
+import { Navigation } from './navigation';
 
 export const HeaderUnsigned = () => {
   return (
