@@ -4,6 +4,8 @@
     "sign-up": "Sign up",
     "email": "E-mail",
     "password": "Password",
+    "old-password": "Old password",
+    "new-password": "New password",
     "has-account": "Do you have an account?",
     "sign-in": {
       "forgot-password": "Forgot password?",
@@ -21,7 +23,9 @@
     "privacy-policy": "Privacy Policy"
   },
   "icons": {
-    "notification": "notification"
+    "notification": "notification",
+    "sticker": "sticker",
+    "line": "line"
   },
   "navigation": {
     "create": "Create project",
@@ -34,7 +38,15 @@
     "sign-in": "Sign in",
     "register": "Register",
     "back": "Back",
-    "change-password": "Change password"
+    "change-password": "Change password",
+    "reset-password": "Reset password",
+    "email-confirm": "E-mail confirmation",
+    "reset-confirm": "Reset confirmation"
+  },
+  "email-confirm-page": {
+    "heading": "Confirm the change at the e-mail",
+    "description": "We have sent you an e-mail. Follow the link in the e-mail.",
+    "back": "Back to sign in"
   },
   "notifications": {
     "title": "{count, plural, one {# уведомление} few {# уведомления} other {# уведомлений}}"

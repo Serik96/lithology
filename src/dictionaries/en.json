@@ -4,6 +4,8 @@
     "sign-up": "Sign up",
     "email": "E-mail",
     "password": "Password",
+    "old-password": "Old password",
+    "new-password": "New password",
     "has-account": "Do you have an account?",
     "sign-in": {
       "forgot-password": "Forgot password?",
@@ -36,8 +38,15 @@
     "sign-in": "Sign in",
     "register": "Register",
     "back": "Back",
-    "change-password": "Change password"
+    "change-password": "Change password",
+    "reset-password": "Reset password",
+    "email-confirm": "E-mail confirmation",
+    "reset-confirm": "Reset confirmation"
   },
+  "email-sended": "We have sent you an e-mail. Follow the link in the e-mail.",
+  "backToSignIn": "Back to sign in",
+  "email-confirm-page-heading": "Confirm the change at the e-mail",
+  "reset-page-heading": "We reset the password",
   "notifications": {
     "title": "{count, plural, =1 {# notification} other {# notifications}}."
   }

@@ -2,27 +2,36 @@
 
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { navResetPassword } from '@/app/[locale]/reset-password/const';
 import { Button, TextField } from '@/components/ui';
 import Breadcrumbs from '@/components/ui/breadcrumbs';
 import { ArrowSquareRight } from '@/icons';
-import s from './reset-password.module.scss';
+import s from './change-password.module.scss';
+import { navChangePassword } from './const';
 
-const ResetPassword = () => {
+const ChangePassword = () => {
   const t = useTranslations();
 
   return (
     <>
-      <Breadcrumbs navLinks={navResetPassword} />
-      <div className={s.resetPassword}>
+      <Breadcrumbs navLinks={navChangePassword} />
+      <div className={s.changePassword}>
         <form className={s.form}>
-          <h1 className={s.heading}>{t('navigation.reset-password')}</h1>
+          <h1 className={s.heading}>{t('navigation.change-password')}</h1>
           <div className={s.formBody}>
             <div className={s.formFields}>
-              <TextField label={t('auth.email')} placeholder={t('auth.email')} />
+              <TextField
+                type={'password'}
+                label={t('auth.old-password')}
+                placeholder={t('auth.old-password')}
+              />
+              <TextField
+                type={'password'}
+                label={t('auth.new-password')}
+                placeholder={t('auth.new-password')}
+              />
             </div>
             <Button>
-              {t('navigation.reset-password')}
+              {t('navigation.change-password')}
               <ArrowSquareRight />
             </Button>
           </div>
@@ -49,4 +58,4 @@ const ResetPassword = () => {
   );
 };
 
-export default ResetPassword;
+export default ChangePassword;

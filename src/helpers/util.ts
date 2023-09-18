@@ -7,3 +7,8 @@ export const isPrivatePage = (pathname: string) => {
   const privateRoutes = Object.entries(routes.project).map(e => e[1]);
   return privateRoutes.includes(pathname);
 };
+
+export const isPageWithoutFooter = (pathname: string) => {
+  const privateRoutes = [routes.auth.sign_in, routes.auth.register];
+  return privateRoutes.includes(pathname);
+};

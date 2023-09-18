@@ -17,5 +17,7 @@ export const routes = {
     sign_in: '/sign-in',
     register: '/register',
     reset_password: '/reset-password',
+    change_password: '/change-password',
+    confirm: '/confirm',
   },
 };

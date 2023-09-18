@@ -1,28 +1,26 @@
 @import "src/styles/global/mixins";
 
-.resetPassword {
+.confirmEmail {
   display: flex;
   width: fit-content;
   margin: 40px auto 165px auto;
   min-height: calc(100vh - 615px);
 
-  .form {
-    max-width: 389px;
-
+  .wrapper {
     .heading {
       @include fontHeadingXL;
+      max-width: 488px;
     }
 
-    .formBody {
-      max-width: 336px;
-      margin-top: 32px;
+    .description {
+      @include bodyFontRegularM;
+      max-width: 312px;
+      margin-top: 16px;
+    }
 
-      .formFields {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 40px;
-      }
+    .btn {
+      max-width: 280px;
+      margin-top: 40px;
     }
   }
 
@@ -31,13 +29,13 @@
     height: fit-content;
 
     .stickerImg {
-      margin-top: 110px;
+      margin-top: 38px;
     }
 
     .stickerLine {
       position: absolute;
-      bottom: -76px;
-      left: -117%;
+      bottom: -98px;
+      left: -198%;
     }
   }
 }
