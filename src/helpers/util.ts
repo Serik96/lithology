@@ -9,6 +9,6 @@ export const isPrivatePage = (pathname: string) => {
 };
 
 export const isPageWithoutFooter = (pathname: string) => {
-  const privateRoutes = [routes.auth.sign_in, routes.auth.register];
+  const privateRoutes = [routes.auth.sign_in, routes.auth.registration];
   return privateRoutes.includes(pathname);
 };

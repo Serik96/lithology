@@ -8,6 +8,6 @@ export const navSignIn: TBreadcrumbs[] = [
   },
   {
     label: 'navigation.sign-in',
-    href: routes.auth.register,
+    href: routes.auth.registration,
   },
 ];

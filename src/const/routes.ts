@@ -15,7 +15,7 @@ export const routes = {
   },
   auth: {
     sign_in: '/sign-in',
-    register: '/register',
+    registration: '/registration',
     reset_password: '/reset-password',
     change_password: '/change-password',
     confirm: '/confirm',

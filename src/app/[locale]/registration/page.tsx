@@ -6,18 +6,18 @@ import Breadcrumbs from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
 import { cn } from '@/helpers';
 import { ArrowSquareRight } from '@/icons';
-import { navRegister } from './const';
-import s from './register.module.scss';
+import { navRegistration } from './const';
+import s from './registration.module.scss';
 
-const Register = () => {
+const Registration = () => {
   const t = useTranslations();
 
   return (
     <>
-      <Breadcrumbs navLinks={navRegister} />
+      <Breadcrumbs navLinks={navRegistration} />
       <div className={s.signUp}>
         <form className={s.form}>
-          <h1 className={s.heading}>{t('navigation.register')}</h1>
+          <h1 className={s.heading}>{t('navigation.registration')}</h1>
           <div className={s.formFields}>
             <TextField label={t('auth.email')} placeholder={t('auth.email')} />
             <TextField
@@ -43,4 +43,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Registration;

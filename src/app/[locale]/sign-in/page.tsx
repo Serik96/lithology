@@ -31,11 +31,11 @@ const SignIn = () => {
             <ArrowSquareRight />
           </Button>
 
-          <div className={s.register}>
+          <div className={s.registration}>
             {t('auth.sign-in.question-for-reg')}
             &nbsp;
-            <Link className={cn(s.reset, 'link_active')} href={routes.auth.register}>
-              {t('navigation.register')}
+            <Link className={cn(s.reset, 'link_active')} href={routes.auth.registration}>
+              {t('navigation.registration')}
             </Link>
           </div>
           <Link
