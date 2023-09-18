@@ -1,6 +1,6 @@
-import React, { ChangeEvent, useState } from "react";
-import { cn } from "@/helpers";
-import s from "./textfield.module.scss";
+import React, { ChangeEvent, useState } from 'react';
+import { cn } from '@/helpers';
+import s from './textfield.module.scss';
 
 type TProps = {
   label?: string;
@@ -13,9 +13,9 @@ type TProps = {
 
 export const TextField: React.FC<TProps> = ({
   label,
-  value = "",
+  value = '',
   placeholder,
-  type = "text",
+  type = 'text',
   className,
   onChange,
 }) => {

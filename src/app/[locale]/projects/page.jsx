@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 const Projects = () => {
   return <div>projects</div>;

@@ -1,9 +1,9 @@
-import { usePathname } from "next/navigation";
-import { HeaderDefault } from "@/components/header/header-default";
-import { HeaderUnsigned } from "@/components/header/header-unsigned";
-import { tempData } from "@/const/tmp-data";
-import { isPrivatePage } from "@/helpers";
-import s from "./header.module.scss";
+import { usePathname } from 'next/navigation';
+import { HeaderDefault } from '@/components/header/header-default';
+import { HeaderUnsigned } from '@/components/header/header-unsigned';
+import { tempData } from '@/const/tmp-data';
+import { isPrivatePage } from '@/helpers';
+import s from './header.module.scss';
 
 const Header = () => {
   const pathname = usePathname();

@@ -1,3 +1,3 @@
-export * from "./currency";
-export * from "./lang";
-export * from "./routes";
+export * from './currency';
+export * from './lang';
+export * from './routes';

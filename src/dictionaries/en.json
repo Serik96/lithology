@@ -26,9 +26,9 @@
     "notification": "notification",
     "sticker": "sticker",
     "line": "line",
-    "instagram": "instagram",
-    "youtube": "youtube",
-    "facebook": "facebook"
+    "instagram": "Litholog instagram",
+    "youtube": "Litholog youtube",
+    "facebook": "Litholog facebook"
   },
   "navigation": {
     "create": "Create report",
@@ -46,8 +46,8 @@
     "email-confirm": "E-mail confirmation",
     "reset-confirm": "Reset confirmation"
   },
-  "email-sent": "We have sent you an e-mail. Follow the link in the e-mail.",
-  "back-to-sign-in": "Back to sign in",
+  "email-sended": "We have sent you an e-mail. Follow the link in the e-mail.",
+  "backToSignIn": "Back to sign in",
   "email-confirm-page-heading": "Confirm the change at the e-mail",
   "reset-page-heading": "We reset the password",
   "notifications": {

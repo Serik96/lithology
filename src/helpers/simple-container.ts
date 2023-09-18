@@ -1,5 +1,5 @@
-import { findKey } from "@/helpers/object-helper";
-import { TStringObject } from "@/types";
+import { findKey } from '@/helpers/object-helper';
+import { TStringObject } from '@/types';
 
 type TId = Record<string, number>;
 
@@ -40,7 +40,7 @@ export class SimpleContainer {
   }
 
   static getIdByTitle(title: string) {
-    if (typeof this.titles[title] !== "undefined") {
+    if (typeof this.titles[title] !== 'undefined') {
       return title;
     }
 
@@ -56,7 +56,7 @@ export class SimpleContainer {
     };
   }
 
-  static asCollection(): ReturnType<(typeof this)["getRecord"]>[] {
+  static asCollection(): ReturnType<(typeof this)['getRecord']>[] {
     const col = [];
 
     for (const [name, id] of Object.entries(this.ids)) {

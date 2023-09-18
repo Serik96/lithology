@@ -48,7 +48,8 @@
     "no-multi-spaces": "error",
     "no-restricted-imports": "warn",
     "quotes": [
-      "error"
+      "error",
+      "single"
     ],
     "indent": [
       "error",

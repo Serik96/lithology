@@ -1,7 +1,7 @@
-import { useRouter } from "next/navigation";
-import { FC, PropsWithChildren } from "react";
-import { cn } from "@/helpers";
-import s from "./button.module.scss";
+import { useRouter } from 'next/navigation';
+import { FC, PropsWithChildren } from 'react';
+import { cn } from '@/helpers';
+import s from './button.module.scss';
 
 type TProps = PropsWithChildren<{
   href?: string;
@@ -15,7 +15,7 @@ export const Button: FC<TProps> = ({
   onClick,
   href,
   className,
-  variant = "",
+  variant = '',
 }) => {
   const router = useRouter();
 

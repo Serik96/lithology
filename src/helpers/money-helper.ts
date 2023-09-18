@@ -1,4 +1,4 @@
-import { ECurrencySign } from "@/enums";
+import { ECurrencySign } from '@/enums';
 
 export function round(x: number, precision: number = 2) {
   const base = 10 ** precision;

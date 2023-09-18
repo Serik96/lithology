@@ -1,5 +1,5 @@
-import en from "./en.json";
-import ru from "./ru.json";
+import en from './en.json';
+import ru from './ru.json';
 
 /**
  * @link https://next-intl-docs.vercel.app/docs/usage/messages

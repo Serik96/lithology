@@ -43,10 +43,11 @@
     "email-confirm": "E-mail confirmation",
     "reset-confirm": "Reset confirmation"
   },
-  "email-sent": "We have sent you an e-mail. Follow the link in the e-mail.",
-  "back-to-sign-in": "Back to sign in",
-  "email-confirm-page-heading": "Confirm the change at the e-mail",
-  "reset-page-heading": "We reset the password",
+  "email-confirm-page": {
+    "heading": "Confirm the change at the e-mail",
+    "description": "We have sent you an e-mail. Follow the link in the e-mail.",
+    "back": "Back to sign in"
+  },
   "notifications": {
     "title": "{count, plural, one {# уведомление} few {# уведомления} other {# уведомлений}}"
   }

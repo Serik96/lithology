@@ -1,9 +1,9 @@
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
 
 const Main = () => {
-  const t = useTranslations("home");
+  const t = useTranslations('home');
 
-  return <div>{t("title")}</div>;
+  return <div>{t('title')}</div>;
 };
 
 export default Main;

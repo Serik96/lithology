@@ -7,7 +7,7 @@ export const useRouteChange = (onUrlChanged: TRouteChangeCallback) => {
   const router = useRouter();
 
   useEffect(() => {
-    // router.events.on("routeChangeStart", onUrlChangeStart);
+    // router.events.on('routeChangeStart', onUrlChangeStart);
     router.events.on('routeChangeComplete', onUrlChanged);
 
     window.onpopstate = () => {
@@ -19,10 +19,10 @@ export const useRouteChange = (onUrlChanged: TRouteChangeCallback) => {
 
     /*
     router.beforePopState(params => {
-      console.log("beforePopState", params); //{ as }
+      console.log('beforePopState', params); //{ as }
 
       if (params.as !== router.asPath) {
-        console.log("params.as !== router.asPath", router.asPath);
+        console.log('params.as !== router.asPath', router.asPath);
         // Will run when leaving the current page; on back/forward actions
         // Add your logic here, like toggling the modal state
       }
@@ -31,8 +31,8 @@ export const useRouteChange = (onUrlChanged: TRouteChangeCallback) => {
     */
 
     return () => {
-      // console.log("turning off listener");
-      // router.events.off("routeChangeStart", onUrlChangeStart);
+      // console.log('turning off listener');
+      // router.events.off('routeChangeStart', onUrlChangeStart);
       router.events.off('routeChangeComplete', onUrlChanged);
       router.beforePopState(() => true);
     };
