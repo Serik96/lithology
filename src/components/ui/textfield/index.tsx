@@ -24,17 +24,28 @@ export const TextField: React.FC<TProps> = ({
     setValueState(event.target.value);
     onChange?.(event.target.value);
   };
-
-  return (
-    <div className={s.textField}>
-      {label && <label className={s.label}>{label}</label>}
+  const inputElement =
+    type === 'text' ? (
       <input
-        type={type}
+        type="text"
         value={valueState}
         onChange={handleChange}
         placeholder={placeholder}
         className={cn(s.input, className)}
       />
+    ) : (
+      <textarea
+        value={valueState}
+        onChange={handleChange}
+        placeholder={placeholder}
+        className={cn(s.input, className)}
+      />
+    );
+
+  return (
+    <div className={s.textField}>
+      {label && <label className={s.label}>{label}</label>}
+      {inputElement}
     </div>
   );
 };

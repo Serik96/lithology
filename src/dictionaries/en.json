@@ -54,5 +54,10 @@
   "reset-page-heading": "We reset the password",
   "notifications": {
     "title": "{count, plural, =1 {# notification} other {# notifications}}."
+  },
+  "support": {
+    "name": "Name",
+    "description": "Description",
+    "send": "Send"
   }
 }
