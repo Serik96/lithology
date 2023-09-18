@@ -16,7 +16,9 @@
   "footer": {
     "heading": "Let's go over the details",
     "privacy": "© Drone. All Rights Reserved 2023.",
-    "check-socials": "Check our social media"
+    "check-socials": "Check our social media",
+    "terms-of-use": "Terms of Use",
+    "privacy-policy": "Privacy Policy"
   },
   "icons": {
     "notification": "notification"

@@ -4,19 +4,18 @@ export const config = {
     phone: '+7 (321) 542-12-52',
     mediaLinks: [
       {
-        label: 'Linkedin',
-        href: '#',
-      },
-      {
-        label: 'YouTube',
-        href: '#',
-      },
-      {
+        img: '/icons/socials/instagram.svg',
         label: 'Instagram',
         href: '#',
       },
       {
-        label: 'Twitter',
+        img: '/icons/socials/facebook.svg',
+        label: 'FaceBook',
+        href: '#',
+      },
+      {
+        img: '/icons/socials/youtube.svg',
+        label: 'YouTube',
         href: '#',
       },
     ],

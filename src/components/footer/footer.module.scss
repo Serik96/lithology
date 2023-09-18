@@ -1,1 +1,39 @@
 @import "src/styles/global/mixins";
+
+.footer {
+  border-top: 1px solid var(--gray-100);
+  display: flex;
+  flex-direction: column;
+
+  .top {
+    @include fontHeadingL;
+
+    .heading {
+      margin-top: 19px;
+
+      .headingIcon {
+        margin-top: 19px;
+      }
+    }
+  }
+
+  .bot {
+    margin-top: 70px;
+    margin-bottom: 96px;
+    display: flex;
+    gap: 64px;
+
+    .privacy {
+
+    }
+
+    .contact {
+
+    }
+
+    .terms {
+
+    }
+  }
+
+}
