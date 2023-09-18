@@ -36,7 +36,6 @@
     "prettier": "3.0.3",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
-    "stylelint": "^15.10.3",
     "tslint": "^5.20.1",
     "tslint-config-airbnb": "^5.11.2",
     "tslint-config-prettier": "^1.18.0",
