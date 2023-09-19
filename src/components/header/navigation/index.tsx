@@ -2,13 +2,14 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import { navLinks, unsignedNavLinks } from '@/components/header/navigation/const';
+import { cn } from '@/helpers';
 import s from './navigation.module.scss';
 
 type TProps = {
   isUnsigned?: boolean;
 };
 
-const Navigation = ({ isUnsigned = false }: TProps) => {
+export const Navigation = ({ isUnsigned = false }: TProps) => {
   const links = isUnsigned ? unsignedNavLinks : navLinks;
   const t = useTranslations();
 
@@ -20,7 +21,10 @@ const Navigation = ({ isUnsigned = false }: TProps) => {
 
           return (
             <li key={`header__list-item_${e.href}`}>
-              <Link href={e.href} className={s.link}>
+              <Link
+                href={e.href}
+                className={cn(s.link, e.isActive && s.active, !e.label && s.onlyIcon)}
+              >
                 {Icon && <Icon />}
                 {t(e.label)}
               </Link>
@@ -31,5 +35,3 @@ const Navigation = ({ isUnsigned = false }: TProps) => {
     </nav>
   );
 };
-
-export default Navigation;

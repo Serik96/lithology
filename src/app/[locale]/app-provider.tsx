@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react';
-import Header from '@/components/header';
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
 
 type TProps = PropsWithChildren;
 
@@ -8,6 +9,7 @@ const AppProvider = ({ children }: TProps) => {
     <div className="container">
       <Header />
       {children}
+      <Footer />
     </div>
   );
 };

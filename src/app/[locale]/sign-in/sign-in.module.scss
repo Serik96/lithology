@@ -1,17 +1,11 @@
 @import "src/styles/global/mixins";
 
-body {
-  background-image: url("public/img/auth-bg.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .signIn {
-  min-height: 100vh;
+  min-height: calc(100vh - 116px);
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 
   .form {
     width: 100%;
@@ -19,6 +13,7 @@ body {
     background-color: var(--amber-200);
     border-radius: 4px;
     padding: 40px 32px;
+    margin-top: 24px;
 
     .heading {
       @include fontHeadingXL;
@@ -32,11 +27,11 @@ body {
       margin-bottom: 32px;
     }
 
-    .register {
+    .registration {
       margin: 40px 0 24px 0;
     }
 
-    .register,
+    .registration,
     .resetPassword {
       @include bodyFontMediumS;
       display: block;

@@ -1,0 +1,39 @@
+@import "src/styles/global/mixins";
+
+
+.signUp {
+  min-height: calc(100vh - 116px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .form {
+    width: 100%;
+    max-width: 389px;
+    background-color: var(--amber-200);
+    border-radius: 4px;
+    padding: 40px 32px;
+    margin-top: 24px;
+
+    .heading {
+      @include fontHeadingXL;
+      margin-bottom: 24px;
+    }
+
+    .formFields {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .signIn {
+      @include bodyFontMediumS;
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+}

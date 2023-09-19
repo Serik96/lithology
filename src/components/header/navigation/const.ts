@@ -7,19 +7,20 @@ export const navLinks: TNavLink[] = [
     label: 'navigation.create',
     href: routes.project.create,
     icon: AddIcon,
+    isActive: true,
   },
   {
-    label: 'navigation.home',
+    label: null,
     href: routes.project.cabinet,
     icon: HomeIcon,
   },
   {
-    label: 'navigation.folders',
+    label: null,
     href: routes.project.folders,
     icon: FolderIcon,
   },
   {
-    label: 'navigation.settings',
+    label: null,
     href: routes.project.settings,
     icon: SettingsIcon,
   },
@@ -43,7 +44,7 @@ export const unsignedNavLinks: TNavLink[] = [
   },
   {
     label: 'navigation.sign-in',
-    href: routes.auth.sign_in,
+    href: routes.auth.signIn,
     icon: ProfileIcon,
   },
 ];

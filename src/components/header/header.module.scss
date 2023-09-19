@@ -1,8 +1,35 @@
+@import "src/styles/global/mixins";
+
 .header {
   padding: 16px 0;
 
   .wrapper {
     display: flex;
     align-items: center;
+
+    .notification {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 12px;
+      border-radius: 100%;
+      border: 1px solid var(--gray-100);
+      margin-left: 24px;
+
+      &:active {
+        border: 1px solid var(--blue-400);
+      }
+
+      .notificationCount {
+        @include bodyFontRegularS;
+        position: absolute;
+        top: -7px;
+        right: -12px;
+        padding: 2px 8px;
+        border-radius: 12px;
+        background-color: var(--red-400);
+        color: var(--white-400);
+      }
+    }
   }
 }

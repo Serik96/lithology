@@ -1,0 +1,40 @@
+@import "src/styles/global/mixins";
+
+.confirmEmail {
+  display: flex;
+  width: fit-content;
+  margin: 40px auto 165px auto;
+  min-height: calc(100vh - 615px);
+
+  .wrapper {
+    .heading {
+      @include fontHeadingXL;
+      color: var(--green-400);
+    }
+
+    .description {
+      @include bodyFontRegularM;
+      margin-top: 16px;
+    }
+
+    .btn {
+      max-width: 280px;
+      margin-top: 40px;
+    }
+  }
+
+  .sticker {
+    position: relative;
+    height: fit-content;
+
+    .stickerImg {
+      margin-top: 38px;
+    }
+
+    .stickerLine {
+      position: absolute;
+      bottom: -98px;
+      left: -198%;
+    }
+  }
+}

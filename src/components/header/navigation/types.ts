@@ -1,7 +1,8 @@
 import { FC } from 'react';
 
 export type TNavLink = {
-  label: string;
+  label: Nullable<string>;
   href: string;
   icon: Nullable<FC>;
+  isActive?: boolean;
 };

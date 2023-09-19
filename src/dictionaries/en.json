@@ -1,8 +1,12 @@
 {
   "litholog": "Litholog",
   "auth": {
+    "sign-up": "Sign up",
     "email": "E-mail",
     "password": "Password",
+    "old-password": "Old password",
+    "new-password": "New password",
+    "has-account": "Do you have an account?",
     "sign-in": {
       "forgot-password": "Forgot password?",
       "question-for-reg": "You don't have an account?"
@@ -14,22 +18,38 @@
   "footer": {
     "heading": "Let's go over the details",
     "privacy": "© Drone. All Rights Reserved 2023.",
-    "check-socials": "Check our social media"
+    "check-socials": "Check our social media",
+    "terms-of-use": "Terms of Use",
+    "privacy-policy": "Privacy Policy"
   },
   "icons": {
-    "notification": "notifcations icon"
+    "notification": "notification",
+    "sticker": "sticker",
+    "line": "line",
+    "instagram": "instagram",
+    "youtube": "youtube",
+    "facebook": "facebook"
   },
   "navigation": {
-    "create": "Create project",
+    "create": "Create report",
     "home": "Home",
     "folders": "Folders",
     "settings": "Settings",
     "main": "Main",
     "news": "News",
     "support": "Support",
-    "sign-in": "Sign In",
-    "register": "Register"
+    "sign-in": "Sign in",
+    "registration": "Registration",
+    "back": "Back",
+    "change-password": "Change password",
+    "reset-password": "Reset password",
+    "email-confirm": "E-mail confirmation",
+    "reset-confirm": "Reset confirmation"
   },
+  "email-sent": "We have sent you an e-mail. Follow the link in the e-mail.",
+  "back-to-sign-in": "Back to sign in",
+  "email-confirm-page-heading": "Confirm the change at the e-mail",
+  "reset-page-heading": "We reset the password",
   "notifications": {
     "title": "{count, plural, =1 {# notification} other {# notifications}}."
   }

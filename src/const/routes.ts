@@ -1,6 +1,7 @@
 export const routes = {
   project: {
-    create: '/create-project',
+    create: '/create-report',
+    projects: '/projects',
     notifications: '/notifications',
     folders: '/folders',
     settings: '/settings',
@@ -13,8 +14,12 @@ export const routes = {
     support: '/support',
   },
   auth: {
-    sign_in: '/sign-in',
-    register: '/register',
-    reset_password: '/reset-password',
+    signIn: '/sign-in',
+    registration: '/registration',
+    resetPassword: '/reset-password',
+    resetPasswordConfirm: '/reset-password/confirm',
+    changePassword: '/change-password',
+    changePasswordConfirm: '/change-password/confirm',
+    confirm: '/confirm',
   },
 };
