@@ -9,6 +9,7 @@ type TProps = {
   className?: string;
   placeholder?: string;
   onChange?: (value: string) => void;
+  multiline?: boolean;
 };
 
 export const TextField: React.FC<TProps> = ({
@@ -18,29 +19,31 @@ export const TextField: React.FC<TProps> = ({
   type = 'text',
   className,
   onChange,
+  multiline,
 }) => {
   const [valueState, setValueState] = useState(value);
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setValueState(event.target.value);
     onChange?.(event.target.value);
   };
-  const inputElement =
-    type === 'text' ? (
-      <input
-        type="text"
-        value={valueState}
-        onChange={handleChange}
-        placeholder={placeholder}
-        className={cn(s.input, className)}
-      />
-    ) : (
-      <textarea
-        value={valueState}
-        onChange={handleChange}
-        placeholder={placeholder}
-        className={cn(s.input, className)}
-      />
-    );
+
+  const inputElement = multiline ? (
+    <textarea
+      value={valueState}
+      onChange={handleChange}
+      placeholder={placeholder}
+      className={cn(s.input, className)}
+    />
+  ) : (
+    <input
+      type={type}
+      value={valueState}
+      onChange={handleChange}
+      placeholder={placeholder}
+      className={cn(s.input, className)}
+    />
+  );
 
   return (
     <div className={s.textField}>

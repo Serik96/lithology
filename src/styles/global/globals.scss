@@ -97,7 +97,6 @@ textarea {
   background-color: var(--amber-400);
   padding: 9px 16px;
   transition: all 0.2s;
-  resize: none;
 
   &:hover,
   &:focus,
@@ -113,6 +112,10 @@ textarea {
   &:focus {
     border: 1px solid var(--gray-400);
   }
+}
+
+textarea {
+  resize: vertical;
 }
 
 a {

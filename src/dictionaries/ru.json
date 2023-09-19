@@ -46,7 +46,8 @@
     "change-password": "Change password",
     "reset-password": "Reset password",
     "email-confirm": "E-mail confirmation",
-    "reset-confirm": "Reset confirmation"
+    "reset-confirm": "Reset confirmation",
+    "notifications": "Notification"
   },
   "email-sent": "We have sent you an e-mail. Follow the link in the e-mail.",
   "back-to-sign-in": "Back to sign in",

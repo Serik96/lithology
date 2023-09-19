@@ -1,8 +1,8 @@
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import s from './main.module.scss';
-import Image from 'next/image';
 
-export const Main = () => {
+const Main = () => {
   const t = useTranslations();
 
   return (
@@ -21,3 +21,5 @@ export const Main = () => {
     </div>
   );
 };
+
+export default Main;
