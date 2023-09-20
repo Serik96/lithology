@@ -6,8 +6,10 @@ export const findKey = (
 ) => Object.keys(obj).find(key => predicate(obj[key], key, obj));
 
 export const strValuesToNum = (obj: TStringObject): TStringNumberObject =>
-  Object.entries(obj).reduce((o: TObject, [key, value]) => {
+  Object.entries(obj).reduce((o: TStringNumberObject, [key, value]) => {
     const n = Number(value);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     o[key] = isNaN(n) ? value : n;
 
     return o;
@@ -20,7 +22,7 @@ export const removeNullProperties = (obj: TObject): TObject => {
     if (value === null) {
       delete obj[key];
     } else if (typeof value !== 'string' && hasProperties) {
-      removeNullProperties(value);
+      removeNullProperties(value as TObject);
     }
   });
 

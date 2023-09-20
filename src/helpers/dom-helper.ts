@@ -32,7 +32,7 @@ export const scrollToEl = (selector: string) => {
   });
 };
 
-export const scrollToElById = id => {
+export const scrollToElById = (id: string) => {
   const field = document.getElementById(id);
 
   if (field) {
