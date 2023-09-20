@@ -5,6 +5,7 @@ import FolderIcon from '../../public/icons/menu/folder.svg';
 import HomeIcon from '../../public/icons/menu/home.svg';
 import SettingsIcon from '../../public/icons/menu/settings.svg';
 import NotificationIcon from '../../public/icons/notifications/notification.svg';
+import PlayIcon from '../../public/icons/play.svg';
 import ProfileIcon from '../../public/icons/profile.svg';
 
 export {
@@ -16,4 +17,5 @@ export {
   ProfileIcon,
   ArrowSquareRight,
   ArrowLeft,
+  PlayIcon,
 };
