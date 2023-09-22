@@ -1,10 +1,13 @@
-'use client';
-
 import { PropsWithChildren } from 'react';
 
-export default function RootLayout({ children }: PropsWithChildren) {
+type TProps = PropsWithChildren<{
+  params: {
+    locale: string;
+  };
+}>;
+export default function RootLayout({ children, params: { locale } }: TProps) {
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body>{children}</body>
     </html>
   );

@@ -1,5 +1,6 @@
 'use client';
-import React, { ChangeEvent, useState } from 'react';
+
+import { ChangeEvent, memo, useState } from 'react';
 import { cn } from '@/helpers';
 import s from './textfield.module.scss';
 
@@ -12,44 +13,38 @@ type TProps = {
   onChange?: (value: string) => void;
   multiline?: boolean;
 };
+ 
+export const TextField: React.FC<TProps> = memo(
+  ({ label, value = '', placeholder, type = 'text', className, onChange, multiline }) => {
+    const [valueState, setValueState] = useState(value);
 
-export const TextField: React.FC<TProps> = ({
-  label,
-  value = '',
-  placeholder,
-  type = 'text',
-  className,
-  onChange,
-  multiline,
-}) => {
-  const [valueState, setValueState] = useState(value);
+    const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setValueState(event.target.value);
+      onChange?.(event.target.value);
+    };
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setValueState(event.target.value);
-    onChange?.(event.target.value);
-  };
+    const inputElement = multiline ? (
+      <textarea
+        value={valueState}
+        onChange={handleChange}
+        placeholder={placeholder}
+        className={cn(s.input, className)}
+      />
+    ) : (
+      <input
+        type={type}
+        value={valueState}
+        onChange={handleChange}
+        placeholder={placeholder}
+        className={cn(s.input, className)}
+      />
+    );
 
-  const inputElement = multiline ? (
-    <textarea
-      value={valueState}
-      onChange={handleChange}
-      placeholder={placeholder}
-      className={cn(s.input, className)}
-    />
-  ) : (
-    <input
-      type={type}
-      value={valueState}
-      onChange={handleChange}
-      placeholder={placeholder}
-      className={cn(s.input, className)}
-    />
-  );
-
-  return (
-    <div className={s.textField}>
-      {label && <label className={s.label}>{label}</label>}
-      {inputElement}
-    </div>
-  );
-};
+    return (
+      <div className={s.textField}>
+        {label && <label className={s.label}>{label}</label>}
+        {inputElement}
+      </div>
+    );
+  },
+);
