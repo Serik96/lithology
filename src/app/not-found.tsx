@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { Button } from '@/components/ui';
+import { routes } from '@/const';
 import { ArrowCircleLeft } from '@/icons';
 import s from './not-found.module.scss';
 
@@ -24,7 +25,7 @@ const NotFound = () => {
         <div className={s.titleWrapper}>
           <h1 className={s.heading}>404</h1>
           <p className={s.description}>Page not found</p>
-          <Button variant="secondary">
+          <Button variant="secondary" href={routes.public.main}>
             <ArrowCircleLeft />
             Return to home page
           </Button>
