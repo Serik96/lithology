@@ -62,7 +62,12 @@
   "notifications": {
     "title": "{count, plural, =1 {# notification} other {# notifications}}."
   },
+  "not-found": {
+    "heading": "Page not found",
+    "back": "Return to home page"
+  },
   "support": {
+    "404": "404",
     "name": "Name",
     "description": "Description",
     "send": "Send"
