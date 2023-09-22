@@ -1,3 +1,4 @@
+'use client';
 import React, { ChangeEvent, useState } from 'react';
 import { cn } from '@/helpers';
 import s from './textfield.module.scss';

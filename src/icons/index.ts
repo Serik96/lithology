@@ -1,3 +1,4 @@
+import ArrowCircleLeft from '../../public/icons/arrow-circle-left.svg';
 import ArrowLeft from '../../public/icons/arrow-left.svg';
 import ArrowSquareRight from '../../public/icons/arrow-square-right.svg';
 import AddIcon from '../../public/icons/menu/add.svg';
@@ -18,4 +19,5 @@ export {
   ArrowSquareRight,
   ArrowLeft,
   PlayIcon,
+  ArrowCircleLeft,
 };

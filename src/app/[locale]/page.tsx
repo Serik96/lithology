@@ -1,3 +1,4 @@
+'use client';
 import { useTranslations } from 'next-intl';
 import { PlayIcon } from '@/icons';
 import s from './main.module.scss';

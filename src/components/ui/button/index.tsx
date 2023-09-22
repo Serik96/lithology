@@ -1,3 +1,4 @@
+'use client';
 import { useRouter } from 'next/navigation';
 import { FC, PropsWithChildren } from 'react';
 import { cn } from '@/helpers';
