@@ -5,7 +5,7 @@ import { Button, TextField } from '@/components/ui';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
 import { cn } from '@/helpers';
-import { ArrowSquareRight } from '@/icons';
+import { ArrowSquareRightIcon } from '@/icons';
 import { navRegistration } from './const';
 import s from './registration.module.scss';
 
@@ -27,7 +27,7 @@ const Registration = () => {
             />
           </div>
           <Button className={s.btn}>
-            {t('auth.sign-up')} <ArrowSquareRight />
+            {t('auth.sign-up')} <ArrowSquareRightIcon />
           </Button>
 
           <div className={s.signIn}>

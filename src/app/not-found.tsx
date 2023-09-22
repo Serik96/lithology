@@ -1,11 +1,13 @@
-'use client';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui';
 import { routes } from '@/const';
-import { ArrowCircleLeft } from '@/icons';
+import { ArrowCircleLeftIcon } from '@/icons';
 import s from './not-found.module.scss';
 
 const NotFound = () => {
+  const t = useTranslations();
+
   return (
     <div className={s.notFound}>
       <Image
@@ -13,21 +15,21 @@ const NotFound = () => {
         height={1080}
         className={s.bg}
         src="/img/not-found-bg.svg"
-        alt="background"
+        alt={t('not-found.heading')}
       />
       <div className={s.wrapper}>
         <Image
           src="/img/stickers/not-found.png"
           width={329}
           height={254}
-          alt="not found"
+          alt={t('not-found.heading')}
         />
         <div className={s.titleWrapper}>
-          <h1 className={s.heading}>404</h1>
-          <p className={s.description}>Page not found</p>
+          <h1 className={s.heading}>{t('not-found.404')}</h1>
+          <p className={s.description}>{t('not-found.heading')}</p>
           <Button variant="secondary" href={routes.public.main}>
-            <ArrowCircleLeft />
-            Return to home page
+            <ArrowCircleLeftIcon />
+            {t('not-found.back')}
           </Button>
         </div>
       </div>

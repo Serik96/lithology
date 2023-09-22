@@ -15,7 +15,7 @@ type TProps = PropsWithChildren<{
     locale: string;
   };
 }>;
- 
+
 export default function RootLayout({ children, params: { locale } }: TProps) {
   const lang = useLocale();
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

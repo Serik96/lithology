@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Button, TextField } from '@/components/ui';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
-import { ArrowSquareRight } from '@/icons';
+import { ArrowSquareRightIcon } from '@/icons';
 import { navResetPassword } from './const';
 import s from './reset-password.module.scss';
 
@@ -23,7 +23,7 @@ const ResetPassword = () => {
             </div>
             <Button>
               {t('navigation.reset-password')}
-              <ArrowSquareRight />
+              <ArrowSquareRightIcon />
             </Button>
           </div>
         </form>

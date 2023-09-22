@@ -1,7 +1,7 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import { Button, TextField } from '@/components/ui';
-import { ArrowSquareRight } from '@/icons';
+import { ArrowSquareRightIcon } from '@/icons';
 import s from './support.module.scss';
 
 const Support = () => {
@@ -24,7 +24,7 @@ const Support = () => {
             />
             <Button className={s.formBtn}>
               {t('support.send')}
-              <ArrowSquareRight />
+              <ArrowSquareRightIcon />
             </Button>
           </form>
         </div>

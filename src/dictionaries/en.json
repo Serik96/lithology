@@ -13,7 +13,7 @@
     }
   },
   "main": {
-    "title": "Best lothology service ever",
+    "title": "Best lithology service ever",
     "description": "Fishtext is used by designers, planners and frontenders when they need to quickly populate mockups or prototypes with content.",
     "play-img-label": "Play image"
   },
@@ -47,7 +47,13 @@
     "reset-password": "Reset password",
     "email-confirm": "E-mail confirmation",
     "reset-confirm": "Reset confirmation",
-    "notifications": "Notification"
+    "notifications": "Notification",
+    "all-projects": {
+      "main": "All projects",
+      "archived": "Archived",
+      "favourites": "Favourites",
+      "create": "Create project"
+    }
   },
   "email-sent": "We have sent you an e-mail. Follow the link in the e-mail.",
   "back-to-sign-in": "Back to sign in",
@@ -56,7 +62,12 @@
   "notifications": {
     "title": "{count, plural, =1 {# notification} other {# notifications}}."
   },
+  "not-found": {
+    "heading": "Page not found",
+    "back": "Return to home page"
+  },
   "support": {
+    "404": "404",
     "name": "Name",
     "description": "Description",
     "send": "Send"
