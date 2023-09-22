@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent, memo, useState } from 'react';
+import { ChangeEvent, FC, memo, useState } from 'react';
 import { cn } from '@/helpers';
 import s from './textfield.module.scss';
 
@@ -13,8 +13,10 @@ type TProps = {
   onChange?: (value: string) => void;
   multiline?: boolean;
 };
- 
-export const TextField: React.FC<TProps> = memo(
+
+// eslint-disable-next-line react/display-name
+export const TextField: FC<TProps> = memo(
+  // eslint-disable-next-line react/prop-types
   ({ label, value = '', placeholder, type = 'text', className, onChange, multiline }) => {
     const [valueState, setValueState] = useState(value);
 
