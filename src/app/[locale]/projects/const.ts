@@ -13,7 +13,7 @@ export const projectsNav: TBreadcrumbs[] = [
   },
 ];
 
-export const sidebarNav: TSidebarLink[] = [
+export const projectsSidebarNav: TSidebarLink[] = [
   {
     label: 'navigation.all-projects.main',
     icon: BookIcon,

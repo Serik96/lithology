@@ -10,20 +10,31 @@ type TProps = {
   type?: string;
   className?: string;
   placeholder?: string;
+  icon?: FC;
   onChange?: (value: string) => void;
   multiline?: boolean;
 };
 
 // eslint-disable-next-line react/display-name
 export const TextField: FC<TProps> = memo(
-  // eslint-disable-next-line react/prop-types
-  ({ label, value = '', placeholder, type = 'text', className, onChange, multiline }) => {
+  ({
+    label,
+    value = '',
+    placeholder,
+    type = 'text',
+    className,
+    onChange,
+    multiline,
+    icon,
+  }) => {
     const [valueState, setValueState] = useState(value);
 
     const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setValueState(event.target.value);
       onChange?.(event.target.value);
     };
+
+    const Icon: Nullable<FC> = icon ?? null;
 
     const inputElement = multiline ? (
       <textarea
@@ -38,14 +49,17 @@ export const TextField: FC<TProps> = memo(
         value={valueState}
         onChange={handleChange}
         placeholder={placeholder}
-        className={cn(s.input, className)}
+        className={cn(s.input, className, Icon && s.withIcon)}
       />
     );
 
     return (
       <div className={s.textField}>
         {label && <label className={s.label}>{label}</label>}
-        {inputElement}
+        <div className={s.wrapper}>
+          {Icon && <Icon />}
+          {inputElement}
+        </div>
       </div>
     );
   },

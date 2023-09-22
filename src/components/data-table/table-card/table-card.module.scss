@@ -1,0 +1,37 @@
+.card {
+  padding: 20px 16px;
+  background-color: var(--amber-200);
+  border-radius: 4px;
+
+  &.cardDefault {
+    display: flex;
+    align-items: center;
+
+    .cardCol {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      &:nth-child(1) {
+        gap: 8px;
+        max-width: 212px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        max-width: 93px;
+      }
+
+      &:nth-child(5) {
+        justify-content: space-between;
+        max-width: 165px;
+      }
+    }
+  }
+
+  .moreBtn {
+    cursor: pointer;
+    color: var(--gray-200);
+  }
+}

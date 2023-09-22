@@ -1,17 +1,22 @@
 'use client';
 
-import { Sidebar } from '@/components/sidebar';
+import { useTranslations } from 'next-intl';
+import { ProjectsContainer } from '@/components/projects-container';
 import { Breadcrumbs } from '@/components/ui';
-import { projectsNav, sidebarNav } from './const';
-import s from './projects.module.scss';
+import { tempData } from '@/const/tmp-data';
+import { projectsNav, projectsSidebarNav } from './const';
 
 const Projects = () => {
+  const t = useTranslations();
+
   return (
     <>
       <Breadcrumbs navLinks={projectsNav} />
-      <div className={s.projects}>
-        <Sidebar links={sidebarNav} />
-      </div>
+      <ProjectsContainer
+        sidebarLinks={projectsSidebarNav}
+        heading={t('navigation.all-projects.main')}
+        tableData={tempData.projects}
+      />
     </>
   );
 };

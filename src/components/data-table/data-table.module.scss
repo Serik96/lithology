@@ -1,0 +1,70 @@
+.dataTable {
+  width: 100%;
+  max-width: 672px;
+
+  .searchWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+
+    .form {
+      width: 100%;
+      max-width: 552px;
+    }
+
+    .viewBtns {
+      display: flex;
+      gap: 12px;
+
+      .viewBtn {
+        width: 48px;
+        height: 48px;
+        border: 1px solid var(--gray-100);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &.viewBtnActive {
+          border-color: var(--black-400);
+        }
+      }
+    }
+  }
+
+  .table {
+    margin-top: 32px;
+
+    .tableHeader {
+      display: flex;
+      margin-bottom: 16px;
+
+      .tableHeaderItem {
+        width: 100%;
+
+        &:nth-child(1) {
+          max-width: 212px;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          max-width: 93px;
+        }
+
+        &:nth-child(5) {
+          max-width: 165px;
+        }
+      }
+    }
+
+    .tableBody {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+}
