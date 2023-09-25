@@ -8,6 +8,6 @@ export const navSubscription: TBreadcrumbs[] = [
   },
   {
     label: 'subscription.title',
-    href: routes.subscription.main,
+    href: routes.project.subscription.main,
   },
 ];

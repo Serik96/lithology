@@ -46,6 +46,7 @@
   }
 
   &.secondary {
+    @include btnFocus;
     width: fit-content;
     border: 1px solid var(--gray-100);
     background-color: var(--white-400);
@@ -53,11 +54,13 @@
     color: var(--orange-400);
     padding: 8px 16px;
     gap: 12px;
+  }
 
-    &:active,
-    &:focus {
-      border: 1px solid var(--blue-400);
-    }
+  &.bordered {
+    @include btnFocus;
+    color: var(--black-400);
+    border: 1px solid var(--black-400);
+    background-color: transparent;
   }
 
   svg {

@@ -10,12 +10,11 @@ export const routes = {
     notifications: '/notifications',
     folders: '/folders',
     settings: '/settings',
-    price: '/price',
     cabinet: '/cabinet',
-  },
-  subscription: {
-    main: '/subscription',
-    purchase: '/subscription/purchase',
+    subscription: {
+      main: '/subscription',
+      purchase: '/subscription/purchase',
+    },
   },
   public: {
     main: '/',

@@ -1,3 +1,5 @@
+@import 'src/styles/global/mixins';
+
 .card {
   position: relative;
   padding: 20px 16px;
@@ -7,6 +9,7 @@
   &.cardDefault {
     display: flex;
     align-items: center;
+    width: 100%;
 
     .cardCol {
       display: flex;
@@ -32,7 +35,20 @@
   }
 
   &.cardRows {
-    
+    width: calc(100% / 2 - 2px);
+
+    .cardTitle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .cardHeading {
+        @include bodyFontMediumL;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+    }
   }
 
   .link {

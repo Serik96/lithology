@@ -69,7 +69,7 @@
   "reset-page-heading": "We reset the password",
   "back-to-settings": "Back to settings",
   "you-bought-the": "You bought the ",
-  "subscription-expiration_date": "Subscription expiration date: ",
+  "subscription-expiration-date": "Subscription expiration date: ",
   "tariff": "Tariff",
   "notifications": {
     "title": "{count, plural, =1 {# notification} other {# notifications}}."
@@ -80,9 +80,11 @@
     "back": "Return to home page"
   },
   "table": {
-    "name": "Name",
-    "point": "Point",
-    "created_at": "Date created",
+    "fields": {
+      "name": "Name",
+      "point": "Point",
+      "created-at": "Date created"
+    },
     "add-to-favourites": "Add to favourites",
     "add-to-archive": "Add to archive",
     "delete": "Delete"

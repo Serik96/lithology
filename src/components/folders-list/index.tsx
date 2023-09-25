@@ -1,17 +1,17 @@
-import s from '@/components/data-table/data-table.module.scss';
 import { TFolder } from '@/types/project';
+import s from './folders-list.module.scss';
 import { TableCard } from './table-card';
 
 type TProps = {
   data: TFolder[];
-  rowsType: number;
+  type: number;
 };
 
-export const FoldersList = ({ data, rowsType }: TProps) => {
+export const FoldersList = ({ data, type }: TProps) => {
   return (
-    <div className={s.tableBody}>
+    <div className={s.list}>
       {data.map(e => (
-        <TableCard key={e.id} data={e} cardType={rowsType} />
+        <TableCard key={e.id} data={e} type={type} />
       ))}
     </div>
   );

@@ -23,7 +23,7 @@ const Projects = () => {
       >
         <DataTable hasRowsTypes={true} rowsType={rowsType} setRowsType={setRowsType}>
           {rowsType === 0 && <TableHeader />}
-          <FoldersList data={tempData.folders} rowsType={rowsType} />
+          <FoldersList data={tempData.folders} type={rowsType} />
         </DataTable>
       </ProjectsContainer>
     </>

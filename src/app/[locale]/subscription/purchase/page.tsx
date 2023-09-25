@@ -24,7 +24,7 @@ const Purchase = () => {
           </h1>
           <p className={s.description}>
             {/* @todo: Date() must be replaced */}
-            {`${t('subscription-expiration_date')} ${formatDate(Date())}`}
+            {`${t('subscription-expiration-date')} ${formatDate(Date())}`}
           </p>
           <Button href={routes.auth.signIn} className={s.btn}>
             {t('back-to-settings')}

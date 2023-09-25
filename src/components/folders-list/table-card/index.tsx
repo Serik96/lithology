@@ -1,16 +1,18 @@
+import { TColsCard, TRowsCard } from '@/types';
 import { TFolder } from '@/types/project';
 import { ColsCard } from './cols-card';
 import { RowsCard } from './rows-card';
 
 type TProps = {
   data: TFolder;
-  cardType: number;
+  type: number;
 };
-export const TableCard = ({ data, cardType }: TProps) => {
+
+export const TableCard = ({ data, type }: TProps) => {
   return (
     <>
-      {cardType === 0 && <ColsCard {...data} />}
-      {cardType === 1 && <RowsCard {...data} />}
+      {type === TColsCard && <ColsCard {...data} />}
+      {type === TRowsCard && <RowsCard {...data} />}
     </>
   );
 };
