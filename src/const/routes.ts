@@ -13,6 +13,10 @@ export const routes = {
     price: '/price',
     cabinet: '/cabinet',
   },
+  subscription: {
+    main: '/subscription',
+    purchase: '/subscription/purchase',
+  },
   public: {
     main: '/',
     news: '/news',

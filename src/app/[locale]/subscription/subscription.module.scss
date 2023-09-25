@@ -1,0 +1,54 @@
+@import "src/styles/global/mixins";
+
+.subscription {
+  margin-top: 48px;
+  min-height: calc(100vh - 116px);
+
+  .heading {
+    @include fontHeadingXXL;
+    font-weight: var(--text-weight-base);
+    margin-bottom: 24px;
+  }
+
+  .offers {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .card {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+
+      .description {
+        @include bodyFontMediumL;
+        max-width: 467px;
+      }
+    }
+  }
+
+  .pricePlanList {
+    display: flex;
+    gap: 16px;
+
+    .card {
+      margin-top: 32px;
+      padding: 32px;
+      background-color: var(--amber-200);
+
+      .slug {
+        @include bodyFontRegularL;
+      }
+
+      .title {
+        @include fontHeadingL;
+        margin-bottom: 12px;
+      }
+
+      .content {
+        @include bodyFontRegularS;
+        min-height: 340px;
+      }
+    }
+  }
+}

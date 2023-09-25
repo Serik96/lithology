@@ -48,18 +48,29 @@
     "reset-password": "Reset password",
     "email-confirm": "E-mail confirmation",
     "reset-confirm": "Reset confirmation",
-    "notifications": "Notification",
+    "notifications": {
+      "main": "Notifications",
+      "mark-all-read": "Mark all as read"
+    },
     "all-projects": {
       "main": "All projects",
       "archived": "Archived",
       "favourites": "Favourites",
       "create": "Create project"
+    },
+    "subscription": {
+      "main": "Subscription",
+      "purchase": "Subscription purchase"
     }
   },
   "email-sent": "We have sent you an e-mail. Follow the link in the e-mail.",
   "back-to-sign-in": "Back to sign in",
   "email-confirm-page-heading": "Confirm the change at the e-mail",
   "reset-page-heading": "We reset the password",
+  "back-to-settings": "Back to settings",
+  "you-bought-the": "You bought the ",
+  "subscription-expiration_date": "Subscription expiration date: ",
+  "tariff": "Tariff",
   "notifications": {
     "title": "{count, plural, =1 {# notification} other {# notifications}}."
   },
@@ -77,5 +88,13 @@
     "name": "Name",
     "description": "Description",
     "send": "Send"
+  },
+  "subscription": {
+    "title": "Subscription",
+    "offers": {
+      "free-projects": "Join now to get 50 projects for free",
+      "money-back": "15-day money-back guarantee"
+    },
+    "buy": "Buy"
   }
 }
