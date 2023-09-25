@@ -59,4 +59,27 @@ export const tempData = {
       },
     },
   ],
+  pricePlans: [
+    {
+      id: 1,
+      slug: 'Popular',
+      title: 'Basic',
+      content: 'Fishtext is used by designers, planners typography in action.',
+      price: 10000,
+    },
+    {
+      id: 2,
+      slug: 'Popular',
+      title: 'Basic',
+      content: 'Fishtext is used by designers, planners typography in action.',
+      price: 10000,
+    },
+    {
+      id: 3,
+      slug: 'Popular',
+      title: 'Basic',
+      content: 'Fishtext is used by designers, planners typography in action.',
+      price: 10000,
+    },
+  ],
 };

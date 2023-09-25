@@ -1,3 +1,4 @@
+import ArchiveTick from '../../public/icons/archive-tick.svg';
 import ArrowCircleLeftIcon from '../../public/icons/arrow-circle-left.svg';
 import ArrowLeftIcon from '../../public/icons/arrow-left.svg';
 import ArrowSquareRightIcon from '../../public/icons/arrow-square-right.svg';
@@ -38,4 +39,5 @@ export {
   FatrowsIcon,
   BlockIcon,
   MoreIcon,
+  ArchiveTick,
 };
