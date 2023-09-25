@@ -19,7 +19,7 @@ export const DataTable = ({ hasTypes, type, setType, children }: TProps) => {
     <div className={s.dataTable}>
       <div className={s.searchWrapper}>
         <form className={s.form}>
-          <TextField icon={SearchIcon} placeholder={t('search')} />
+          <TextField Icon={SearchIcon} placeholder={t('search')} />
         </form>
         {hasTypes && (
           <div className={s.viewBtns}>
