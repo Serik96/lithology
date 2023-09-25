@@ -3,15 +3,15 @@ import s from './folders-list.module.scss';
 import { TableCard } from './table-card';
 
 type TProps = {
-  data: TFolder[];
+  folders: TFolder[];
   type: number;
 };
 
-export const FoldersList = ({ data, type }: TProps) => {
+export const FoldersList = ({ folders, type }: TProps) => {
   return (
     <div className={s.list}>
-      {data.map(e => (
-        <TableCard key={e.id} data={e} type={type} />
+      {folders.map(f => (
+        <TableCard key={f.id} data={f} type={type} />
       ))}
     </div>
   );

@@ -12,6 +12,7 @@ import { projectsNav, projectsSidebarNav } from './const';
 
 const Projects = () => {
   const t = useTranslations();
+  // @todo юзать enum вместо 0 или 1
   const [rowsType, setRowsType] = useState(0);
 
   return (
@@ -21,9 +22,10 @@ const Projects = () => {
         sidebarLinks={projectsSidebarNav}
         heading={t('navigation.all-projects.main')}
       >
-        <DataTable hasTypes={true} type={rowsType} setType={setRowsType}>
+        <DataTable hasTypes type={rowsType} setType={setRowsType}>
+          {/* @todo сравнивать с enum-ом */}
           {rowsType === 0 && <TableHeader />}
-          <FoldersList data={tempData.folders} type={rowsType} />
+          <FoldersList folders={tempData.folders} type={rowsType} />
         </DataTable>
       </ProjectsContainer>
     </>
