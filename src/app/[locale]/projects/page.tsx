@@ -21,7 +21,7 @@ const Projects = () => {
         sidebarLinks={projectsSidebarNav}
         heading={t('navigation.all-projects.main')}
       >
-        <DataTable hasRowsTypes={true} rowsType={rowsType} setRowsType={setRowsType}>
+        <DataTable hasTypes={true} type={rowsType} setType={setRowsType}>
           {rowsType === 0 && <TableHeader />}
           <FoldersList data={tempData.folders} type={rowsType} />
         </DataTable>

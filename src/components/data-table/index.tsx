@@ -7,12 +7,12 @@ import { rowsTypes } from './const';
 import s from './data-table.module.scss';
 
 type TProps = PropsWithChildren<{
-  hasRowsTypes: boolean;
-  rowsType?: number;
-  setRowsType?: (value: number) => void;
+  hasTypes: boolean;
+  type?: number;
+  setType?: (value: number) => void;
 }>;
 
-export const DataTable = ({ hasRowsTypes, rowsType, setRowsType, children }: TProps) => {
+export const DataTable = ({ hasTypes, type, setType, children }: TProps) => {
   const t = useTranslations();
 
   return (
@@ -21,7 +21,7 @@ export const DataTable = ({ hasRowsTypes, rowsType, setRowsType, children }: TPr
         <form className={s.form}>
           <TextField icon={SearchIcon} placeholder={t('search')} />
         </form>
-        {hasRowsTypes && (
+        {hasTypes && (
           <div className={s.viewBtns}>
             {rowsTypes.map((e, i) => {
               const Icon = e.icon;
@@ -29,8 +29,8 @@ export const DataTable = ({ hasRowsTypes, rowsType, setRowsType, children }: TPr
               return (
                 <div
                   key={`rows_type_${i}`}
-                  className={cn(s.viewBtn, rowsType === e.type && s.viewBtnActive)}
-                  onClick={() => setRowsType && setRowsType(e.type)}
+                  className={cn(s.viewBtn, type === e.type && s.viewBtnActive)}
+                  onClick={() => setType && setType(e.type)}
                 >
                   <Icon />
                 </div>

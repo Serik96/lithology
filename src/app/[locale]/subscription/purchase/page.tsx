@@ -27,8 +27,8 @@ const Purchase = () => {
             {`${t('subscription-expiration-date')} ${formatDate(Date())}`}
           </p>
           <Button href={routes.auth.signIn} className={s.btn}>
-            {t('back-to-settings')}
             <ArrowSquareRightIcon />
+            {t('back-to-settings')}
           </Button>
         </div>
         <div className={s.sticker}>

@@ -4,6 +4,7 @@ import { Breadcrumbs, Button } from '@/components/ui';
 import { currencySigns } from '@/const';
 import { tempData } from '@/const/tmp-data';
 import { ECurrencySign } from '@/enums';
+import { complexStr } from '@/helpers';
 import { ArrowSquareRightIcon } from '@/icons';
 import { navSubscription } from './const';
 import s from './subscription.module.scss';
@@ -38,8 +39,10 @@ const Subscription = () => {
               <h2 className={s.title}>{e.title}</h2>
               <p className={s.content}>{e.content}</p>
               <Button variant="bordered">
-                {t('subscription.buy')} {currencySigns[ECurrencySign.usd]}
-                {e.price}
+                {complexStr(
+                  [t('subscription.buy'), currencySigns[ECurrencySign.usd] + e.price],
+                  ' ',
+                )}
                 <ArrowSquareRightIcon />
               </Button>
             </li>

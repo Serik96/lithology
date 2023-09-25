@@ -8,10 +8,10 @@ export const navPurchase: TBreadcrumbs[] = [
   },
   {
     label: 'navigation.subscription.main',
-    href: routes.subscription.main,
+    href: routes.project.subscription.main,
   },
   {
     label: 'navigation.subscription.purchase',
-    href: routes.subscription.purchase,
+    href: routes.project.subscription.purchase,
   },
 ];
