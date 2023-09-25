@@ -71,7 +71,10 @@
   "table": {
     "name": "Name",
     "point": "Point",
-    "created_at": "Date created"
+    "created_at": "Date created",
+    "add-to-favourites": "Add to favourites",
+    "add-to-archive": "Add to archive",
+    "delete": "Delete"
   },
   "support": {
     "name": "Name",

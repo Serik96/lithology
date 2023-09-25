@@ -62,3 +62,10 @@
   width: 1.5em;
   height: 1.5em;
 }
+
+@mixin btnFocus {
+  &:active,
+  &:focus {
+    border: 1px solid var(--blue-400);
+  }
+}

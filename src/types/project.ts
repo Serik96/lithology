@@ -9,7 +9,7 @@ export type TProject = {
 };
 
 export type TFolder = {
-  id?: number;
+  id: number;
   company_id: number;
   slug: string;
   name: string;

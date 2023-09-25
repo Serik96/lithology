@@ -28,3 +28,17 @@ export const removeNullProperties = (obj: TObject): TObject => {
 
   return obj;
 };
+
+export const getAllValues = (obj: TObject): unknown[] => {
+  let values: unknown[] = [];
+
+  for (const key in obj) {
+    if (typeof obj[key] === 'object') {
+      values = values.concat(getAllValues(obj[key] as TObject));
+    } else {
+      values.push(obj[key]);
+    }
+  }
+
+  return values;
+};

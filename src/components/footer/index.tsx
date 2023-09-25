@@ -28,7 +28,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className={s.bot}>
-          <div className={s.privacy}>{t('privacy')}</div>
+          <div>{t('privacy')}</div>
           <div className={s.contact}>
             <Link href={`mailto:${config.footer.email}`}>{config.footer.email}</Link>
             <Link href={`tel:${cleanPhone(config.footer.phone, '+')}`}>

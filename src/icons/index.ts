@@ -3,6 +3,7 @@ import ArrowLeftIcon from '../../public/icons/arrow-left.svg';
 import ArrowSquareRightIcon from '../../public/icons/arrow-square-right.svg';
 import BlockIcon from '../../public/icons/block.svg';
 import BookIcon from '../../public/icons/book.svg';
+import CloseIcon from '../../public/icons/close.svg';
 import CloudIcon from '../../public/icons/cloud.svg';
 import FatrowsIcon from '../../public/icons/fatrows.svg';
 import FolderAddIcon from '../../public/icons/folder-add.svg';
@@ -27,6 +28,7 @@ export {
   ArrowSquareRightIcon,
   ArrowLeftIcon,
   PlayIcon,
+  CloseIcon,
   ArrowCircleLeftIcon,
   StarIcon,
   CloudIcon,

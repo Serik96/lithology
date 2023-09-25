@@ -15,8 +15,9 @@ export const tempData = {
   notifications: {
     count: 41,
   },
-  projects: [
+  folders: [
     {
+      id: 1,
       folder_id: 1,
       name: 'Kamchatka',
       company_id: 1,
@@ -37,10 +38,11 @@ export const tempData = {
       },
     },
     {
+      id: 2,
       folder_id: 2,
       name: 'Kamchatka 2',
       company_id: 2,
-      slug: 'test',
+      slug: 'test2',
       description: 'test test test',
       parent: 2,
       level_num: 1,
