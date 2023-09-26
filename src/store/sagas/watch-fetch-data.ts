@@ -7,6 +7,7 @@ function* fetchAndHandleData(action: ReturnType<typeof fetchDataRequest>): Gener
     const data = yield call(fetchData, action.payload);
     yield put(fetchDataSuccess(data));
   } catch (error) {
+    console.error(error);
     if (error instanceof Error) {
       yield put(fetchDataFailure(error.message));
     }
