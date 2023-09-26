@@ -10,7 +10,23 @@
     @include bodyFontRegularS;
   }
 
-  .input {
-    width: 100%;
+  .wrapper {
+    position: relative;
+
+    svg {
+      @include icon;
+      position: absolute;
+      top: 12px;
+      left: 16px;
+    }
+
+    .input {
+      width: 100%;
+
+      &.withIcon {
+        padding: 12px 16px 12px 56px;
+        height: 48px;
+      }
+    }
   }
 }

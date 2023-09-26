@@ -1,0 +1,39 @@
+@import 'src/styles/global/mixins';
+
+.main {
+  height: 700px;
+  background-image: url('/public/temp/main-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  color: var(--white-400);
+  margin-top: 16px;
+  margin-bottom: 95px;
+
+  .wrapper {
+    height: 100%;
+    position: relative;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .heading {
+      font-size: 56px;
+      font-weight: var(--text-weight-base);
+      line-height: 64px;
+    }
+
+    .description {
+      @include bodyFontRegularM;
+      max-width: 467px;
+    }
+
+    .playImg {
+      position: absolute;
+      bottom: 32px;
+      right: 32px;
+    }
+  }
+}

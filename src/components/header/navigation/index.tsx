@@ -26,7 +26,7 @@ export const Navigation = ({ isUnsigned = false }: TProps) => {
                 className={cn(s.link, e.isActive && s.active, !e.label && s.onlyIcon)}
               >
                 {Icon && <Icon />}
-                {t(e.label)}
+                {e.label && t(e.label)}
               </Link>
             </li>
           );

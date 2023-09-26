@@ -13,6 +13,7 @@
 
 .btn {
   @include bodyFontMediumM;
+  @include btnFocus;
   width: 100%;
   color: var(--white-400);
   padding: 20px 16px;
@@ -29,12 +30,8 @@
     background-color: var(--orange-500);
   }
 
-  &:active,
-  &:focus {
-    border: 1px solid var(--blue-400);
-  }
-
   &.outlined {
+    @include btnFocus;
     width: fit-content;
     border: 1px solid var(--orange-400);
     background-color: transparent;
@@ -46,11 +43,24 @@
       border-color: var(--orange-500);;
       color: var(--orange-500);;
     }
+  }
 
-    &:active,
-    &:focus {
-      border: 1px solid var(--blue-400);
-    }
+  &.secondary {
+    @include btnFocus;
+    width: fit-content;
+    border: 1px solid var(--gray-100);
+    background-color: var(--white-400);
+    border-radius: 8px;
+    color: var(--orange-400);
+    padding: 8px 16px;
+    gap: 12px;
+  }
+
+  &.bordered {
+    @include btnFocus;
+    color: var(--black-400);
+    border: 1px solid var(--black-400);
+    background-color: transparent;
   }
 
   svg {

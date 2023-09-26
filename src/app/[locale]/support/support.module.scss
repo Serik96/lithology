@@ -1,0 +1,35 @@
+@import 'src/styles/global/mixins';
+
+.support {
+  display: flex;
+  width: fit-content;
+  margin: 32px auto 224px auto;
+  min-height: calc(100vh - 615px);
+
+  .form {
+    max-width: 560px;
+
+    .heading {
+      @include fontHeadingXL;
+    }
+
+    .formBody {
+      margin-top: 32px;
+
+      .formFields {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .textArea {
+        min-height: 129px;
+      }
+
+      .formBtn {
+        max-width: 280px;
+        margin-top: 40px;
+      }
+    }
+  }
+}

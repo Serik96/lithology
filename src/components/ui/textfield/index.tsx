@@ -1,4 +1,6 @@
-import React, { ChangeEvent, useState } from 'react';
+'use client';
+
+import { ChangeEvent, FC, memo, useState } from 'react';
 import { cn } from '@/helpers';
 import s from './textfield.module.scss';
 
@@ -8,33 +10,54 @@ type TProps = {
   type?: string;
   className?: string;
   placeholder?: string;
+  Icon?: FC;
   onChange?: (value: string) => void;
+  multiline?: boolean;
 };
 
-export const TextField: React.FC<TProps> = ({
+export const TextFieldRaw: FC<TProps> = ({
   label,
   value = '',
   placeholder,
   type = 'text',
   className,
   onChange,
+  multiline,
+  Icon,
 }) => {
   const [valueState, setValueState] = useState(value);
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setValueState(event.target.value);
     onChange?.(event.target.value);
   };
 
+  const inputElement = multiline ? (
+    <textarea
+      value={valueState}
+      onChange={handleChange}
+      placeholder={placeholder}
+      className={cn(s.input, className)}
+    />
+  ) : (
+    <input
+      type={type}
+      value={valueState}
+      onChange={handleChange}
+      placeholder={placeholder}
+      className={cn(s.input, className, Icon && s.withIcon)}
+    />
+  );
+
   return (
     <div className={s.textField}>
       {label && <label className={s.label}>{label}</label>}
-      <input
-        type={type}
-        value={valueState}
-        onChange={handleChange}
-        placeholder={placeholder}
-        className={cn(s.input, className)}
-      />
+      <div className={s.wrapper}>
+        {Icon && <Icon />}
+        {inputElement}
+      </div>
     </div>
   );
 };
+
+export const TextField = memo(TextFieldRaw);

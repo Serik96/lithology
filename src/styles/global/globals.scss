@@ -16,13 +16,24 @@ body {
   margin: 0px;
 }
 
-h1, h2, h3, h4, h5, h6,
-ul, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
 }
 
@@ -38,7 +49,9 @@ h3 {
   @include fontHeadingL;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   @include fontHeadingM;
 }
 
@@ -51,12 +64,15 @@ a {
   }
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-input, textarea,
-button, a,
+input,
+textarea,
+button,
+a,
 select {
   color: var(--black-400);
   font-family: var(--font-body);
@@ -73,7 +89,8 @@ select {
   @include icon;
 }
 
-input, textarea {
+input,
+textarea {
   @include bodyFontRegularS;
   border-radius: 4px;
   border: 1px solid var(--gray-400);
@@ -95,6 +112,10 @@ input, textarea {
   &:focus {
     border: 1px solid var(--gray-400);
   }
+}
+
+textarea {
+  resize: vertical;
 }
 
 a {

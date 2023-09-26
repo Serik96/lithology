@@ -5,7 +5,7 @@ import { Button, TextField } from '@/components/ui';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
 import { cn } from '@/helpers';
-import { ArrowSquareRight } from '@/icons';
+import { ArrowSquareRightIcon } from '@/icons';
 import { navSignIn } from './const';
 import s from './sign-in.module.scss';
 
@@ -28,7 +28,7 @@ const SignIn = () => {
           </div>
           <Button className={s.btn}>
             {t('navigation.sign-in')}
-            <ArrowSquareRight />
+            <ArrowSquareRightIcon />
           </Button>
 
           <div className={s.registration}>
@@ -39,7 +39,7 @@ const SignIn = () => {
             </Link>
           </div>
           <Link
-            href={routes.auth.resetPassword}
+            href={routes.auth.resetPassword.main}
             className={cn(s.resetPassword, 'link_active')}
           >
             {t('auth.sign-in.forgot-password')}

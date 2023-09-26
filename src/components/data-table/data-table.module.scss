@@ -1,0 +1,45 @@
+@import 'src/styles/global/mixins';
+
+.dataTable {
+  width: 100%;
+  max-width: 672px;
+
+  .searchWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+
+    .form {
+      width: 100%;
+      max-width: 552px;
+    }
+
+    .viewBtns {
+      display: flex;
+      gap: 12px;
+
+      .viewBtn {
+        @include btnFocus;
+        width: 48px;
+        height: 48px;
+        border: 1px solid var(--gray-100);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &.viewBtnActive {
+          @include btnFocus;
+          border-color: var(--black-400);
+        }
+      }
+    }
+  }
+
+  .table {
+    margin-top: 32px;
+  }
+}

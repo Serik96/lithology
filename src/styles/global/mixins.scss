@@ -7,7 +7,7 @@
 }
 
 @mixin bodyFontRegularM {
-  font-size: var(--text-m-s);
+  font-size: var(--text-b-m);
   line-height: 24px;
 }
 
@@ -56,10 +56,16 @@
   line-height: 56px;
 }
 
-
 /* Global mixins */
 
 @mixin icon {
   width: 1.5em;
   height: 1.5em;
+}
+
+@mixin btnFocus {
+  &:active,
+  &:focus {
+    border: 1px solid var(--blue-400);
+  }
 }

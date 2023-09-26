@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
-import { ArrowSquareRight } from '@/icons';
+import { ArrowSquareRightIcon } from '@/icons';
 import s from './confirm.module.scss';
 import { navConfirm } from './const';
 
@@ -21,7 +21,7 @@ const Confirm = () => {
           <p className={s.description}>{t('email-sent')}</p>
           <Button href={routes.auth.signIn} className={s.btn}>
             {t('back-to-sign-in')}
-            <ArrowSquareRight />
+            <ArrowSquareRightIcon />
           </Button>
         </div>
         <div className={s.sticker}>

@@ -1,12 +1,20 @@
 export const routes = {
   project: {
     create: '/create-report',
-    projects: '/projects',
+    allProjects: {
+      main: '/projects',
+      archived: '/projects/archived',
+      create: '/projects/create',
+      favourites: '/projects/favourites',
+    },
     notifications: '/notifications',
     folders: '/folders',
     settings: '/settings',
-    price: '/price',
     cabinet: '/cabinet',
+    subscription: {
+      main: '/subscription',
+      purchase: '/subscription/purchase',
+    },
   },
   public: {
     main: '/',
@@ -16,10 +24,13 @@ export const routes = {
   auth: {
     signIn: '/sign-in',
     registration: '/registration',
-    resetPassword: '/reset-password',
-    resetPasswordConfirm: '/reset-password/confirm',
-    changePassword: '/change-password',
-    changePasswordConfirm: '/change-password/confirm',
-    confirm: '/confirm',
+    resetPassword: {
+      main: '/reset-password',
+      confirm: '/reset-password/confirm',
+    },
+    changePassword: {
+      main: '/change-password',
+      confirm: '/change-password/confirm',
+    },
   },
 };
