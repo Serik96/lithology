@@ -1,6 +1,7 @@
 import { FC } from 'react';
+import { ECardType } from '@/enums';
 
 export type TRowType = {
-  type: number;
-  icon: FC;
+  type: ECardType;
+  Icon: FC;
 };
