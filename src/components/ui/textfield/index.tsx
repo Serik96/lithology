@@ -10,57 +10,54 @@ type TProps = {
   type?: string;
   className?: string;
   placeholder?: string;
-  icon?: FC;
+  Icon?: FC;
   onChange?: (value: string) => void;
   multiline?: boolean;
 };
 
-// eslint-disable-next-line react/display-name
-export const TextField: FC<TProps> = memo(
-  ({
-    label,
-    value = '',
-    placeholder,
-    type = 'text',
-    className,
-    onChange,
-    multiline,
-    icon,
-  }) => {
-    const [valueState, setValueState] = useState(value);
+export const TextFieldRaw: FC<TProps> = ({
+  label,
+  value = '',
+  placeholder,
+  type = 'text',
+  className,
+  onChange,
+  multiline,
+  Icon,
+}) => {
+  const [valueState, setValueState] = useState(value);
 
-    const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setValueState(event.target.value);
-      onChange?.(event.target.value);
-    };
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setValueState(event.target.value);
+    onChange?.(event.target.value);
+  };
 
-    const Icon: Nullable<FC> = icon ?? null;
+  const inputElement = multiline ? (
+    <textarea
+      value={valueState}
+      onChange={handleChange}
+      placeholder={placeholder}
+      className={cn(s.input, className)}
+    />
+  ) : (
+    <input
+      type={type}
+      value={valueState}
+      onChange={handleChange}
+      placeholder={placeholder}
+      className={cn(s.input, className, Icon && s.withIcon)}
+    />
+  );
 
-    const inputElement = multiline ? (
-      <textarea
-        value={valueState}
-        onChange={handleChange}
-        placeholder={placeholder}
-        className={cn(s.input, className)}
-      />
-    ) : (
-      <input
-        type={type}
-        value={valueState}
-        onChange={handleChange}
-        placeholder={placeholder}
-        className={cn(s.input, className, Icon && s.withIcon)}
-      />
-    );
-
-    return (
-      <div className={s.textField}>
-        {label && <label className={s.label}>{label}</label>}
-        <div className={s.wrapper}>
-          {Icon && <Icon />}
-          {inputElement}
-        </div>
+  return (
+    <div className={s.textField}>
+      {label && <label className={s.label}>{label}</label>}
+      <div className={s.wrapper}>
+        {Icon && <Icon />}
+        {inputElement}
       </div>
-    );
-  },
-);
+    </div>
+  );
+};
+
+export const TextField = memo(TextFieldRaw);

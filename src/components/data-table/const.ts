@@ -10,7 +10,7 @@ export const rowsTypes: TRowType[] = [
     Icon: FatrowsIcon,
   },
   {
-    type: ECardType.ROW,
+    type: ECardType.COLUMN,
     Icon: BlockIcon,
   },
 ];

@@ -83,7 +83,7 @@
     "fields": {
       "name": "Name",
       "point": "Point",
-      "created-at": "Date created"
+      "created_at": "Date created"
     },
     "add-to-favourites": "Add to favourites",
     "add-to-archive": "Add to archive",

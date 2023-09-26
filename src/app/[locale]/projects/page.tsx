@@ -10,11 +10,10 @@ import { Breadcrumbs } from '@/components/ui';
 import { tempData } from '@/const/tmp-data';
 import { ECardType } from '@/enums';
 import { projectsNav, projectsSidebarNav } from './const';
-import { defaultLayoutType } from './enums';
 
 const Projects = () => {
   const t = useTranslations();
-  const [rowsType, setRowsType] = useState(defaultLayoutType.type);
+  const [rowType, setRowType] = useState(ECardType.ROW);
 
   return (
     <>
@@ -23,9 +22,9 @@ const Projects = () => {
         sidebarLinks={projectsSidebarNav}
         heading={t('navigation.all-projects.main')}
       >
-        <DataTable hasTypes={true} rowType={rowsType} setRowType={setRowsType}>
-          {rowsType === ECardType.ROW && <TableHeader />}
-          <FoldersList data={tempData.folders} type={rowsType} />
+        <DataTable showTypeToggle rowType={rowType} setRowType={setRowType}>
+          {rowType === ECardType.ROW && <TableHeader />}
+          <FoldersList folders={tempData.folders} type={rowType} />
         </DataTable>
       </ProjectsContainer>
     </>

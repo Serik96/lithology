@@ -8,21 +8,21 @@ import { rowsTypes } from './const';
 import s from './data-table.module.scss';
 
 type TProps = PropsWithChildren<{
-  hasTypes: boolean;
+  showTypeToggle?: boolean;
   rowType?: ECardType;
-  setRowType?: (value: number) => void;
+  setRowType?: (value: ECardType) => void;
 }>;
 
-export const DataTable = ({ hasTypes, rowType, setRowType, children }: TProps) => {
+export const DataTable = ({ showTypeToggle, rowType, setRowType, children }: TProps) => {
   const t = useTranslations();
 
   return (
     <div className={s.dataTable}>
       <div className={s.searchWrapper}>
         <form className={s.form}>
-          <TextField icon={SearchIcon} placeholder={t('search')} />
+          <TextField Icon={SearchIcon} placeholder={t('search')} />
         </form>
-        {hasTypes && (
+        {showTypeToggle && (
           <div className={s.viewBtns}>
             {rowsTypes.map(({ Icon, type }, i) => (
               <div

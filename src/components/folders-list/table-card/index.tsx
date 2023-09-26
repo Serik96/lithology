@@ -1,18 +1,18 @@
-import { TColsCard, TRowsCard } from '@/types';
+import { ECardType } from '@/enums';
 import { TFolder } from '@/types/project';
 import { ColsCard } from './cols-card';
 import { RowsCard } from './rows-card';
 
 type TProps = {
   data: TFolder;
-  type: number;
+  type: ECardType;
 };
 
 export const TableCard = ({ data, type }: TProps) => {
   return (
     <>
-      {type === TColsCard && <ColsCard {...data} />}
-      {type === TRowsCard && <RowsCard {...data} />}
+      {type === ECardType.ROW && <RowsCard {...data} />}
+      {type === ECardType.COLUMN && <ColsCard {...data} />}
     </>
   );
 };

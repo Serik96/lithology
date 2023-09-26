@@ -3,5 +3,5 @@ export const tableHeaderFields: string[] = [
   'table.fields.point',
   'table.fields.point',
   'table.fields.point',
-  'table.fields.created-at',
+  'table.fields.created_at',
 ];
