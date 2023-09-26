@@ -7,7 +7,7 @@ async function fetchData<T>(
 ): Promise<FetchResponse<T>> {
   try {
     const response = await fetch(url, {
-      method: options.method || 'GET',
+      method: options.method || 'POST',
       headers: {
         'Content-Type': 'application/json',
         ...options.headers,

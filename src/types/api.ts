@@ -3,7 +3,7 @@ export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 export type FetchOptions = {
   method?: HttpMethod;
   headers?: Record<string, string>;
-  body?: never;
+  body?: unknown;
 };
 
 export type FetchResponse<T> = {

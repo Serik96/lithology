@@ -5,3 +5,8 @@ export type TAuthState = {
   user: Nullable<TUser>;
   isAuthenticated: boolean;
 };
+
+export type TLogin = {
+  login: string;
+  password: string;
+};

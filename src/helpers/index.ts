@@ -9,3 +9,4 @@ export * from './util';
 export * from './phone-helper';
 export * from './route';
 export * from './date';
+export * from './form-helper';

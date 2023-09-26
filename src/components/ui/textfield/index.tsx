@@ -10,6 +10,7 @@ type TProps = {
   type?: string;
   className?: string;
   placeholder?: string;
+  name?: string;
   Icon?: FC;
   onChange?: (value: string) => void;
   multiline?: boolean;
@@ -18,6 +19,7 @@ type TProps = {
 export const TextFieldRaw: FC<TProps> = ({
   label,
   value = '',
+  name,
   placeholder,
   type = 'text',
   className,
@@ -34,6 +36,7 @@ export const TextFieldRaw: FC<TProps> = ({
 
   const inputElement = multiline ? (
     <textarea
+      name={name}
       value={valueState}
       onChange={handleChange}
       placeholder={placeholder}
@@ -41,6 +44,7 @@ export const TextFieldRaw: FC<TProps> = ({
     />
   ) : (
     <input
+      name={name}
       type={type}
       value={valueState}
       onChange={handleChange}
