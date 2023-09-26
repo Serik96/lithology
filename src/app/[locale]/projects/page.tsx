@@ -23,6 +23,7 @@ const Projects = () => {
         heading={t('navigation.all-projects.main')}
       >
         <DataTable showTypeToggle rowType={rowType} setRowType={setRowType}>
+          {/* @todo: TableHeader и FoldersList перенести внутрь DataTable */}
           {rowType === ECardType.ROW && <TableHeader />}
           <FoldersList folders={tempData.folders} type={rowType} />
         </DataTable>
