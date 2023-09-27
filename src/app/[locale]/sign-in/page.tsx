@@ -1,31 +1,43 @@
 'use client';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { FormEvent } from 'react';
-import { useDispatch } from 'react-redux';
+import { FormEvent, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Button, TextField } from '@/components/ui';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
 import { cn, getFormValue } from '@/helpers';
 import { ArrowSquareRightIcon } from '@/icons';
-import { login } from '@/store/reducers/auth';
+import { AuthModel } from '@/model';
+import { TAuthLoginAction } from '@/model/auth/types';
 import { navSignIn } from './const';
 import s from './sign-in.module.scss';
 
 const SignIn = () => {
   const t = useTranslations();
   const dispatch = useDispatch();
+  const router = useRouter();
+  const isAuthenticated = useSelector(AuthModel.store.selectors.isAuthenticated);
+  // @todo проверять get-параметр back, если он задан, то после логина редиректить на него
+  // если не задан, то оставляем редирект на главную
+  const redirectUrl = '/';
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      void router.push(redirectUrl);
+    }
+  }, [isAuthenticated, router]);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const email = getFormValue('email', e);
-    const password = getFormValue('password', e);
-    const data = {
-      login: email,
-      password,
+
+    const data: TAuthLoginAction = {
+      login: getFormValue('email', e),
+      password: getFormValue('password', e),
     };
 
-    dispatch(login(data));
+    dispatch(AuthModel.store.actions.login.trigger(data));
   };
 
   return (

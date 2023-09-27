@@ -5,6 +5,7 @@ type TProps = PropsWithChildren<{
     locale: string;
   };
 }>;
+
 export default function RootLayout({ children, params: { locale } }: TProps) {
   return (
     <html lang={locale}>

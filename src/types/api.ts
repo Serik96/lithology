@@ -1,13 +1,16 @@
-export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
+export type THttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 
-export type FetchOptions = {
-  method?: HttpMethod;
+export type TFetchOptions = {
+  url: string;
+  method?: THttpMethod;
   headers?: Record<string, string>;
   body?: unknown;
 };
 
-export type FetchResponse<T> = {
-  data?: T;
-  status: number;
-  statusText: string;
+export type TFetchFailureResponse = {
+  status?: number;
+  statusText?: string;
+  isSuccess: false;
 };
+export type TFetchSuccessfulResponse<T> = { data: T; isSuccess: true };
+export type TFetchResponse<T> = TFetchSuccessfulResponse<T> | TFetchFailureResponse;

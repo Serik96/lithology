@@ -3,10 +3,15 @@ import { TUser } from '@/types';
 export type TAuthState = {
   token: Nullable<string>;
   user: Nullable<TUser>;
-  isAuthenticated: boolean;
+  pending: boolean;
 };
 
-export type TLogin = {
+export type TAuthLoginAction = {
   login: string;
   password: string;
+};
+
+export type TAuthLoginResponse = {
+  token: string;
+  user: TUser;
 };
