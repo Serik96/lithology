@@ -19,6 +19,7 @@ const SignIn = () => {
   const dispatch = useDispatch();
   const router = useRouter();
   const isAuthenticated = useSelector(AuthModel.store.selectors.isAuthenticated);
+  const isPending = useSelector(AuthModel.store.selectors.isPending);
   // @todo проверять get-параметр back, если он задан, то после логина редиректить на него
   // если не задан, то оставляем редирект на главную
   const redirectUrl = '/';
@@ -31,6 +32,10 @@ const SignIn = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (isPending) {
+      return;
+    }
 
     const data: TAuthLoginAction = {
       login: getFormValue('email', e),
@@ -59,10 +64,11 @@ const SignIn = () => {
               placeholder={t('auth.password')}
             />
           </div>
-          <Button className={s.btn}>
+          <Button className={s.btn} disabled={isPending}>
             {t('navigation.sign-in')}
             <ArrowSquareRightIcon />
           </Button>
+          {/* @todo isPending && <Loader /> */}
 
           <div className={s.registration}>
             {t('auth.sign-in.question-for-reg')}
