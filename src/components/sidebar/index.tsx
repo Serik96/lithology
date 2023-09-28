@@ -6,26 +6,35 @@ import s from './sidebar.module.scss';
 
 type TProps = {
   links: TSidebarLink[];
+  onClick?: (value: string) => void;
 };
 
-export const Sidebar = ({ links }: TProps) => {
+export const Sidebar = ({ links, onClick }: TProps) => {
   const t = useTranslations();
 
   return (
     <nav className={s.sidebar}>
       <ul className={s.list}>
-        {links.map((e, i) => {
-          const Icon = e.icon;
-
+        {links.map(({ Icon, href, isBottomLink, label, type }, i) => {
           return (
             <li
-              key={`sidebar__link_${e.href}_${i}`}
-              className={cn(s.listItem, e.isBottomLink && s.listItemActive)}
+              key={`sidebar__link_${href}_${i}`}
+              className={cn(s.listItem, isBottomLink && s.listItemActive)}
             >
-              <Link href={e.href} className={cn(s.link, e.isBottomLink && 'link_active')}>
-                <Icon />
-                {t(e.label)}
-              </Link>
+              {type ? (
+                <div
+                  onClick={() => onClick?.(type)}
+                  className={cn(s.link, isBottomLink && 'link_active')}
+                >
+                  <Icon />
+                  {t(label)}
+                </div>
+              ) : (
+                <Link href={href} className={cn(s.link, isBottomLink && 'link_active')}>
+                  <Icon />
+                  {t(label)}
+                </Link>
+              )}
             </li>
           );
         })}

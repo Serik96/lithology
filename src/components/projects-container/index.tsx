@@ -6,12 +6,18 @@ import s from './projects-container.module.scss';
 type TProps = PropsWithChildren<{
   sidebarLinks: TSidebarLink[];
   heading: string;
+  handleSidebarAction?: (value: string) => void;
 }>;
 
-export const ProjectsContainer = ({ sidebarLinks, heading, children }: TProps) => {
+export const ProjectsContainer = ({
+  sidebarLinks,
+  heading,
+  children,
+  handleSidebarAction,
+}: TProps) => {
   return (
     <div className={s.projects}>
-      <Sidebar links={sidebarLinks} />
+      <Sidebar links={sidebarLinks} onClick={handleSidebarAction} />
       <div className={s.wrapper}>
         <h1 className={s.heading}>{heading}</h1>
         {children}

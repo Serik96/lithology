@@ -39,6 +39,32 @@
     }
   }
 
+  .filters {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+
+    .filter {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+
+      .filterIcon {
+        display: flex;
+
+        &.reversed {
+          transform: rotate(180deg);
+        }
+
+        svg {
+          @include icon;
+        }
+      }
+    }
+  }
+
   .table {
     margin-top: 32px;
   }

@@ -83,7 +83,14 @@
     "fields": {
       "name": "Name",
       "point": "Point",
-      "created_at": "Date created"
+      "grain": "Grain",
+      "area": "Area",
+      "orientation": "Orientation",
+      "created_at": "Date created",
+      "a_z": "A-Z",
+      "creation_date": "Creation date",
+      "change_date": "Date of change",
+      "comment_date": "Comment date"
     },
     "add-to-favourites": "Add to favourites",
     "add-to-archive": "Add to archive",

@@ -5,20 +5,16 @@ import { useEffect, useState } from 'react';
 import { DataTable } from '@/components/data-table';
 import { ProjectsContainer } from '@/components/projects-container';
 import { Breadcrumbs } from '@/components/ui';
-import { tempData } from '@/const/tmp-data';
 import { ECardType } from '@/enums';
-import { TFolder } from '@/types/project';
-import { projectsNav, projectsSidebarNav } from './const';
+import { TProject } from '@/types/project';
+import { projectNav, projectSidebarNav } from './const';
 
-const Projects = () => {
+const Project = () => {
   const t = useTranslations();
-
   const [rowType, setRowType] = useState(ECardType.ROW);
-  const [folders, setFolders] = useState<TFolder[]>();
+  const [projects, setProjects] = useState<TProject[]>();
 
-  const getFolders = () => {
-    setFolders(tempData.folders);
-  };
+  const getFolders = () => {};
 
   const handleSidebarAction = (type: string) => {
     console.log(type);
@@ -30,9 +26,9 @@ const Projects = () => {
 
   return (
     <>
-      <Breadcrumbs navLinks={projectsNav} />
+      <Breadcrumbs navLinks={projectNav} />
       <ProjectsContainer
-        sidebarLinks={projectsSidebarNav}
+        sidebarLinks={projectSidebarNav}
         handleSidebarAction={handleSidebarAction}
         heading={t('navigation.all-projects.main')}
       >
@@ -40,11 +36,11 @@ const Projects = () => {
           showTypeToggle
           rowType={rowType}
           setRowType={setRowType}
-          folders={folders}
+          projects={projects}
         />
       </ProjectsContainer>
     </>
   );
 };
 
-export default Projects;
+export default Project;

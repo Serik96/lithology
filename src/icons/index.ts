@@ -6,6 +6,7 @@ import BlockIcon from '../../public/icons/block.svg';
 import BookIcon from '../../public/icons/book.svg';
 import CloseIcon from '../../public/icons/close.svg';
 import CloudIcon from '../../public/icons/cloud.svg';
+import DropIcon from '../../public/icons/drop.svg';
 import FatrowsIcon from '../../public/icons/fatrows.svg';
 import FolderAddIcon from '../../public/icons/folder-add.svg';
 import AddIcon from '../../public/icons/menu/add.svg';
@@ -17,27 +18,30 @@ import NotificationIcon from '../../public/icons/notifications/notification.svg'
 import PlayIcon from '../../public/icons/play.svg';
 import ProfileIcon from '../../public/icons/profile.svg';
 import SearchIcon from '../../public/icons/search.svg';
+import StarFilledIcon from '../../public/icons/star-filled.svg';
 import StarIcon from '../../public/icons/star.svg';
 
 export {
-  HomeIcon,
-  AddIcon,
-  FolderIcon,
-  SettingsIcon,
-  NotificationIcon,
-  ProfileIcon,
   ArrowSquareRightIcon,
   ArrowLeftIcon,
-  PlayIcon,
-  CloseIcon,
   ArrowCircleLeftIcon,
-  StarIcon,
-  CloudIcon,
-  FolderAddIcon,
-  BookIcon,
-  SearchIcon,
-  FatrowsIcon,
-  BlockIcon,
-  MoreIcon,
   ArchiveTick,
+  AddIcon,
+  BookIcon,
+  BlockIcon,
+  CloseIcon,
+  CloudIcon,
+  DropIcon,
+  FolderIcon,
+  FolderAddIcon,
+  FatrowsIcon,
+  HomeIcon,
+  ProfileIcon,
+  PlayIcon,
+  SettingsIcon,
+  StarIcon,
+  SearchIcon,
+  StarFilledIcon,
+  NotificationIcon,
+  MoreIcon,
 };

@@ -16,7 +16,7 @@ export const notificationsNav: TBreadcrumbs[] = [
 export const notificationsSidebarNav: TSidebarLink[] = [
   {
     label: 'navigation.notifications.mark-all-read',
-    icon: ArchiveTick,
+    Icon: ArchiveTick,
     href: routes.project.notifications,
     isBottomLink: true,
   },

@@ -1,3 +1,5 @@
+import { ESortBy } from '@/enums';
+
 export type TProject = {
   folder_id: number;
   title: string;
@@ -18,9 +20,10 @@ export type TFolder = {
   level_num: number;
   order_num: number;
   visible: number;
-  top: number;
+  top: boolean;
   created_at: string;
   /* @todo Тут поля которых не хватает  */
+  archived: boolean;
   project_images: Nullable<string[]>;
   project_info: {
     grain: Nullable<number>;
@@ -28,4 +31,10 @@ export type TFolder = {
     orientation: Nullable<number>;
     point: Nullable<number>;
   };
+};
+
+export type TSort = {
+  label: string;
+  name: string;
+  by: ESortBy;
 };
