@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import AppProvider from '@/app/[locale]/app-provider';
 import { locales } from '@/const';
 import { dictionaries } from '@/dictionaries';
-import { store } from '@/store/store';
+import { store } from '@/store';
 
 type TProps = PropsWithChildren<{
   params: {

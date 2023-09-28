@@ -1,4 +1,4 @@
-@import "src/styles/global/mixins";
+@import 'src/styles/global/mixins';
 
 @mixin btnStates {
   &:hover {
@@ -40,8 +40,8 @@
     gap: 6px;
 
     &:hover {
-      border-color: var(--orange-500);;
-      color: var(--orange-500);;
+      border-color: var(--orange-500);
+      color: var(--orange-500);
     }
   }
 
@@ -61,6 +61,11 @@
     color: var(--black-400);
     border: 1px solid var(--black-400);
     background-color: transparent;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 
   svg {
