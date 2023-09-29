@@ -11,17 +11,23 @@ import {
   StarFilledIcon,
   StarIcon,
 } from '@/icons';
-import { TFolder } from '@/types/project';
+import { TReport } from '@/types/project';
 import s from './table-card.module.scss';
 
+type TProps = {
+  folder: TReport;
+};
+
 export const RowsCard = ({
-  top,
-  archived,
-  name,
-  slug,
-  created_at,
-  project_info: { point },
-}: TFolder) => {
+  report: {
+    top,
+    archived,
+    name,
+    slug,
+    created_at,
+    project_info: { point },
+  },
+}: TProps) => {
   const t = useTranslations();
   const [isMoreVisible, setIsMoreVisible] = useState(false);
 

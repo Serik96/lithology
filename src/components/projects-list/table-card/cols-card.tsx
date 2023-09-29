@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { Button } from '@/components/ui';
 import { routes } from '@/const';
 import { cn, formatDate } from '@/helpers';
 import {
@@ -12,26 +12,27 @@ import {
   StarFilledIcon,
   StarIcon,
 } from '@/icons';
-import { TFolder } from '@/types/project';
-import { formattedCardInfo } from './const';
+import { TProject } from '@/types/project';
 import s from './table-card.module.scss';
 
+type TProps = {
+  project: TProject;
+  foldersSlug: string;
+};
+
 export const ColsCard = ({
-  top,
-  archived,
-  name,
-  slug,
-  created_at,
-  project_info: { grain, area, orientation },
-  project_images,
-}: TFolder) => {
+  foldersSlug,
+  project: { top, title, archived, slug, created_at, reportsCount },
+}: TProps) => {
   const t = useTranslations();
   const [isMoreVisible, setIsMoreVisible] = useState(false);
-  const info = formattedCardInfo(grain, area, orientation);
 
   return (
     <div className={cn(s.card, s.cardCols)}>
-      <Link className={s.link} href={`${routes.project.allProjects.main}/${slug}`} />
+      <Link
+        className={s.link}
+        href={`${routes.project.allProjects.main}/${foldersSlug}/${slug}`}
+      />
       <div className={s.statusIcons}>
         {top && (
           <div className={s.favoriteIcon}>
@@ -47,7 +48,7 @@ export const ColsCard = ({
       <div className={s.cardTitle}>
         <div className={s.cardHeading}>
           <FolderIcon />
-          {name}
+          {title}
         </div>
         <div className={s.more}>
           <div className={s.moreBtn} onClick={() => setIsMoreVisible(true)}>
@@ -74,34 +75,11 @@ export const ColsCard = ({
         </div>
       </div>
 
-      <div className={s.info}>
-        {info.map((e, i) => (
-          <div key={`project_info_${e.value}_${i}`} className={s.infoItem}>
-            {`${t(e.label)}: ${e.value}`}
-          </div>
-        ))}
-      </div>
-      <div className={s.cardImgs}>
-        {project_images &&
-          project_images.map((e, i) => {
-            const width = 100 / project_images.length;
+      <div className={s.date}>{`${t('table.created')}: ${formatDate(created_at)}`}</div>
 
-            return (
-              <Image
-                key={`project_img_${e}_${i}`}
-                src={e}
-                className={s.projectImage}
-                alt={name}
-                style={{
-                  width: `${width}%`,
-                }}
-                width={302}
-                height={181}
-              />
-            );
-          })}
-      </div>
-      <div className={s.date}>{formatDate(created_at)}</div>
+      <Button variant={'info'} className={s.reportsBtn}>
+        {t('table.reports', { count: reportsCount })}
+      </Button>
     </div>
   );
 };

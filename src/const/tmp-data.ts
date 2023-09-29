@@ -104,7 +104,7 @@ export const tempData = {
       top: false,
       archived: false,
       created_at: '2023-09-22T15:53:14.266Z',
-      project_images: null,
+      project_images: [],
       project_info: {
         grain: 0.25,
         area: 2.5,
@@ -134,6 +134,52 @@ export const tempData = {
       title: 'Basic',
       content: 'Fishtext is used by designers, planners typography in action.',
       price: 10000,
+    },
+  ],
+  projects: [
+    {
+      folder_id: 1,
+      title: 'Kamchatka',
+      content:
+        // eslint-disable-next-line max-len
+        'Fishtext is used by designers, planners, and frontenders when they need to quickly populate mockups or prototypes with content. Fishtext is used by designers, planners, and frontenders when they need to quickly populate mockups or prototypes with content.',
+      lat: 2,
+      lng: 1,
+      industry: 'test',
+      location: 'test',
+      archived: false,
+      created_at: '2023-09-22T15:53:14.266Z',
+      slug: 'test-slug-project',
+      top: false,
+      reportsCount: 5,
+      project_info: {
+        grain: 2,
+        area: 1,
+        orientation: 4,
+        point: 1,
+      },
+    },
+    {
+      folder_id: 2,
+      title: 'Kamchatka 2',
+      content:
+        // eslint-disable-next-line max-len
+        '2 Fishtext is used by designers, planners, and frontenders when they need to quickly populate mockups or prototypes with content. Fishtext is used by designers, planners, and frontenders when they need to quickly populate mockups or prototypes with content.',
+      lat: 1,
+      lng: 2,
+      industry: 'test 2',
+      location: 'test 1',
+      archived: false,
+      created_at: '2023-09-22T15:53:14.266Z',
+      slug: 'test-2-project',
+      top: false,
+      reportsCount: 2,
+      project_info: {
+        grain: 2,
+        area: 1,
+        orientation: 4,
+        point: 1,
+      },
     },
   ],
 };

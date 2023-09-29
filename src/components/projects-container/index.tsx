@@ -5,14 +5,16 @@ import s from './projects-container.module.scss';
 
 type TProps = PropsWithChildren<{
   sidebarLinks: TSidebarLink[];
+  description?: string;
   heading: string;
   handleSidebarAction?: (value: string) => void;
 }>;
 
 export const ProjectsContainer = ({
-  sidebarLinks,
-  heading,
   children,
+  sidebarLinks,
+  description,
+  heading,
   handleSidebarAction,
 }: TProps) => {
   return (
@@ -20,6 +22,7 @@ export const ProjectsContainer = ({
       <Sidebar links={sidebarLinks} onClick={handleSidebarAction} />
       <div className={s.wrapper}>
         <h1 className={s.heading}>{heading}</h1>
+        {description && <p className={s.description}>{description}</p>}
         {children}
       </div>
     </div>

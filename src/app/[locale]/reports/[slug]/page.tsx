@@ -1,25 +1,26 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { DataTable } from '@/components/data-table';
-import { FoldersList } from '@/components/folders-list';
 import { ProjectsContainer } from '@/components/projects-container';
 import { Breadcrumbs } from '@/components/ui';
 import { tempData } from '@/const/tmp-data';
 import { ECardType } from '@/enums';
-import { TFolder } from '@/types/project';
-import { projectsNav, projectsSidebarNav } from './const';
+import { TProject } from '@/types/project';
+import { projectNav, projectSidebarNav } from './const';
 
-const Projects = () => {
+const Reports = () => {
   const t = useTranslations();
+  const pathname = usePathname();
 
   const [rowType, setRowType] = useState(ECardType.ROW);
-  const [folders, setFolders] = useState<TFolder[]>();
+  const [reports, setReports] = useState<TProject[]>();
 
   /* todo: тут будет функция с подключенным бэком  */
-  const getFolders = () => {
-    setFolders(tempData.folders);
+  const getProjects = () => {
+    setReports(tempData.projects);
   };
 
   const handleSidebarAction = (type: string) => {
@@ -28,23 +29,25 @@ const Projects = () => {
 
   /* todo: тут будет функция с подключенным бэком  */
   useEffect(() => {
-    getFolders();
+    getProjects();
   }, []);
 
   return (
     <>
-      <Breadcrumbs navLinks={projectsNav} />
+      <Breadcrumbs navLinks={projectNav} />
       <ProjectsContainer
-        sidebarLinks={projectsSidebarNav}
+        sidebarLinks={projectSidebarNav}
         handleSidebarAction={handleSidebarAction}
         heading={t('navigation.all-projects.main')}
       >
         <DataTable showTypeToggle rowType={rowType} setRowType={setRowType}>
-          {folders && <FoldersList folders={folders} type={rowType} />}
+          {/* projects && (
+            <ProjectsList type={rowType} projects={projects} foldersSlug={slug} />
+          ) */}
         </DataTable>
       </ProjectsContainer>
     </>
   );
 };
 
-export default Projects;
+export default Reports;

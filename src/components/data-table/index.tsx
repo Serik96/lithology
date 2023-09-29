@@ -1,24 +1,22 @@
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { PropsWithChildren, useState } from 'react';
 import { TextField } from '@/components/ui';
 import { ECardType, ESortBy } from '@/enums';
 import { cn } from '@/helpers';
 import { DropIcon, SearchIcon } from '@/icons';
-import { TFolder, TProject } from '@/types/project';
+import { TProject } from '@/types/project';
 import { rowsTypes, sortInitialValue } from './const';
 import s from './data-table.module.scss';
-import { FoldersList } from './folders-list';
 import { TableHeader } from './table-header';
 
-type TProps = {
+type TProps = PropsWithChildren<{
   showTypeToggle?: boolean;
   rowType?: ECardType;
   setRowType?: (value: ECardType) => void;
-  folders?: TFolder[];
   projects?: TProject[];
-};
+}>;
 
-export const DataTable = ({ showTypeToggle, rowType, setRowType, folders }: TProps) => {
+export const DataTable = ({ showTypeToggle, rowType, setRowType, children }: TProps) => {
   const t = useTranslations();
   const [filters, setFilters] = useState(sortInitialValue);
 
@@ -29,7 +27,7 @@ export const DataTable = ({ showTypeToggle, rowType, setRowType, folders }: TPro
       if (typeof index !== 'undefined') {
         arr[index] = {
           ...arr[index],
-          by: arr[index].by === ESortBy.ASC ? ESortBy.DESC : ESortBy.ASC,
+          direction: arr[index].direction === ESortBy.ASC ? ESortBy.DESC : ESortBy.ASC,
         };
       }
 
@@ -66,7 +64,10 @@ export const DataTable = ({ showTypeToggle, rowType, setRowType, folders }: TPro
           >
             {t(e.label)}
             <div
-              className={cn(s.filterIcon, filters[i].by === ESortBy.DESC && s.reversed)}
+              className={cn(
+                s.filterIcon,
+                filters[i].direction === ESortBy.DESC && s.reversed,
+              )}
             >
               <DropIcon />
             </div>
@@ -75,7 +76,7 @@ export const DataTable = ({ showTypeToggle, rowType, setRowType, folders }: TPro
       </div>
       <div className={s.table}>
         {rowType === ECardType.ROW && <TableHeader />}
-        {folders && rowType && <FoldersList folders={folders} type={rowType} />}
+        {children}
       </div>
     </div>
   );

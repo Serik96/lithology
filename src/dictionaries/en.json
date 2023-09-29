@@ -86,15 +86,19 @@
       "grain": "Grain",
       "area": "Area",
       "orientation": "Orientation",
-      "created_at": "Date created",
-      "a_z": "A-Z",
-      "creation_date": "Creation date",
-      "change_date": "Date of change",
-      "comment_date": "Comment date"
+      "created_at": "Date created"
+    },
+    "filter-fields": {
+      "a-z": "A-Z",
+      "creation-date": "Creation date",
+      "change-date": "Date of change",
+      "comment-date": "Comment date"
     },
     "add-to-favourites": "Add to favourites",
     "add-to-archive": "Add to archive",
-    "delete": "Delete"
+    "delete": "Delete",
+    "reports": "{count, plural, =1 {# report} other {# reports}}",
+    "created": "Created"
   },
   "support": {
     "name": "Name",

@@ -63,6 +63,16 @@
     background-color: transparent;
   }
 
+  &.info {
+    @include btnFocus;
+    @include bodyFontMediumS;
+    border: 1px solid var(--gray-100);
+    background-color: transparent;
+    color: var(--black-400);
+    padding: 5px 12px;
+    width: fit-content;
+  }
+
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;

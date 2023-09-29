@@ -1,7 +1,7 @@
 import { TRowType } from '@/components/data-table/types';
 import { ECardType, ESortBy } from '@/enums';
 import { BlockIcon, FatrowsIcon } from '@/icons';
-import { TSort } from '@/types/project';
+import { TProjectSortField } from '@/types/project';
 
 export const defaultRowsType = 0;
 
@@ -16,25 +16,25 @@ export const rowsTypes: TRowType[] = [
   },
 ];
 
-export const sortInitialValue: TSort[] = [
+export const sortInitialValue: TProjectSortField[] = [
   {
-    label: 'table.fields.a_z',
-    name: 'a_z',
-    by: ESortBy.ASC,
+    label: 'table.filter-fields.a-z',
+    name: 'a-z',
+    direction: ESortBy.ASC,
   },
   {
-    label: 'table.fields.creation_date',
-    name: 'creation_date',
-    by: ESortBy.ASC,
+    label: 'table.filter-fields.creation-date',
+    name: 'creation-date',
+    direction: ESortBy.ASC,
   },
   {
-    label: 'table.fields.change_date',
-    name: 'change_date',
-    by: ESortBy.ASC,
+    label: 'table.filter-fields.change-date',
+    name: 'change-date',
+    direction: ESortBy.ASC,
   },
   {
-    label: 'table.fields.comment_date',
-    name: 'comment_date',
-    by: ESortBy.ASC,
+    label: 'table.filter-fields.comment-date',
+    name: 'comment-date',
+    direction: ESortBy.ASC,
   },
 ];

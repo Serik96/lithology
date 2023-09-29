@@ -38,6 +38,7 @@ const Subscription = () => {
               <p className={s.slug}>{e.slug}</p>
               <h2 className={s.title}>{e.title}</h2>
               <p className={s.content}>{e.content}</p>
+
               <Button variant="bordered">
                 {complexStr(
                   [t('subscription.buy'), currencySigns[ECurrencySign.usd] + e.price],
