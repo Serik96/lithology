@@ -7,7 +7,7 @@ export type TBreadcrumbs = {
 
 export type TSidebarLink = {
   label: string;
-  href: string;
+  href?: string;
   Icon: FC;
   type?: string;
   isBottomLink?: boolean;

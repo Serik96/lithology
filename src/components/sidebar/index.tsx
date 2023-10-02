@@ -15,29 +15,27 @@ export const Sidebar = ({ links, onClick }: TProps) => {
   return (
     <nav className={s.sidebar}>
       <ul className={s.list}>
-        {links.map(({ Icon, href, isBottomLink, label, type }, i) => {
-          return (
-            <li
-              key={`sidebar__link_${href}_${i}`}
-              className={cn(s.listItem, isBottomLink && s.listItemActive)}
-            >
-              {type ? (
-                <div
-                  onClick={() => onClick?.(type)}
-                  className={cn(s.link, isBottomLink && 'link_active')}
-                >
-                  <Icon />
-                  {t(label)}
-                </div>
-              ) : (
-                <Link href={href} className={cn(s.link, isBottomLink && 'link_active')}>
-                  <Icon />
-                  {t(label)}
-                </Link>
-              )}
-            </li>
-          );
-        })}
+        {links.map(({ Icon, href, isBottomLink, label, type }, i) => (
+          <li
+            key={`sidebar__link_${i}`}
+            className={cn(s.listItem, isBottomLink && s.listItemActive)}
+          >
+            {href ? (
+              <Link href={href} className={cn(s.link, isBottomLink && 'link_active')}>
+                <Icon />
+                {t(label)}
+              </Link>
+            ) : (
+              <div
+                onClick={() => onClick?.(type ? type : '')}
+                className={cn(s.link, isBottomLink && 'link_active')}
+              >
+                <Icon />
+                {t(label)}
+              </div>
+            )}
+          </li>
+        ))}
       </ul>
     </nav>
   );

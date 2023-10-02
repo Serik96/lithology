@@ -1,14 +1,14 @@
 export const routes = {
   project: {
-    create: '/create-report',
     allProjects: {
       main: '/projects',
-      archived: '/projects/archived',
       create: '/projects/create',
-      favourites: '/projects/favourites',
+    },
+    reports: {
+      main: '/reports',
+      create: '/reports/create',
     },
     notifications: '/notifications',
-    folders: '/folders',
     settings: '/settings',
     cabinet: '/cabinet',
     subscription: {

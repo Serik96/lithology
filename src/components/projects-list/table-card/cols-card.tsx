@@ -6,6 +6,7 @@ import { routes } from '@/const';
 import { cn, formatDate } from '@/helpers';
 import {
   CloseIcon,
+  CloudFilledIcon,
   CloudIcon,
   FolderIcon,
   MoreIcon,
@@ -17,11 +18,9 @@ import s from './table-card.module.scss';
 
 type TProps = {
   project: TProject;
-  foldersSlug: string;
 };
 
 export const ColsCard = ({
-  foldersSlug,
   project: { top, title, archived, slug, created_at, reportsCount },
 }: TProps) => {
   const t = useTranslations();
@@ -29,10 +28,7 @@ export const ColsCard = ({
 
   return (
     <div className={cn(s.card, s.cardCols)}>
-      <Link
-        className={s.link}
-        href={`${routes.project.allProjects.main}/${foldersSlug}/${slug}`}
-      />
+      <Link className={s.link} href={`${routes.project.reports.main}/${slug}`} />
       <div className={s.statusIcons}>
         {top && (
           <div className={s.favoriteIcon}>
@@ -60,16 +56,21 @@ export const ColsCard = ({
           />
           <div className={cn(s.moreView, isMoreVisible && s.visible)}>
             <div className={s.moreActionBtn}>
-              <StarIcon />
+              <div className={cn(s.moreIcon, top && s.active)}>
+                {top ? <StarFilledIcon /> : <StarIcon />}
+              </div>
               {t('table.add-to-favourites')}
             </div>
             <div className={s.moreActionBtn}>
-              <CloudIcon />
+              <div className={cn(s.moreIcon, archived && s.active)}>
+                {archived ? <CloudFilledIcon /> : <CloudIcon />}
+              </div>
+
               {t('table.add-to-archive')}
             </div>
             <div className={s.moreDeleteBtn}>
               <CloseIcon />
-              {t('table.delete')}
+              {t('delete')}
             </div>
           </div>
         </div>

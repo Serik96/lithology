@@ -1,25 +1,20 @@
 import { routes } from '@/const';
 import { ECardSortType } from '@/enums';
-import { BookIcon, CloudIcon, FolderAddIcon, StarIcon } from '@/icons';
+import { CloudIcon, FolderAddIcon, StarIcon } from '@/icons';
 import { TBreadcrumbs, TSidebarLink } from '@/types';
 
-export const projectsNav: TBreadcrumbs[] = [
+export const reportsNav: TBreadcrumbs[] = [
   {
     label: 'navigation.home',
     href: routes.project.cabinet,
   },
   {
-    label: 'navigation.all-projects.main',
+    label: 'navigation.reports.main',
     href: routes.project.allProjects.main,
   },
 ];
 
-export const projectsSidebarNav: TSidebarLink[] = [
-  {
-    label: 'navigation.all-projects.main',
-    Icon: BookIcon,
-    href: routes.project.allProjects.main,
-  },
+export const reportsSidebarNav: TSidebarLink[] = [
   {
     label: 'navigation.all-projects.archived',
     Icon: CloudIcon,
@@ -31,7 +26,7 @@ export const projectsSidebarNav: TSidebarLink[] = [
     type: ECardSortType.FAVOURITES,
   },
   {
-    label: 'navigation.all-projects.create',
+    label: 'navigation.reports.create',
     Icon: FolderAddIcon,
     href: routes.project.allProjects.create,
     isBottomLink: true,

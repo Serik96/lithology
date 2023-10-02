@@ -5,22 +5,27 @@ import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { DataTable } from '@/components/data-table';
 import { ProjectsContainer } from '@/components/projects-container';
+import { ReportsList } from '@/components/reports-list';
 import { Breadcrumbs } from '@/components/ui';
 import { tempData } from '@/const/tmp-data';
 import { ECardType } from '@/enums';
-import { TProject } from '@/types/project';
-import { projectNav, projectSidebarNav } from './const';
+import { getLastSlug } from '@/helpers';
+import { TReport } from '@/types/project';
+import { reportsNav, reportsSidebarNav } from './const';
 
 const Reports = () => {
   const t = useTranslations();
   const pathname = usePathname();
+  /* @todo slug будет нужен для запроса всех репортов из проекта   */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const slug = getLastSlug(pathname);
 
   const [rowType, setRowType] = useState(ECardType.ROW);
-  const [reports, setReports] = useState<TProject[]>();
+  const [reports, setReports] = useState<TReport[]>();
 
   /* todo: тут будет функция с подключенным бэком  */
-  const getProjects = () => {
-    setReports(tempData.projects);
+  const getReports = () => {
+    setReports(tempData.reports);
   };
 
   const handleSidebarAction = (type: string) => {
@@ -29,21 +34,19 @@ const Reports = () => {
 
   /* todo: тут будет функция с подключенным бэком  */
   useEffect(() => {
-    getProjects();
+    getReports();
   }, []);
 
   return (
     <>
-      <Breadcrumbs navLinks={projectNav} />
+      <Breadcrumbs navLinks={reportsNav} />
       <ProjectsContainer
-        sidebarLinks={projectSidebarNav}
+        sidebarLinks={reportsSidebarNav}
         handleSidebarAction={handleSidebarAction}
-        heading={t('navigation.all-projects.main')}
+        heading={t('navigation.reports.all')}
       >
         <DataTable showTypeToggle rowType={rowType} setRowType={setRowType}>
-          {/* projects && (
-            <ProjectsList type={rowType} projects={projects} foldersSlug={slug} />
-          ) */}
+          {reports && <ReportsList type={rowType} reports={reports} />}
         </DataTable>
       </ProjectsContainer>
     </>

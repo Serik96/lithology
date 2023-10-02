@@ -5,7 +5,7 @@ import { TNavLink } from './types';
 export const navLinks: TNavLink[] = [
   {
     label: 'navigation.create',
-    href: routes.project.create,
+    href: routes.project.reports.create,
     icon: AddIcon,
     isActive: true,
   },
@@ -16,7 +16,7 @@ export const navLinks: TNavLink[] = [
   },
   {
     label: null,
-    href: routes.project.folders,
+    href: routes.project.allProjects.main,
     icon: FolderIcon,
   },
   {

@@ -6,14 +6,13 @@ import { TableCard } from './table-card';
 type TProps = {
   projects: TProject[];
   type: ECardType;
-  foldersSlug: string;
 };
 
-export const ProjectsList = ({ projects, type, foldersSlug }: TProps) => {
+export const ProjectsList = ({ projects, type }: TProps) => {
   return (
     <div className={s.list}>
       {projects.map(p => (
-        <TableCard foldersSlug={foldersSlug} key={p.slug} data={p} type={type} />
+        <TableCard key={p.slug} data={p} type={type} />
       ))}
     </div>
   );

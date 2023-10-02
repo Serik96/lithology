@@ -1,6 +1,9 @@
 {
   "litholog": "Litholog",
   "search": "Search",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "delete": "Delete",
   "auth": {
     "sign-up": "Sign up",
     "email": "E-mail",
@@ -61,6 +64,11 @@
     "subscription": {
       "main": "Subscription",
       "purchase": "Subscription purchase"
+    },
+    "reports": {
+      "main": "Reports",
+      "all": "All reports",
+      "create": "Create report"
     }
   },
   "email-sent": "We have sent you an e-mail. Follow the link in the e-mail.",
@@ -96,9 +104,14 @@
     },
     "add-to-favourites": "Add to favourites",
     "add-to-archive": "Add to archive",
-    "delete": "Delete",
     "reports": "{count, plural, =1 {# report} other {# reports}}",
-    "created": "Created"
+    "created": "Created",
+    "project-delete": "Are you sure you want to delete the {project} project?",
+    "project-delete-description": "The project can't be taken back.",
+    "folder-delete-description": "The folder can't be taken back.",
+    "folder-delete": "Are you sure you want to delete the {folder} folder?",
+    "report-delete": "Are you sure you want to delete the {report} report?",
+    "report-delete-description": "The report can't be taken back."
   },
   "support": {
     "name": "Name",

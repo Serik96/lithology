@@ -4,7 +4,9 @@ import ArrowLeftIcon from '../../public/icons/arrow-left.svg';
 import ArrowSquareRightIcon from '../../public/icons/arrow-square-right.svg';
 import BlockIcon from '../../public/icons/block.svg';
 import BookIcon from '../../public/icons/book.svg';
+import CloseFilledIcon from '../../public/icons/close-filled.svg';
 import CloseIcon from '../../public/icons/close.svg';
+import CloudFilledIcon from '../../public/icons/cloud-filled.svg';
 import CloudIcon from '../../public/icons/cloud.svg';
 import DropIcon from '../../public/icons/drop.svg';
 import FatrowsIcon from '../../public/icons/fatrows.svg';
@@ -30,7 +32,9 @@ export {
   BookIcon,
   BlockIcon,
   CloseIcon,
+  CloseFilledIcon,
   CloudIcon,
+  CloudFilledIcon,
   DropIcon,
   FolderIcon,
   FolderAddIcon,

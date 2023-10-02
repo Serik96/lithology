@@ -5,6 +5,7 @@ import { routes } from '@/const';
 import { cn, formatDate } from '@/helpers';
 import {
   CloseIcon,
+  CloudFilledIcon,
   CloudIcon,
   FolderIcon,
   MoreIcon,
@@ -67,16 +68,21 @@ export const RowsCard = ({
             />
             <div className={cn(s.moreView, isMoreVisible && s.visible)}>
               <div className={s.moreActionBtn}>
-                <StarIcon />
+                <div className={cn(s.moreIcon, top && s.active)}>
+                  {top ? <StarFilledIcon /> : <StarIcon />}
+                </div>
                 {t('table.add-to-favourites')}
               </div>
               <div className={s.moreActionBtn}>
-                <CloudIcon />
+                <div className={cn(s.moreIcon, archived && s.active)}>
+                  {archived ? <CloudFilledIcon /> : <CloudIcon />}
+                </div>
+
                 {t('table.add-to-archive')}
               </div>
               <div className={s.moreDeleteBtn}>
                 <CloseIcon />
-                {t('table.delete')}
+                {t('delete')}
               </div>
             </div>
           </div>

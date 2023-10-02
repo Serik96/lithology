@@ -6,18 +6,13 @@ import { RowsCard } from './rows-card';
 type TProps = {
   data: TProject;
   type: ECardType;
-  foldersSlug: string;
 };
 
-export const TableCard = ({ data, type, foldersSlug }: TProps) => {
+export const TableCard = ({ data, type }: TProps) => {
   return (
     <>
-      {type === ECardType.ROW && (
-        <RowsCard foldersSlug={foldersSlug} project={{ ...data }} />
-      )}
-      {type === ECardType.COLUMN && (
-        <ColsCard foldersSlug={foldersSlug} project={{ ...data }} />
-      )}
+      {type === ECardType.ROW && <RowsCard project={{ ...data }} />}
+      {type === ECardType.COLUMN && <ColsCard project={{ ...data }} />}
     </>
   );
 };

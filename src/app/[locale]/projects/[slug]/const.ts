@@ -18,13 +18,11 @@ export const projectSidebarNav: TSidebarLink[] = [
   {
     label: 'navigation.all-projects.archived',
     Icon: CloudIcon,
-    href: routes.project.allProjects.archived,
     type: ECardSortType.ARCHIVED,
   },
   {
     label: 'navigation.all-projects.favourites',
     Icon: StarIcon,
-    href: routes.project.allProjects.favourites,
     type: ECardSortType.FAVOURITES,
   },
   {
