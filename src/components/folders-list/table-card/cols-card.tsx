@@ -14,7 +14,6 @@ import {
   StarIcon,
 } from '@/icons';
 import { TFolder } from '@/types/project';
-import { formattedCardInfo } from './const';
 import s from './table-card.module.scss';
 
 type TProps = {
@@ -34,7 +33,6 @@ export const ColsCard = ({
 }: TProps) => {
   const t = useTranslations();
   const [isMoreVisible, setIsMoreVisible] = useState(false);
-  const info = formattedCardInfo(grain, area, orientation);
 
   return (
     <div className={cn(s.card, s.cardCols)}>
@@ -87,11 +85,13 @@ export const ColsCard = ({
       </div>
 
       <div className={s.info}>
-        {info.map((e, i) => (
-          <div key={`project_info_${e.value}_${i}`} className={s.infoItem}>
-            {`${t(e.label)}: ${e.value}`}
-          </div>
-        ))}
+        {grain && (
+          <div className={s.infoItem}>{`${t('table.fields.grain')}: ${grain}`}</div>
+        )}
+        {area && <div className={s.infoItem}>{`${t('table.fields.area')}: ${area}`}</div>}
+        {orientation && (
+          <div className={s.infoItem}>{`${t('table.fields.area')}: ${orientation}`}</div>
+        )}
       </div>
       <div className={s.cardImgs}>
         {project_images &&

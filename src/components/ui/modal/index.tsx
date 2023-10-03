@@ -1,17 +1,18 @@
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 import { Button } from '@/components/ui';
+import { ESize } from '@/enums';
 import { cn } from '@/helpers';
 import { CloseFilledIcon } from '@/icons';
 import s from './modal.module.scss';
 
 type TProps = {
   open: boolean;
-  onClose: () => void;
+  onClose?: () => void;
   onConfirm: () => void;
   title: string;
   description: string;
-  maxSize: number;
+  maxWidth: ESize;
   cancelBtnText?: string;
   confirmBtnText?: string;
 };
@@ -24,17 +25,21 @@ export const Modal = ({
   confirmBtnText,
   title,
   description,
-  maxSize,
+  maxWidth,
 }: TProps) => {
   const t = useTranslations();
+
+  const handleClose = () => {
+    onClose?.();
+  };
 
   useEffect(() => {
     const htmlTag = document.querySelector('html');
     if (htmlTag) {
       if (open) {
-        htmlTag.style.overflowY = 'hidden';
+        htmlTag.classList.add('hideScroll');
       } else {
-        htmlTag.style.overflowY = 'auto';
+        htmlTag.classList.remove('hideScroll');
       }
     }
   }, [open]);
@@ -42,15 +47,15 @@ export const Modal = ({
   return (
     open && (
       <div className={cn(s.modal, open && s.open)}>
-        <div className={s.bg} onClick={onClose} />
-        <div className={s.wrapper} style={{ maxWidth: maxSize }}>
-          <div className={s.closeBtn} onClick={onClose}>
+        <div className={s.bg} onClick={handleClose} />
+        <div className={cn(s.wrapper, s?.[maxWidth ?? ESize.md])}>
+          <div className={s.closeBtn} onClick={handleClose}>
             <CloseFilledIcon />
           </div>
           <div className={s.title}>{title}</div>
           <div className={s.description}>{description}</div>
           <div className={s.btns}>
-            <Button className={s.cancelBtn} variant={'info-black'} onClick={onClose}>
+            <Button className={s.cancelBtn} variant={'info-black'} onClick={handleClose}>
               {cancelBtnText ?? t('cancel')}
             </Button>
             <Button className={s.confirmBtn} variant={'red'} onClick={onConfirm}>

@@ -11,7 +11,7 @@ import { tempData } from '@/const/tmp-data';
 import { ECardType } from '@/enums';
 import { getLastSlug } from '@/helpers';
 import { TReport } from '@/types/project';
-import { reportsNav, reportsSidebarNav } from './const';
+import { reportsBreadcrumbs, reportsSideLinks } from './const';
 
 const Reports = () => {
   const t = useTranslations();
@@ -39,9 +39,9 @@ const Reports = () => {
 
   return (
     <>
-      <Breadcrumbs navLinks={reportsNav} />
+      <Breadcrumbs navLinks={reportsBreadcrumbs} />
       <ProjectsContainer
-        sidebarLinks={reportsSidebarNav}
+        sidebarLinks={reportsSideLinks}
         handleSidebarAction={handleSidebarAction}
         heading={t('navigation.reports.all')}
       >

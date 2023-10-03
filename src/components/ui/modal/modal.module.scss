@@ -34,6 +34,10 @@
     padding: 24px 40px;
     width: 100%;
 
+    &.md {
+      max-width: 480px;
+    }
+
     .closeBtn {
       position: absolute;
       top: 4px;

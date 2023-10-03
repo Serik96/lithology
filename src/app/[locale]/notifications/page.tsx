@@ -2,14 +2,14 @@
 
 import { Sidebar } from '@/components/sidebar';
 import { Breadcrumbs } from '@/components/ui';
-import { notificationsNav, notificationsSidebarNav } from './const';
+import { notificationsBreadcrumbs, notificationsSideLinks } from './const';
 
 const Notifications = () => {
   return (
     <>
-      <Breadcrumbs navLinks={notificationsNav} />
+      <Breadcrumbs navLinks={notificationsBreadcrumbs} />
       <div>
-        <Sidebar links={notificationsSidebarNav} />
+        <Sidebar links={notificationsSideLinks} />
       </div>
     </>
   );

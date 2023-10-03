@@ -1,5 +1,5 @@
 import { TRowType } from '@/components/data-table/types';
-import { ECardType, ESortBy } from '@/enums';
+import { ECardType, ESortDirection } from '@/enums';
 import { BlockIcon, FatrowsIcon } from '@/icons';
 import { TProjectSortField } from '@/types/project';
 
@@ -20,21 +20,21 @@ export const sortInitialValue: TProjectSortField[] = [
   {
     label: 'table.filter-fields.a-z',
     name: 'a-z',
-    direction: ESortBy.ASC,
+    direction: ESortDirection.ASC,
   },
   {
     label: 'table.filter-fields.creation-date',
     name: 'creation-date',
-    direction: ESortBy.ASC,
+    direction: ESortDirection.ASC,
   },
   {
     label: 'table.filter-fields.change-date',
     name: 'change-date',
-    direction: ESortBy.ASC,
+    direction: ESortDirection.ASC,
   },
   {
     label: 'table.filter-fields.comment-date',
     name: 'comment-date',
-    direction: ESortBy.ASC,
+    direction: ESortDirection.ASC,
   },
 ];

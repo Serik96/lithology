@@ -9,7 +9,7 @@ import { Breadcrumbs } from '@/components/ui';
 import { tempData } from '@/const/tmp-data';
 import { ECardType } from '@/enums';
 import { TFolder } from '@/types/project';
-import { projectsNav, projectsSidebarNav } from './const';
+import { projectsBreadcrumbs, projectsSideLinks } from './const';
 
 const Projects = () => {
   const t = useTranslations();
@@ -33,9 +33,9 @@ const Projects = () => {
 
   return (
     <>
-      <Breadcrumbs navLinks={projectsNav} />
+      <Breadcrumbs navLinks={projectsBreadcrumbs} />
       <ProjectsContainer
-        sidebarLinks={projectsSidebarNav}
+        sidebarLinks={projectsSideLinks}
         handleSidebarAction={handleSidebarAction}
         heading={t('navigation.all-projects.main')}
       >

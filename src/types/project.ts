@@ -1,4 +1,4 @@
-import { ESortBy } from '@/enums';
+import { ESortDirection } from '@/enums';
 
 export type TProject = {
   folder_id: number;
@@ -48,7 +48,7 @@ export type TFolder = {
 export type TProjectSortField = {
   label: string;
   name: string;
-  direction: ESortBy;
+  direction: ESortDirection;
 };
 
 export type TReport = {

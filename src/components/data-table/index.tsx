@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { PropsWithChildren, useState } from 'react';
 import { TextField } from '@/components/ui';
-import { ECardType, ESortBy } from '@/enums';
+import { ECardType, ESortDirection } from '@/enums';
 import { cn } from '@/helpers';
 import { DropIcon, SearchIcon } from '@/icons';
 import { TProject } from '@/types/project';
@@ -27,7 +27,10 @@ export const DataTable = ({ showTypeToggle, rowType, setRowType, children }: TPr
       if (typeof index !== 'undefined') {
         arr[index] = {
           ...arr[index],
-          direction: arr[index].direction === ESortBy.ASC ? ESortBy.DESC : ESortBy.ASC,
+          direction:
+            arr[index].direction === ESortDirection.ASC
+              ? ESortDirection.DESC
+              : ESortDirection.ASC,
         };
       }
 
@@ -66,7 +69,7 @@ export const DataTable = ({ showTypeToggle, rowType, setRowType, children }: TPr
             <div
               className={cn(
                 s.filterIcon,
-                filters[i].direction === ESortBy.DESC && s.reversed,
+                filters[i].direction === ESortDirection.DESC && s.reversed,
               )}
             >
               <DropIcon />

@@ -3,7 +3,7 @@ import { ECardSortType } from '@/enums';
 import { BookIcon, CloudIcon, FolderAddIcon, StarIcon } from '@/icons';
 import { TBreadcrumbs, TSidebarLink } from '@/types';
 
-export const projectsNav: TBreadcrumbs[] = [
+export const projectsBreadcrumbs: TBreadcrumbs[] = [
   {
     label: 'navigation.home',
     href: routes.project.cabinet,
@@ -14,7 +14,7 @@ export const projectsNav: TBreadcrumbs[] = [
   },
 ];
 
-export const projectsSidebarNav: TSidebarLink[] = [
+export const projectsSideLinks: TSidebarLink[] = [
   {
     label: 'navigation.all-projects.main',
     Icon: BookIcon,
@@ -34,6 +34,6 @@ export const projectsSidebarNav: TSidebarLink[] = [
     label: 'navigation.all-projects.create',
     Icon: FolderAddIcon,
     href: routes.project.allProjects.create,
-    isBottomLink: true,
+    isBottom: true,
   },
 ];

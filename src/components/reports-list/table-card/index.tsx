@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { Modal } from '@/components/ui/modal';
-import { ECardType } from '@/enums';
+import { ECardType, ESize } from '@/enums';
 import { TReport } from '@/types/project';
 import { ColsCard } from './cols-card';
 import { RowsCard } from './rows-card';
@@ -28,7 +28,7 @@ export const TableCard = ({ data, type }: TProps) => {
         open={modalOpen}
         title={t('table.report-delete', { report: data.name })}
         description={t('table.report-delete-description')}
-        maxSize={480}
+        maxWidth={ESize.md}
         onClose={() => setModalOpen(false)}
         onConfirm={() => {}}
         confirmBtnText={t('delete')}

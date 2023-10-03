@@ -1,4 +1,4 @@
-export enum ESortBy {
+export enum ESortDirection {
   ASC = 'ASC',
   DESC = 'DESC',
 }

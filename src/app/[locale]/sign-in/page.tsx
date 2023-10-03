@@ -11,7 +11,7 @@ import { cn, getFormValue } from '@/helpers';
 import { ArrowSquareRightIcon } from '@/icons';
 import { AuthModel } from '@/model';
 import { TAuthLoginAction } from '@/model/auth/types';
-import { navSignIn } from './const';
+import { signInBreadcrumbs } from './const';
 import s from './sign-in.module.scss';
 
 const SignIn = () => {
@@ -47,7 +47,7 @@ const SignIn = () => {
 
   return (
     <>
-      <Breadcrumbs navLinks={navSignIn} />
+      <Breadcrumbs navLinks={signInBreadcrumbs} />
       <div className={s.signIn}>
         <form className={s.form} onSubmit={handleSubmit}>
           <h1 className={s.heading}>{t('navigation.sign-in')}</h1>

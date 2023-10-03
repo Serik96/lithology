@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { Sidebar } from '@/components/sidebar';
+import { ECardSortType } from '@/enums';
 import { TSidebarLink } from '@/types';
 import s from './projects-container.module.scss';
 
@@ -7,7 +8,7 @@ type TProps = PropsWithChildren<{
   sidebarLinks: TSidebarLink[];
   description?: string;
   heading: string;
-  handleSidebarAction?: (value: string) => void;
+  onSidebarClick?: (value: Nullable<ECardSortType>) => void;
 }>;
 
 export const ProjectsContainer = ({
@@ -15,11 +16,11 @@ export const ProjectsContainer = ({
   sidebarLinks,
   description,
   heading,
-  handleSidebarAction,
+  onSidebarClick,
 }: TProps) => {
   return (
     <div className={s.projects}>
-      <Sidebar links={sidebarLinks} onClick={handleSidebarAction} />
+      <Sidebar links={sidebarLinks} onClick={onSidebarClick} />
       <div className={s.wrapper}>
         <h1 className={s.heading}>{heading}</h1>
         {description && <p className={s.description}>{description}</p>}
