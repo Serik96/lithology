@@ -7,7 +7,7 @@ type TProps = {
   reports: TReport[];
   type: ECardType;
 };
- 
+
 export const ReportsList = ({ reports, type }: TProps) => {
   return (
     <div className={s.list}>

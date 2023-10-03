@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ECardSortType } from '@/enums';
+import { ECardFilterType } from '@/enums';
 
 export type TBreadcrumbs = {
   label: string;
@@ -10,6 +10,6 @@ export type TSidebarLink = {
   label: string;
   href?: string;
   Icon: FC;
-  type?: ECardSortType;
+  type?: ECardFilterType;
   isBottom?: boolean;
 };

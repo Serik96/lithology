@@ -1,5 +1,5 @@
 import { routes } from '@/const';
-import { ECardSortType } from '@/enums';
+import { ECardFilterType } from '@/enums';
 import { CloudIcon, FolderAddIcon, StarIcon } from '@/icons';
 import { TBreadcrumbs, TSidebarLink } from '@/types';
 
@@ -18,12 +18,12 @@ export const reportsSideLinks: TSidebarLink[] = [
   {
     label: 'navigation.all-projects.archived',
     Icon: CloudIcon,
-    type: ECardSortType.ARCHIVED,
+    type: ECardFilterType.ARCHIVED,
   },
   {
     label: 'navigation.all-projects.favourites',
     Icon: StarIcon,
-    type: ECardSortType.FAVOURITES,
+    type: ECardFilterType.FAVOURITES,
   },
   {
     label: 'navigation.reports.create',

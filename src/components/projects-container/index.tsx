@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { Sidebar } from '@/components/sidebar';
-import { ECardSortType } from '@/enums';
+import { ECardFilterType } from '@/enums';
 import { TSidebarLink } from '@/types';
 import s from './projects-container.module.scss';
 
@@ -8,7 +8,7 @@ type TProps = PropsWithChildren<{
   sidebarLinks: TSidebarLink[];
   description?: string;
   heading: string;
-  onSidebarClick?: (value: Nullable<ECardSortType>) => void;
+  onSidebarClick?: (type: Nullable<ECardFilterType>) => void;
 }>;
 
 export const ProjectsContainer = ({

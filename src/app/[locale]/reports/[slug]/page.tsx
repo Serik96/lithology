@@ -8,7 +8,7 @@ import { ProjectsContainer } from '@/components/projects-container';
 import { ReportsList } from '@/components/reports-list';
 import { Breadcrumbs } from '@/components/ui';
 import { tempData } from '@/const/tmp-data';
-import { ECardType } from '@/enums';
+import { ECardFilterType, ECardType } from '@/enums';
 import { getLastSlug } from '@/helpers';
 import { TReport } from '@/types/project';
 import { reportsBreadcrumbs, reportsSideLinks } from './const';
@@ -28,7 +28,7 @@ const Reports = () => {
     setReports(tempData.reports);
   };
 
-  const handleSidebarAction = (type: string) => {
+  const handleSidebarClick = (type: Nullable<ECardFilterType>) => {
     console.log(type);
   };
 
@@ -42,7 +42,7 @@ const Reports = () => {
       <Breadcrumbs navLinks={reportsBreadcrumbs} />
       <ProjectsContainer
         sidebarLinks={reportsSideLinks}
-        handleSidebarAction={handleSidebarAction}
+        onSidebarClick={handleSidebarClick}
         heading={t('navigation.reports.all')}
       >
         <DataTable showTypeToggle rowType={rowType} setRowType={setRowType}>

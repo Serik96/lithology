@@ -3,7 +3,7 @@ export enum ECardType {
   ROW = 'ROW',
 }
 
-export enum ECardSortType {
+export enum ECardFilterType {
   ARCHIVED = 'ARCHIVED',
   FAVOURITES = 'FAVOURITES',
 }

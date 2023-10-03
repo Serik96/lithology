@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { ECardSortType } from '@/enums';
+import { ECardFilterType } from '@/enums';
 import { cn } from '@/helpers';
 import { TSidebarLink } from '@/types';
 import s from './sidebar.module.scss';
 
 type TProps = {
   links: TSidebarLink[];
-  onClick?: (value: Nullable<ECardSortType>) => void;
+  onClick?: (value: Nullable<ECardFilterType>) => void;
 };
 
 export const Sidebar = ({ links, onClick }: TProps) => {

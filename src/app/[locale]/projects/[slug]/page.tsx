@@ -7,7 +7,7 @@ import { ProjectsContainer } from '@/components/projects-container';
 import { ProjectsList } from '@/components/projects-list';
 import { Breadcrumbs } from '@/components/ui';
 import { tempData } from '@/const/tmp-data';
-import { ECardType } from '@/enums';
+import { ECardFilterType, ECardType } from '@/enums';
 import { TProject } from '@/types/project';
 import { projectBreadcrumbs, projectSideLinks } from './const';
 
@@ -22,7 +22,7 @@ const Project = () => {
     setProjects(tempData.projects);
   };
 
-  const handleSidebarAction = (type: string) => {
+  const handleSidebarClick = (type: Nullable<ECardFilterType>) => {
     console.log(type);
   };
 
@@ -36,7 +36,7 @@ const Project = () => {
       <Breadcrumbs navLinks={projectBreadcrumbs} />
       <ProjectsContainer
         sidebarLinks={projectSideLinks}
-        handleSidebarAction={handleSidebarAction}
+        onSidebarClick={handleSidebarClick}
         heading={t('navigation.all-projects.main')}
       >
         <DataTable showTypeToggle rowType={rowType} setRowType={setRowType}>

@@ -15,24 +15,37 @@ export const TableCard = ({ data, type }: TProps) => {
   const t = useTranslations();
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
-  return (
-    <>
-      {type === ECardType.ROW && (
+  if (type === ECardType.ROW) {
+    return (
+      <>
         <RowsCard setModalOpen={setModalOpen} report={{ ...data }} />
-      )}
-      {type === ECardType.COLUMN && (
-        <ColsCard setModalOpen={setModalOpen} report={{ ...data }} />
-      )}
+        <Modal
+          title={t('table.report-delete', { report: data.name })}
+          description={t('table.report-delete-description')}
+          maxWidth={ESize.md}
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+          onConfirm={() => {}}
+          confirmBtnText={t('delete')}
+        />
+      </>
+    );
+  }
 
-      <Modal
-        open={modalOpen}
-        title={t('table.report-delete', { report: data.name })}
-        description={t('table.report-delete-description')}
-        maxWidth={ESize.md}
-        onClose={() => setModalOpen(false)}
-        onConfirm={() => {}}
-        confirmBtnText={t('delete')}
-      />
-    </>
-  );
+  if (type === ECardType.COLUMN) {
+    return (
+      <>
+        <ColsCard setModalOpen={setModalOpen} report={{ ...data }} />
+        <Modal
+          title={t('table.report-delete', { report: data.name })}
+          description={t('table.report-delete-description')}
+          maxWidth={ESize.md}
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+          onConfirm={() => {}}
+          confirmBtnText={t('delete')}
+        />
+      </>
+    );
+  }
 };
