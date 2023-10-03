@@ -35,6 +35,8 @@ export const RowsCard = ({
   const t = useTranslations();
   const [isMoreVisible, setIsMoreVisible] = useState(false);
 
+  const width = 100 / project_images.length;
+
   return (
     <div className={cn(s.card, s.cardRows)}>
       <Link className={s.link} href={`${routes.project.allProjects.main}/${slug}`} />
@@ -55,8 +57,6 @@ export const RowsCard = ({
           <div className={s.cardImgs}>
             {project_images &&
               project_images.map((e, i) => {
-                const width = 100 / project_images.length;
-
                 return (
                   <Image
                     key={`project_img_${e}_${i}`}

@@ -38,6 +38,8 @@ export const ColsCard = ({
   const [isMoreVisible, setIsMoreVisible] = useState(false);
   const info = formattedCardInfo(grain, area, orientation);
 
+  const width = 100 / project_images.length;
+
   return (
     <>
       <div className={cn(s.card, s.cardCols)}>
@@ -99,8 +101,6 @@ export const ColsCard = ({
         <div className={s.cardImgs}>
           {project_images &&
             project_images.map((e, i) => {
-              const width = 100 / project_images.length;
-
               return (
                 <Image
                   key={`project_img_${e}_${i}`}
