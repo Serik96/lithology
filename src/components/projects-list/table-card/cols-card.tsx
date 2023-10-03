@@ -31,12 +31,12 @@ export const ColsCard = ({
       <Link className={s.link} href={`${routes.project.reports.main}/${slug}`} />
       <div className={s.statusIcons}>
         {top && (
-          <div className={s.favoriteIcon}>
+          <div className={cn(s.favoriteIcon, s.icon)}>
             <StarFilledIcon />
           </div>
         )}
         {archived && (
-          <div className={s.archivedIcon}>
+          <div className={cn(s.archivedIcon, s.icon)}>
             <CloudIcon />
           </div>
         )}
