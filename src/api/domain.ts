@@ -7,15 +7,21 @@ import { TFetchOptions, TFetchResponse } from '@/types';
 
 export async function fetchApi<T>(options: TFetchOptions): Promise<TFetchResponse<T>> {
   let response;
+  const body =
+    !['GET', 'HEAD'].includes(options.method) && options.body
+      ? JSON.stringify(options.body)
+      : undefined;
+  const headers = {
+    'Content-Type': 'application/json',
+    ...(options.token && { 'auth-token': options.token }),
+    ...options.headers,
+  };
 
   try {
     response = await fetch(options.url, {
-      method: options.method || 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        ...options.headers,
-      },
-      body: options.body ? JSON.stringify(options.body) : undefined,
+      method: options.method,
+      headers,
+      body,
     });
   } catch (err) {
     // @todo: log to sentry

@@ -5,6 +5,7 @@ export const name = 'modal';
 
 export const initialModalInfo: TModalInfo = {
   isOpened: false,
+  recordId: null,
 };
 
 export const initialState: TModalState = {

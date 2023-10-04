@@ -1,16 +1,23 @@
 import { useTranslations } from 'next-intl';
 import { FC } from 'react';
+import { useSelector } from 'react-redux';
 import { Modal } from '@/components/ui/modal';
 import { ESize } from '@/enums';
 import { EModalPurpose } from '@/enums/modal';
-import { TReport } from '@/types/project';
+import { ModalModel, SpecimenModel } from '@/model';
 
-type TProps = {
-  report: TReport;
-};
+const PURPOSE = EModalPurpose.REPORT_DELETE;
 
-export const ReportDeleteModal: FC<TProps> = ({ report }) => {
+export const ReportDeleteModal: FC = () => {
   const t = useTranslations();
+  const id = useSelector(ModalModel.store.selectors.getRecordId(PURPOSE));
+  const report = useSelector(SpecimenModel.store.selectors.getItemById(id));
+
+  if (report === null) {
+    // @todo добавить логгер и писать в него ошибку
+
+    return null;
+  }
 
   const handleConfirm = () => {
     // todo
@@ -18,8 +25,8 @@ export const ReportDeleteModal: FC<TProps> = ({ report }) => {
 
   return (
     <Modal
-      purpose={EModalPurpose.REPORT_DELETE}
-      title={t('table.report-delete', { report: report.name })}
+      purpose={PURPOSE}
+      title={t('table.report-delete', { report: report.title })}
       description={t('table.report-delete-description')}
       maxWidth={ESize.md}
       onConfirm={handleConfirm}

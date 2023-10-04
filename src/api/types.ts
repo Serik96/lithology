@@ -1,7 +1,7 @@
 import { THttpMethod } from '@/types';
-import { EApi, EApiAuth, EApiFolder } from './enum';
+import { EApi, EApiAuth, EApiBase } from './enum';
 
-export type TApiMethod = EApiAuth | EApiFolder;
+export type TApiMethod = EApiAuth | EApiBase;
 
 type TApiMethodPathInfo = {
   suffix?: string;
@@ -9,6 +9,6 @@ type TApiMethodPathInfo = {
 };
 
 // @todo Сделать проверку соответствий в константах Record<TApiMethod, TApiMethodPathInfo>
-type TApiInfo = Record<string, TApiMethodPathInfo>;
+export type TApiInfo = Record<string, TApiMethodPathInfo>;
 
 export type TAllApiInfo = Record<EApi, TApiInfo>;

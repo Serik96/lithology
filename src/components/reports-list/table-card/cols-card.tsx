@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { routes } from '@/const';
+import { EModalPurpose } from '@/enums/modal';
 import { cn, formatDate } from '@/helpers';
 import {
   CloseIcon,
@@ -13,42 +14,37 @@ import {
   StarFilledIcon,
   StarIcon,
 } from '@/icons';
-import { TReport } from '@/types/project';
+import { ModalModel } from '@/model';
+import { TSpecimen } from '@/types/project';
 import s from './table-card.module.scss';
 
 type TProps = {
-  report: TReport;
-  setModalOpen: (value: boolean) => void;
+  report: TSpecimen;
 };
 
-export const ColsCard = ({
-  setModalOpen,
-  report: {
-    top,
-    archived,
-    name,
-    slug,
-    created_at,
-    project_info: { grain, area, orientation },
-    project_images,
-  },
-}: TProps) => {
+export const ColsCard = ({ report }: TProps) => {
   const t = useTranslations();
   const [isMoreVisible, setIsMoreVisible] = useState(false);
-
-  const width = 100 / project_images.length;
+  const { openModal } = ModalModel.hooks.useModal({
+    purpose: EModalPurpose.REPORT_DELETE,
+    recordId: report.id,
+  });
+  const width = report.project_images?.length ? 100 / project_images.length : 0;
 
   return (
     <>
       <div className={cn(s.card, s.cardCols)}>
-        <Link className={s.link} href={`${routes.project.allProjects.main}/${slug}`} />
+        <Link
+          className={s.link}
+          href={`${routes.project.allProjects.main}/${report.slug}`}
+        />
         <div className={s.statusIcons}>
           {top && (
             <div className={cn(s.favoriteIcon, s.icon)}>
               <StarFilledIcon />
             </div>
           )}
-          {archived && (
+          {report.archived && (
             <div className={cn(s.archivedIcon, s.icon)}>
               <CloudIcon />
             </div>
@@ -57,7 +53,7 @@ export const ColsCard = ({
         <div className={s.cardTitle}>
           <div className={s.cardHeading}>
             <FolderIcon />
-            {name}
+            {report.title}
           </div>
           <div className={s.more}>
             <div className={s.moreBtn} onClick={() => setIsMoreVisible(true)}>
@@ -75,13 +71,13 @@ export const ColsCard = ({
                 {t('table.add-to-favourites')}
               </div>
               <div className={s.moreActionBtn}>
-                <div className={cn(s.moreIcon, archived && s.active)}>
-                  {archived ? <CloudFilledIcon /> : <CloudIcon />}
+                <div className={cn(s.moreIcon, report.archived && s.active)}>
+                  {report.archived ? <CloudFilledIcon /> : <CloudIcon />}
                 </div>
 
                 {t('table.add-to-archive')}
               </div>
-              <div className={s.moreDeleteBtn} onClick={() => setModalOpen(true)}>
+              <div className={s.moreDeleteBtn} onClick={openModal}>
                 <CloseIcon />
                 {t('delete')}
               </div>
@@ -90,27 +86,31 @@ export const ColsCard = ({
         </div>
 
         <div className={s.info}>
-          {grain && (
-            <div className={s.infoItem}>{`${t('table.fields.grain')}: ${grain}`}</div>
+          {report.grain && (
+            <div className={s.infoItem}>{`${t('table.fields.grain')}: ${
+              report.grain
+            }`}</div>
           )}
-          {area && (
-            <div className={s.infoItem}>{`${t('table.fields.area')}: ${area}`}</div>
+          {report.area && (
+            <div className={s.infoItem}>{`${t('table.fields.area')}: ${
+              report.area
+            }`}</div>
           )}
-          {orientation && (
-            <div className={s.infoItem}>{`${t(
-              'table.fields.area',
-            )}: ${orientation}`}</div>
+          {report.orientation && (
+            <div className={s.infoItem}>{`${t('table.fields.area')}: ${
+              report.orientation
+            }`}</div>
           )}
         </div>
         <div className={s.cardImgs}>
-          {project_images &&
-            project_images.map((e, i) => {
+          {report.project_images &&
+            report.project_images.map((e, i) => {
               return (
                 <Image
                   key={`project_img_${e}_${i}`}
                   src={e}
                   className={s.projectImage}
-                  alt={name}
+                  alt={report.title}
                   style={{
                     width: `${width}%`,
                   }}
@@ -120,7 +120,7 @@ export const ColsCard = ({
               );
             })}
         </div>
-        <div className={s.date}>{formatDate(created_at)}</div>
+        <div className={s.date}>{formatDate(report.created_at)}</div>
       </div>
     </>
   );
