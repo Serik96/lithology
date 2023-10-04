@@ -1,8 +1,9 @@
 import { routes } from '@/const';
+import { ECardFilterType } from '@/enums';
 import { BookIcon, CloudIcon, FolderAddIcon, StarIcon } from '@/icons';
 import { TBreadcrumbs, TSidebarLink } from '@/types';
 
-export const projectsNav: TBreadcrumbs[] = [
+export const projectsBreadcrumbs: TBreadcrumbs[] = [
   {
     label: 'navigation.home',
     href: routes.project.cabinet,
@@ -13,26 +14,26 @@ export const projectsNav: TBreadcrumbs[] = [
   },
 ];
 
-export const projectsSidebarNav: TSidebarLink[] = [
+export const projectsSideLinks: TSidebarLink[] = [
   {
     label: 'navigation.all-projects.main',
-    icon: BookIcon,
+    Icon: BookIcon,
     href: routes.project.allProjects.main,
   },
   {
     label: 'navigation.all-projects.archived',
-    icon: CloudIcon,
-    href: routes.project.allProjects.archived,
+    Icon: CloudIcon,
+    type: ECardFilterType.ARCHIVED,
   },
   {
     label: 'navigation.all-projects.favourites',
-    icon: StarIcon,
-    href: routes.project.allProjects.favourites,
+    Icon: StarIcon,
+    type: ECardFilterType.FAVOURITES,
   },
   {
     label: 'navigation.all-projects.create',
-    icon: FolderAddIcon,
+    Icon: FolderAddIcon,
     href: routes.project.allProjects.create,
-    isBottomLink: true,
+    isBottom: true,
   },
 ];

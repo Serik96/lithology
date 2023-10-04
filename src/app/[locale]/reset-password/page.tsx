@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Button, TextField } from '@/components/ui';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowSquareRightIcon } from '@/icons';
-import { navResetPassword } from './const';
+import { resetPasswordBreadcrumbs } from './const';
 import s from './reset-password.module.scss';
 
 const ResetPassword = () => {
@@ -13,7 +13,7 @@ const ResetPassword = () => {
 
   return (
     <>
-      <Breadcrumbs navLinks={navResetPassword} />
+      <Breadcrumbs navLinks={resetPasswordBreadcrumbs} />
       <div className={s.resetPassword}>
         <form className={s.form}>
           <h1 className={s.heading}>{t('navigation.reset-password')}</h1>

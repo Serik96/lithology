@@ -63,6 +63,36 @@
     background-color: transparent;
   }
 
+  &.info,
+  &.info-black {
+    @include btnFocus;
+    background-color: transparent;
+    color: var(--black-400);
+    border: 1px solid;
+    width: fit-content;
+  }
+
+  &.info {
+    @include bodyFontMediumS;
+    padding: 5px 12px;
+    border-color: var(--gray-100);
+  }
+
+  &.info-black {
+    @include bodyFontRegularM;
+    border-color: var(--black-400);
+  }
+
+  &.red,
+  &.info-black {
+    padding: 12px 24px;
+  }
+
+  &.red {
+    background-color: var(--red-400);
+    color: var(--white-400);
+  }
+
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;

@@ -1,0 +1,72 @@
+@import 'src/styles/global/mixins';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  &.open {
+    display: flex;
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-400);
+    opacity: 0.8;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 2;
+    background-color: var(--amber-450);
+    border-radius: 4px;
+    padding: 24px 40px;
+    width: 100%;
+
+    &.md {
+      max-width: 480px;
+    }
+
+    .closeBtn {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 100%;
+      color: var(--white-400);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    .title {
+      @include fontHeadingM;
+      margin-bottom: 12px;
+    }
+
+    .description {
+      @include bodyFontRegularS;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+
+      .confirmBtn {
+        width: fit-content;
+      }
+    }
+  }
+}

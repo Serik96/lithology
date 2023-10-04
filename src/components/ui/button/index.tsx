@@ -6,8 +6,9 @@ import s from './button.module.scss';
 
 type TProps = PropsWithChildren<{
   href?: string;
-  onClick?: () => void;
+  onClick?: VoidFunction;
   className?: string;
+  // @todo вариант должен быть enum
   variant?: string;
   disabled?: boolean;
 }>;

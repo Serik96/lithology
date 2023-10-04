@@ -58,9 +58,24 @@
 
 /* Global mixins */
 
+@mixin link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--orange-400);
+  }
+}
+
 @mixin icon {
   width: 1.5em;
   height: 1.5em;
+}
+
+@mixin smallIcon {
+  width: 1em;
+  height: 1em;
 }
 
 @mixin btnFocus {

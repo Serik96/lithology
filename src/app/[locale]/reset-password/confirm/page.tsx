@@ -7,14 +7,14 @@ import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
 import { ArrowSquareRightIcon } from '@/icons';
 import s from './confirm.module.scss';
-import { navConfirm } from './const';
+import { confirmBreadcrumbs } from './const';
 
 const Confirm = () => {
   const t = useTranslations();
 
   return (
     <>
-      <Breadcrumbs navLinks={navConfirm} />
+      <Breadcrumbs navLinks={confirmBreadcrumbs} />
       <div className={s.confirmEmail}>
         <div className={s.wrapper}>
           <h1 className={s.heading}>{t('reset-page-heading')}</h1>

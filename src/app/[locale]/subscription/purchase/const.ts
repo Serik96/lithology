@@ -1,7 +1,7 @@
 import { routes } from '@/const';
 import { TBreadcrumbs } from '@/types';
 
-export const navPurchase: TBreadcrumbs[] = [
+export const purchaseBreadcrumbs: TBreadcrumbs[] = [
   {
     label: 'navigation.home',
     href: routes.public.main,

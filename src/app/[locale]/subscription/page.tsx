@@ -6,7 +6,7 @@ import { tempData } from '@/const/tmp-data';
 import { ECurrencySign } from '@/enums';
 import { complexStr } from '@/helpers';
 import { ArrowSquareRightIcon } from '@/icons';
-import { navSubscription } from './const';
+import { subscriptionBreadcrumbs } from './const';
 import s from './subscription.module.scss';
 
 const Subscription = () => {
@@ -14,7 +14,7 @@ const Subscription = () => {
 
   return (
     <>
-      <Breadcrumbs navLinks={navSubscription} />
+      <Breadcrumbs navLinks={subscriptionBreadcrumbs} />
       <div className={s.subscription}>
         <h1 className={s.heading}>{t('subscription.title')}</h1>
         <div className={s.offers}>
@@ -38,6 +38,7 @@ const Subscription = () => {
               <p className={s.slug}>{e.slug}</p>
               <h2 className={s.title}>{e.title}</h2>
               <p className={s.content}>{e.content}</p>
+
               <Button variant="bordered">
                 {complexStr(
                   [t('subscription.buy'), currencySigns[ECurrencySign.usd] + e.price],

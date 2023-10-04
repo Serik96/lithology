@@ -9,10 +9,11 @@ type TProps = {
 };
 
 export const TableCard = ({ data, type }: TProps) => {
-  return (
-    <>
-      {type === ECardType.ROW && <RowsCard {...data} />}
-      {type === ECardType.COLUMN && <ColsCard {...data} />}
-    </>
-  );
+  if (type === ECardType.ROW) {
+    return <RowsCard folder={{ ...data }} />;
+  }
+
+  if (type === ECardType.COLUMN) {
+    return <ColsCard folder={{ ...data }} />;
+  }
 };

@@ -1,7 +1,7 @@
 import { routes } from '@/const';
 import { TBreadcrumbs } from '@/types';
 
-export const navRegistration: TBreadcrumbs[] = [
+export const registrationBreadcrumbs: TBreadcrumbs[] = [
   {
     label: 'navigation.home',
     href: routes.public.main,

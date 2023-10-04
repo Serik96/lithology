@@ -6,36 +6,45 @@
   background-color: var(--amber-200);
   border-radius: 4px;
 
-  &.cardDefault {
+  &.cardRows {
     display: flex;
     align-items: center;
     width: 100%;
 
-    .cardCol {
+    .cols {
       display: flex;
       align-items: center;
       width: 100%;
 
-      &:nth-child(2) {
-        gap: 8px;
-        max-width: 212px;
-      }
+      .col {
+        display: flex;
+        align-items: center;
+        width: 100%;
 
-      &:nth-child(3),
-      &:nth-child(4),
-      &:nth-child(5) {
-        max-width: 93px;
-      }
+        &:nth-child(1) {
+          gap: 8px;
+          max-width: 212px;
+        }
 
-      &:nth-child(6) {
-        justify-content: space-between;
-        max-width: 165px;
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          max-width: 93px;
+        }
+
+        &:nth-child(5) {
+          justify-content: space-between;
+          max-width: 165px;
+        }
       }
     }
   }
 
-  &.cardRows {
+  &.cardCols {
     width: calc(100% / 2 - 2px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 
     .cardTitle {
       display: flex;
@@ -48,6 +57,60 @@
         align-items: center;
         gap: 12px;
       }
+    }
+
+    .cardImgs {
+      display: flex;
+      width: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+
+      .projectImage {
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .date,
+    .info {
+      @include bodyFontRegularS;
+      color: var(--gray-200);
+    }
+
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 4px;
+      column-gap: 12px;
+    }
+
+    .date {
+      margin-top: auto;
+    }
+  }
+
+  .statusIcons {
+    @include bodyFontRegularM;
+    display: flex;
+    gap: 2px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+
+    .icon {
+      display: flex;
+    }
+
+    svg {
+      @include smallIcon;
+    }
+
+    .archivedIcon {
+      color: var(--gray-200);
+    }
+
+    .favoriteIcon {
+      color: var(--orange-400);
     }
   }
 

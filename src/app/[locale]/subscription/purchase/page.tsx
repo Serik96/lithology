@@ -8,7 +8,7 @@ import { routes } from '@/const';
 import { tempData } from '@/const/tmp-data';
 import { formatDate } from '@/helpers';
 import { ArrowSquareRightIcon } from '@/icons';
-import { navPurchase } from './const';
+import { purchaseBreadcrumbs } from './const';
 import s from './purchase.module.scss';
 
 const Purchase = () => {
@@ -16,7 +16,7 @@ const Purchase = () => {
 
   return (
     <>
-      <Breadcrumbs navLinks={navPurchase} />
+      <Breadcrumbs navLinks={purchaseBreadcrumbs} />
       <div className={s.purchase}>
         <div className={s.wrapper}>
           <h1 className={s.heading}>

@@ -6,14 +6,14 @@ import { Button, TextField } from '@/components/ui';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowSquareRightIcon } from '@/icons';
 import s from './change-password.module.scss';
-import { navChangePassword } from './const';
+import { changePasswordBreadcrumbs } from './const';
 
 const ChangePassword = () => {
   const t = useTranslations();
 
   return (
     <>
-      <Breadcrumbs navLinks={navChangePassword} />
+      <Breadcrumbs navLinks={changePasswordBreadcrumbs} />
       <div className={s.changePassword}>
         <form className={s.form}>
           <h1 className={s.heading}>{t('navigation.change-password')}</h1>

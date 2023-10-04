@@ -2,7 +2,7 @@ import { routes } from '@/const';
 import { ArchiveTick } from '@/icons';
 import { TBreadcrumbs, TSidebarLink } from '@/types';
 
-export const notificationsNav: TBreadcrumbs[] = [
+export const notificationsBreadcrumbs: TBreadcrumbs[] = [
   {
     label: 'navigation.home',
     href: routes.public.main,
@@ -13,11 +13,11 @@ export const notificationsNav: TBreadcrumbs[] = [
   },
 ];
 
-export const notificationsSidebarNav: TSidebarLink[] = [
+export const notificationsSideLinks: TSidebarLink[] = [
   {
     label: 'navigation.notifications.mark-all-read',
-    icon: ArchiveTick,
+    Icon: ArchiveTick,
     href: routes.project.notifications,
-    isBottomLink: true,
+    isBottom: true,
   },
 ];

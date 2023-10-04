@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
 import { cn } from '@/helpers';
 import { ArrowSquareRightIcon } from '@/icons';
-import { navRegistration } from './const';
+import { registrationBreadcrumbs } from './const';
 import s from './registration.module.scss';
 
 const Registration = () => {
@@ -14,7 +14,7 @@ const Registration = () => {
 
   return (
     <>
-      <Breadcrumbs navLinks={navRegistration} />
+      <Breadcrumbs navLinks={registrationBreadcrumbs} />
       <div className={s.signUp}>
         <form className={s.form}>
           <h1 className={s.heading}>{t('navigation.registration')}</h1>

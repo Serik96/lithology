@@ -9,7 +9,7 @@
     flex-direction: column;
 
     .listItem {
-      
+
       &.listItemActive {
         margin-top: 8px;
         padding-top: 24px;
@@ -21,6 +21,7 @@
       }
 
       .link {
+        @include link;
         @include bodyFontRegularM;
         display: flex;
         align-items: center;
