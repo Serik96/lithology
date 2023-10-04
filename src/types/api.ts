@@ -1,9 +1,10 @@
-export type THttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
+export type THttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'OPTIONS';
 
 export type TFetchOptions = {
   url: string;
-  method?: THttpMethod;
+  method: THttpMethod;
   headers?: Record<string, string>;
+  token?: Nullable<string>;
   body?: unknown;
 };
 

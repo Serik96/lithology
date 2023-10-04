@@ -51,25 +51,27 @@ export type TProjectSortField = {
   direction: ESortDirection;
 };
 
-export type TReport = {
-  /* @todo Нет такого типа  */
-  id: number;
-  company_id: number;
+export type TSpecimen = {
+  id?: number;
+  well_id: number;
+  user_id: number;
   slug: string;
-  name: string;
-  description: string | null;
-  parent: number;
-  level_num: number;
+  title: string;
+  content: string;
+  /**
+   * in meters, float
+   */
+  depth?: number;
+  pic1: string;
+  pic2: string;
+  /**
+   * data returned from neural network
+   * @todo ask to return from backend parsed as object
+   */
+  analyzed_content?: string;
   order_num: number;
-  visible: number;
+  visible: boolean;
   top: boolean;
   created_at: string;
-  archived: boolean;
-  project_images: string[];
-  project_info: {
-    grain: Nullable<number>;
-    area: Nullable<number>;
-    orientation: Nullable<number>;
-    point: Nullable<number>;
-  };
+  updated_at: string;
 };

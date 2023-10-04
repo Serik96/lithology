@@ -9,4 +9,6 @@ const baseSelector = createBaseSelector<TModalState>(name);
 export const selectors = {
   isOpened: (purpose: EModalPurpose) =>
     createSelector(baseSelector, state => state.items[purpose].isOpened),
+  getRecordId: (purpose: EModalPurpose) =>
+    createSelector(baseSelector, state => state.items[purpose].recordId),
 };

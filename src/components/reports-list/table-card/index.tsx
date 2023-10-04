@@ -1,40 +1,19 @@
-import { useDispatch } from 'react-redux';
-import { ReportDeleteModal } from '@/components/modal';
 import { ECardType } from '@/enums';
-import { EModalPurpose } from '@/enums/modal';
-import { ModalModel } from '@/model';
-import { TReport } from '@/types/project';
+import { TSpecimen } from '@/types';
 import { ColsCard } from './cols-card';
 import { RowsCard } from './rows-card';
 
 type TProps = {
-  data: TReport;
+  report: TSpecimen;
   type: ECardType;
 };
 
-export const TableCard = ({ data, type }: TProps) => {
-  const dispatch = useDispatch();
-  const openModal = () => {
-    dispatch(ModalModel.store.actions.open({ purpose: EModalPurpose.REPORT_DELETE }));
-  };
-
-  // @todo модалка должна быть одна. и при открытии в неё нужно загружать данные репорта из стейта
-  // сейчас у тебя для каждой строки таблицы своя модалка, что будет жрать много памяти
+export const TableCard = ({ report, type }: TProps) => {
   if (type === ECardType.ROW) {
-    return (
-      <>
-        <RowsCard setModalOpen={openModal} report={{ ...data }} />
-        <ReportDeleteModal report={data} />
-      </>
-    );
+    return <RowsCard report={report} />;
   }
 
   if (type === ECardType.COLUMN) {
-    return (
-      <>
-        <ColsCard setModalOpen={openModal} report={{ ...data }} />
-        <ReportDeleteModal report={data} />
-      </>
-    );
+    return <ColsCard report={report} />;
   }
 };

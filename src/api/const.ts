@@ -1,9 +1,17 @@
-import { EApi, EApiAuth, EApiFolder } from '@/api/enum';
-import { TAllApiInfo } from '@/api/types';
+import { EApi, EApiAuth, EApiBase } from './enum';
+import { TAllApiInfo, TApiInfo } from './types';
 
 export const API_CONTROLLER_PATH = {
   [EApi.AUTH]: 'api/auth',
   [EApi.FOLDER]: 'api/folder',
+  [EApi.SPECIMEN]: 'api/specimen',
+};
+
+const apiBaseMethods: TApiInfo = {
+  [EApiBase.CREATE]: { method: 'POST' },
+  [EApiBase.UPDATE]: { method: 'PUT' },
+  [EApiBase.LIST]: { method: 'GET' },
+  [EApiBase.DELETE]: { method: 'DELETE' },
 };
 
 export const API_METHOD_INFO: TAllApiInfo = {
@@ -12,10 +20,6 @@ export const API_METHOD_INFO: TAllApiInfo = {
     [EApiAuth.LOGOUT]: { suffix: 'logout', method: 'POST' },
     [EApiAuth.CHECK]: { suffix: 'check', method: 'POST' },
   },
-  [EApi.FOLDER]: {
-    [EApiFolder.CREATE]: { method: 'POST' },
-    [EApiFolder.UPDATE]: { method: 'PUT' },
-    [EApiFolder.LIST]: { method: 'GET' },
-    [EApiFolder.DELETE]: { method: 'DELETE' },
-  },
+  [EApi.FOLDER]: apiBaseMethods,
+  [EApi.SPECIMEN]: apiBaseMethods,
 };

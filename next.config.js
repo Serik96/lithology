@@ -3,6 +3,8 @@ const path = require('path');
 
 const withNextIntl = require('next-intl/plugin')('./src/i18n.ts');
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   webpack(config) {
     config.module.rules.push({
@@ -15,6 +17,8 @@ const nextConfig = {
           options: {
             sassOptions: {
               includePaths: [path.join(__dirname, 'src')],
+              // todo: на деве сделать читаемые классы, код ниже не работает
+              outputStyle: isProd ? 'compressed' : 'expanded',
             },
           },
         },

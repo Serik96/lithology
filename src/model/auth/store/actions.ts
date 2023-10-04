@@ -7,7 +7,7 @@ const named = actionNameBuilder(name);
 
 export const actions = {
   login: {
-    trigger: createAction<TAuthLoginAction>(named('login')),
+    trigger: createAction<TAuthLoginAction>(named('login/trigger')),
     pending: createAction(named('login/pending')),
     successful: createAction<TAuthLoginResponse>(named('login/successful')),
     failed: createAction(named('login/failed')),

@@ -1,6 +1,7 @@
 export enum EApi {
   AUTH = 'AUTH',
   FOLDER = 'FOLDER',
+  SPECIMEN = 'SPECIMEN',
 }
 
 export enum EApiAuth {
@@ -9,7 +10,7 @@ export enum EApiAuth {
   CHECK = 'CHECK',
 }
 
-export enum EApiFolder {
+export enum EApiBase {
   CREATE = 'CREATE',
   UPDATE = 'UPDATE',
   LIST = 'LIST',

@@ -2,40 +2,38 @@
 
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { DataTable } from '@/components/data-table';
+import { ReportDeleteModal } from '@/components/modal';
 import { ProjectsContainer } from '@/components/projects-container';
 import { ReportsList } from '@/components/reports-list';
 import { Breadcrumbs } from '@/components/ui';
-import { tempData } from '@/const/tmp-data';
 import { ECardFilterType, ECardType } from '@/enums';
 import { getLastSlug } from '@/helpers';
-import { TReport } from '@/types/project';
+import { useMountEffect } from '@/hooks';
+import { SpecimenModel } from '@/model';
 import { reportsBreadcrumbs, reportsSideLinks } from './const';
 
 const Reports = () => {
   const t = useTranslations();
   const pathname = usePathname();
-  /* @todo slug будет нужен для запроса всех репортов из проекта   */
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const dispatch = useDispatch();
+  /** @todo slug будет нужен для запроса всех репортов из проекта   */
   const slug = getLastSlug(pathname);
-
+  const loading = useSelector(SpecimenModel.store.selectors.isPending);
+  const reports = useSelector(SpecimenModel.store.selectors.getItems);
   const [rowType, setRowType] = useState(ECardType.ROW);
-  const [reports, setReports] = useState<TReport[]>();
-
-  /* todo: тут будет функция с подключенным бэком  */
-  const getReports = () => {
-    setReports(tempData.reports);
-  };
 
   const handleSidebarClick = (type?: ECardFilterType) => {
     console.log(type);
   };
 
-  /* todo: тут будет функция с подключенным бэком  */
-  useEffect(() => {
-    getReports();
-  }, []);
+  useMountEffect(() => {
+    console.log('Reports>', { slug });
+
+    dispatch(SpecimenModel.store.actions.load.trigger({}));
+  });
 
   return (
     <>
@@ -46,9 +44,17 @@ const Reports = () => {
         heading={t('navigation.reports.all')}
       >
         <DataTable showTypeToggle rowType={rowType} setRowType={setRowType}>
-          {reports && <ReportsList type={rowType} reports={reports} />}
+          {/* @todo вместо loading добавить спиннер или что-то такое */}
+          {loading ? (
+            <div>Loading...</div>
+          ) : reports?.length ? (
+            <ReportsList type={rowType} reports={reports} />
+          ) : (
+            <div>No reports</div>
+          )}
         </DataTable>
       </ProjectsContainer>
+      <ReportDeleteModal />
     </>
   );
 };

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { routes } from '@/const';
+import { EModalPurpose } from '@/enums/modal';
 import { cn, formatDate } from '@/helpers';
 import {
   CloseIcon,
@@ -12,41 +13,37 @@ import {
   StarFilledIcon,
   StarIcon,
 } from '@/icons';
-import { TReport } from '@/types/project';
+import { ModalModel } from '@/model';
+import { TSpecimen } from '@/types';
 import s from './table-card.module.scss';
 
 type TProps = {
-  report: TReport;
-  setModalOpen: (value: boolean) => void;
+  report: TSpecimen;
 };
 
-export const RowsCard = ({
-  setModalOpen,
-  report: {
-    top,
-    archived,
-    name,
-    slug,
-    created_at,
-    project_info: { point },
-    project_images,
-  },
-}: TProps) => {
+export const RowsCard = ({ report }: TProps) => {
   const t = useTranslations();
   const [isMoreVisible, setIsMoreVisible] = useState(false);
-
-  const width = 100 / project_images.length;
+  const { openModal } = ModalModel.hooks.useModal({
+    purpose: EModalPurpose.REPORT_DELETE,
+    recordId: report.id,
+  });
+  // todo унифицировать это и многое здесь с cols-card
+  const width = report.project_images?.length ? 100 / project_images.length : 0;
 
   return (
     <div className={cn(s.card, s.cardRows)}>
-      <Link className={s.link} href={`${routes.project.allProjects.main}/${slug}`} />
+      <Link
+        className={s.link}
+        href={`${routes.project.allProjects.main}/${report.slug}`}
+      />
       <div className={s.statusIcons}>
         {top && (
           <div className={cn(s.favoriteIcon, s.icon)}>
             <StarFilledIcon />
           </div>
         )}
-        {archived && (
+        {report.archived && (
           <div className={cn(s.archivedIcon, s.icon)}>
             <CloudIcon />
           </div>
@@ -55,14 +52,14 @@ export const RowsCard = ({
       <div className={s.cols}>
         <div className={s.col}>
           <div className={s.cardImgs}>
-            {project_images &&
-              project_images.map((e, i) => {
+            {report.project_images &&
+              report.project_images.map((e, i) => {
                 return (
                   <Image
                     key={`project_img_${e}_${i}`}
                     src={e}
                     className={s.projectImage}
-                    alt={name}
+                    alt={report.title}
                     style={{
                       width: `${width}%`,
                     }}
@@ -72,14 +69,15 @@ export const RowsCard = ({
                 );
               })}
           </div>
-          {name}
+          {report.title}
         </div>
-        {/* @todo тут временные данные пока что не отобразили на макете что тут будет */}
+        {/* @todo тут временные данные пока что не отобразили на макете что тут будет * /}
         <div className={s.col}>{point}</div>
         <div className={s.col}>{point}</div>
         <div className={s.col}>{point}</div>
+        */}
         <div className={s.col}>
-          {formatDate(created_at)}
+          {formatDate(report.created_at)}
           <div className={s.more}>
             <div className={s.moreBtn} onClick={() => setIsMoreVisible(true)}>
               <MoreIcon />
@@ -96,13 +94,13 @@ export const RowsCard = ({
                 {t('table.add-to-favourites')}
               </div>
               <div className={s.moreActionBtn}>
-                <div className={cn(s.moreIcon, archived && s.active)}>
-                  {archived ? <CloudFilledIcon /> : <CloudIcon />}
+                <div className={cn(s.moreIcon, report.archived && s.active)}>
+                  {report.archived ? <CloudFilledIcon /> : <CloudIcon />}
                 </div>
 
                 {t('table.add-to-archive')}
               </div>
-              <div className={s.moreDeleteBtn} onClick={() => setModalOpen(true)}>
+              <div className={s.moreDeleteBtn} onClick={openModal}>
                 <CloseIcon />
                 {t('delete')}
               </div>
