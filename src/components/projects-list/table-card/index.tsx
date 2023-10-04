@@ -4,16 +4,16 @@ import { ColsCard } from './cols-card';
 import { RowsCard } from './rows-card';
 
 type TProps = {
-  data: TProject;
+  project: TProject;
   type: ECardType;
 };
 
-export const TableCard = ({ data, type }: TProps) => {
+export const TableCard = ({ project, type }: TProps) => {
   if (type === ECardType.ROW) {
-    return <RowsCard project={{ ...data }} />;
+    return <RowsCard project={project} />;
   }
 
   if (type === ECardType.COLUMN) {
-    return <ColsCard project={{ ...data }} />;
+    return <ColsCard project={project} />;
   }
 };

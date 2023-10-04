@@ -12,7 +12,7 @@ export const ProjectsList = ({ projects, type }: TProps) => {
   return (
     <div className={s.list}>
       {projects.map(p => (
-        <TableCard key={p.slug} data={p} type={type} />
+        <TableCard key={p.slug} project={p} type={type} />
       ))}
     </div>
   );
