@@ -1,7 +1,8 @@
-import { useTranslations } from 'next-intl';
-import { useState } from 'react';
-import { Modal } from '@/components/ui/modal';
-import { ECardType, ESize } from '@/enums';
+import { useDispatch } from 'react-redux';
+import { ReportDeleteModal } from '@/components/modal';
+import { ECardType } from '@/enums';
+import { EModalPurpose } from '@/enums/modal';
+import { ModalModel } from '@/model';
 import { TReport } from '@/types/project';
 import { ColsCard } from './cols-card';
 import { RowsCard } from './rows-card';
@@ -12,22 +13,18 @@ type TProps = {
 };
 
 export const TableCard = ({ data, type }: TProps) => {
-  const t = useTranslations();
-  const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const dispatch = useDispatch();
+  const openModal = () => {
+    dispatch(ModalModel.store.actions.open({ purpose: EModalPurpose.REPORT_DELETE }));
+  };
 
+  // @todo модалка должна быть одна. и при открытии в неё нужно загружать данные репорта из стейта
+  // сейчас у тебя для каждой строки таблицы своя модалка, что будет жрать много памяти
   if (type === ECardType.ROW) {
     return (
       <>
-        <RowsCard setModalOpen={setModalOpen} report={{ ...data }} />
-        <Modal
-          title={t('table.report-delete', { report: data.name })}
-          description={t('table.report-delete-description')}
-          maxWidth={ESize.md}
-          open={modalOpen}
-          onClose={() => setModalOpen(false)}
-          onConfirm={() => {}}
-          confirmBtnText={t('delete')}
-        />
+        <RowsCard setModalOpen={openModal} report={{ ...data }} />
+        <ReportDeleteModal report={data} />
       </>
     );
   }
@@ -35,16 +32,8 @@ export const TableCard = ({ data, type }: TProps) => {
   if (type === ECardType.COLUMN) {
     return (
       <>
-        <ColsCard setModalOpen={setModalOpen} report={{ ...data }} />
-        <Modal
-          title={t('table.report-delete', { report: data.name })}
-          description={t('table.report-delete-description')}
-          maxWidth={ESize.md}
-          open={modalOpen}
-          onClose={() => setModalOpen(false)}
-          onConfirm={() => {}}
-          confirmBtnText={t('delete')}
-        />
+        <ColsCard setModalOpen={openModal} report={{ ...data }} />
+        <ReportDeleteModal report={data} />
       </>
     );
   }

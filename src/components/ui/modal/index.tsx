@@ -1,69 +1,79 @@
 import { useTranslations } from 'next-intl';
-import { useEffect } from 'react';
+import { PropsWithChildren, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Button } from '@/components/ui';
 import { ESize } from '@/enums';
+import { EModalPurpose } from '@/enums/modal';
 import { cn } from '@/helpers';
 import { CloseFilledIcon } from '@/icons';
+import { ModalModel } from '@/model';
 import s from './modal.module.scss';
 
-type TProps = {
-  open: boolean;
-  onClose?: () => void;
-  onConfirm: () => void;
+type TProps = PropsWithChildren<{
+  purpose: EModalPurpose;
+  onClose?: VoidFunction;
+  onConfirm: VoidFunction;
   title: string;
   description: string;
   maxWidth: ESize;
   cancelBtnText?: string;
   confirmBtnText?: string;
-};
+}>;
 
 export const Modal = ({
-  open,
+  purpose,
   onClose,
   onConfirm,
   cancelBtnText,
   confirmBtnText,
   title,
   description,
+  children,
   maxWidth,
 }: TProps) => {
   const t = useTranslations();
+  const dispatch = useDispatch();
+  const isOpened = useSelector(ModalModel.store.selectors.isOpened(purpose));
 
   const handleClose = () => {
+    dispatch(ModalModel.store.actions.close({ purpose }));
     onClose?.();
   };
 
   useEffect(() => {
     const htmlTag = document.querySelector('html');
     if (htmlTag) {
-      if (open) {
+      if (isOpened) {
         htmlTag.classList.add('hideScroll');
       } else {
         htmlTag.classList.remove('hideScroll');
       }
     }
-  }, [open]);
+  }, [isOpened]);
+
+  if (!isOpened) {
+    return null;
+  }
 
   return (
-    open && (
-      <div className={cn(s.modal, open && s.open)}>
-        <div className={s.bg} onClick={handleClose} />
-        <div className={cn(s.wrapper, s?.[maxWidth ?? ESize.md])}>
-          <div className={s.closeBtn} onClick={handleClose}>
-            <CloseFilledIcon />
-          </div>
-          <div className={s.title}>{title}</div>
-          <div className={s.description}>{description}</div>
-          <div className={s.btns}>
-            <Button className={s.cancelBtn} variant={'info-black'} onClick={handleClose}>
-              {cancelBtnText ?? t('cancel')}
-            </Button>
-            <Button className={s.confirmBtn} variant={'red'} onClick={onConfirm}>
-              {confirmBtnText ?? t('confirm')}
-            </Button>
-          </div>
+    <div className={cn(s.modal, isOpened && s.open)}>
+      <div className={s.bg} onClick={handleClose} />
+      <div className={cn(s.wrapper, s?.[maxWidth ?? ESize.md])}>
+        <div className={s.closeBtn} onClick={handleClose}>
+          <CloseFilledIcon />
+        </div>
+        {title && <div className={s.title}>{title}</div>}
+        {description && <div className={s.description}>{description}</div>}
+        {children}
+        <div className={s.buttons}>
+          <Button className={s.cancelBtn} variant="info-black" onClick={handleClose}>
+            {cancelBtnText ?? t('cancel')}
+          </Button>
+          <Button className={s.confirmBtn} variant="red" onClick={onConfirm}>
+            {confirmBtnText ?? t('confirm')}
+          </Button>
         </div>
       </div>
-    )
+    </div>
   );
 };
