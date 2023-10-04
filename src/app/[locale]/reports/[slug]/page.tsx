@@ -28,7 +28,7 @@ const Reports = () => {
     setReports(tempData.reports);
   };
 
-  const handleSidebarClick = (type: Nullable<ECardFilterType>) => {
+  const handleSidebarClick = (type?: ECardFilterType) => {
     console.log(type);
   };
 

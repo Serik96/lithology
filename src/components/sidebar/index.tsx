@@ -7,7 +7,7 @@ import s from './sidebar.module.scss';
 
 type TProps = {
   links: TSidebarLink[];
-  onClick?: (value: Nullable<ECardFilterType>) => void;
+  onClick?: (value?: ECardFilterType) => void;
 };
 
 export const Sidebar = ({ links, onClick }: TProps) => {
@@ -24,7 +24,7 @@ export const Sidebar = ({ links, onClick }: TProps) => {
             {href ? (
               <Link
                 href={href}
-                onClick={() => onClick?.(type ?? null)}
+                onClick={() => onClick?.(type)}
                 className={cn(s.link, isBottom && 'link_active')}
               >
                 <Icon />
@@ -32,7 +32,7 @@ export const Sidebar = ({ links, onClick }: TProps) => {
               </Link>
             ) : (
               <div
-                onClick={() => onClick?.(type ?? null)}
+                onClick={() => onClick?.(type)}
                 className={cn(s.link, isBottom && 'link_active')}
               >
                 <Icon />

@@ -22,7 +22,7 @@ const Projects = () => {
     setFolders(tempData.folders);
   };
 
-  const handleSidebarAction = (type: string) => {
+  const handleSidebarAction = (type?: string) => {
     console.log(type);
   };
 
@@ -36,7 +36,7 @@ const Projects = () => {
       <Breadcrumbs navLinks={projectsBreadcrumbs} />
       <ProjectsContainer
         sidebarLinks={projectsSideLinks}
-        handleSidebarAction={handleSidebarAction}
+        onSidebarClick={handleSidebarAction}
         heading={t('navigation.all-projects.main')}
       >
         <DataTable showTypeToggle rowType={rowType} setRowType={setRowType}>

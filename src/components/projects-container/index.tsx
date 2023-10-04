@@ -8,7 +8,7 @@ type TProps = PropsWithChildren<{
   sidebarLinks: TSidebarLink[];
   description?: string;
   heading: string;
-  onSidebarClick?: (type: Nullable<ECardFilterType>) => void;
+  onSidebarClick?: (type?: ECardFilterType) => void;
 }>;
 
 export const ProjectsContainer = ({

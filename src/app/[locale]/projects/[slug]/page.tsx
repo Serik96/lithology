@@ -22,7 +22,7 @@ const Project = () => {
     setProjects(tempData.projects);
   };
 
-  const handleSidebarClick = (type: Nullable<ECardFilterType>) => {
+  const handleSidebarClick = (type?: ECardFilterType) => {
     console.log(type);
   };
 
