@@ -5,14 +5,7 @@ import { useState } from 'react';
 import { routes } from '@/const';
 import { EModalPurpose } from '@/enums/modal';
 import { cn, formatDate } from '@/helpers';
-import {
-  CloseIcon,
-  CloudFilledIcon,
-  CloudIcon,
-  MoreIcon,
-  StarFilledIcon,
-  StarIcon,
-} from '@/icons';
+import { CloseIcon, MoreIcon, StarFilledIcon, StarIcon } from '@/icons';
 import { ModalModel } from '@/model';
 import { TSpecimen } from '@/types';
 import s from './table-card.module.scss';
@@ -28,8 +21,7 @@ export const RowsCard = ({ report }: TProps) => {
     purpose: EModalPurpose.REPORT_DELETE,
     recordId: report.id,
   });
-  // todo унифицировать это и многое здесь с cols-card
-  const width = report.project_images?.length ? 100 / project_images.length : 0;
+  const pics = [report.pic1, report.pic2].filter(Boolean);
 
   return (
     <div className={cn(s.card, s.cardRows)}>
@@ -43,32 +35,23 @@ export const RowsCard = ({ report }: TProps) => {
             <StarFilledIcon />
           </div>
         )}
-        {report.archived && (
-          <div className={cn(s.archivedIcon, s.icon)}>
-            <CloudIcon />
-          </div>
-        )}
       </div>
       <div className={s.cols}>
         <div className={s.col}>
-          <div className={s.cardImgs}>
-            {report.project_images &&
-              report.project_images.map((e, i) => {
-                return (
-                  <Image
-                    key={`project_img_${e}_${i}`}
-                    src={e}
-                    className={s.projectImage}
-                    alt={report.title}
-                    style={{
-                      width: `${width}%`,
-                    }}
-                    width={302}
-                    height={181}
-                  />
-                );
-              })}
-          </div>
+          {pics.length && (
+            <div className={s.cardImgs}>
+              {pics.map((e, i) => (
+                <Image
+                  key={`project_img_${e}_${i}`}
+                  src={e}
+                  className={s.projectImage}
+                  alt={report.title}
+                  width={302}
+                  height={181}
+                />
+              ))}
+            </div>
+          )}
           {report.title}
         </div>
         {/* @todo тут временные данные пока что не отобразили на макете что тут будет * /}
@@ -92,13 +75,6 @@ export const RowsCard = ({ report }: TProps) => {
                   {top ? <StarFilledIcon /> : <StarIcon />}
                 </div>
                 {t('table.add-to-favourites')}
-              </div>
-              <div className={s.moreActionBtn}>
-                <div className={cn(s.moreIcon, report.archived && s.active)}>
-                  {report.archived ? <CloudFilledIcon /> : <CloudIcon />}
-                </div>
-
-                {t('table.add-to-archive')}
               </div>
               <div className={s.moreDeleteBtn} onClick={openModal}>
                 <CloseIcon />
