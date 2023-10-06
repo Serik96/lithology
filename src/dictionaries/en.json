@@ -59,7 +59,8 @@
       "main": "All projects",
       "archived": "Archived",
       "favourites": "Favourites",
-      "create": "Create project"
+      "create": "Create project",
+      "use-existing": "Use existing project"
     },
     "subscription": {
       "main": "Subscription",

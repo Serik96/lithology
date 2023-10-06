@@ -8,7 +8,7 @@ import { DataTable } from '@/components/data-table';
 import { ReportDeleteModal } from '@/components/modal';
 import { ProjectsContainer } from '@/components/projects-container';
 import { ReportsList } from '@/components/reports-list';
-import { Breadcrumbs } from '@/components/ui';
+import { Breadcrumbs, Loader } from '@/components/ui';
 import { ECardFilterType, ECardType } from '@/enums';
 import { getLastSlug } from '@/helpers';
 import { useMountEffect } from '@/hooks';
@@ -46,7 +46,7 @@ const Reports = () => {
         <DataTable showTypeToggle rowType={rowType} setRowType={setRowType}>
           {/* @todo вместо loading добавить спиннер или что-то такое */}
           {loading ? (
-            <div>Loading...</div>
+            <Loader />
           ) : reports?.length ? (
             <ReportsList type={rowType} reports={reports} />
           ) : (

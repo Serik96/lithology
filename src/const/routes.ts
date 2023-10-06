@@ -10,7 +10,8 @@ export const routes = {
     },
     notifications: '/notifications',
     settings: '/settings',
-    cabinet: '/cabinet',
+    cabinet: '/dashboard',
+    personal: '/personal',
     subscription: {
       main: '/subscription',
       purchase: '/subscription/purchase',
