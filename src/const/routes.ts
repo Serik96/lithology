@@ -21,6 +21,7 @@ export const routes = {
     main: '/',
     news: '/news',
     support: '/support',
+    notFound: '/not-found',
   },
   auth: {
     signIn: '/sign-in',

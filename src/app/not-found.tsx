@@ -1,3 +1,5 @@
+import '@/styles/index.scss';
+
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui';

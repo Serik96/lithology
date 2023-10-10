@@ -9,6 +9,7 @@ import CloseIcon from '../../public/icons/close.svg';
 import CloudFilledIcon from '../../public/icons/cloud-filled.svg';
 import CloudIcon from '../../public/icons/cloud.svg';
 import DropIcon from '../../public/icons/drop.svg';
+import ExcludeIcon from '../../public/icons/exclude.svg';
 import FatrowsIcon from '../../public/icons/fatrows.svg';
 import FolderAddIcon from '../../public/icons/folder-add.svg';
 import AddIcon from '../../public/icons/menu/add.svg';
@@ -36,6 +37,7 @@ export {
   CloudIcon,
   CloudFilledIcon,
   DropIcon,
+  ExcludeIcon,
   FolderIcon,
   FolderAddIcon,
   FatrowsIcon,

@@ -19,7 +19,7 @@ export const createBreadcrumbs: TBreadcrumbs[] = [
 
 export const createSideLinks: TSidebarLink[] = [
   {
-    label: 'navigation.all-projects.',
+    label: 'navigation.all-projects.main',
     Icon: FolderAddIcon,
     isBottom: true,
   },

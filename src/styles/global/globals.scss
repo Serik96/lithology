@@ -87,11 +87,7 @@ select {
 input,
 textarea {
   @include bodyFontRegularS;
-  border-radius: 4px;
-  border: 1px solid var(--gray-400);
-  background-color: var(--amber-400);
-  padding: 9px 16px;
-  transition: all 0.2s;
+  @include input;
 
   &:hover,
   &:focus,
