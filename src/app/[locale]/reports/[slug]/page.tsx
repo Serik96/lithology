@@ -44,7 +44,6 @@ const Reports = () => {
         heading={t('navigation.reports.all')}
       >
         <DataTable showTypeToggle rowType={rowType} setRowType={setRowType}>
-          {/* @todo вместо loading добавить спиннер или что-то такое */}
           {loading ? (
             <Loader />
           ) : reports?.length ? (

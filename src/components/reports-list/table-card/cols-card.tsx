@@ -5,15 +5,7 @@ import { useState } from 'react';
 import { routes } from '@/const';
 import { EModalPurpose } from '@/enums/modal';
 import { cn, formatDate } from '@/helpers';
-import {
-  CloseIcon,
-  CloudFilledIcon,
-  CloudIcon,
-  FolderIcon,
-  MoreIcon,
-  StarFilledIcon,
-  StarIcon,
-} from '@/icons';
+import { CloseIcon, FolderIcon, MoreIcon, StarFilledIcon, StarIcon } from '@/icons';
 import { ModalModel } from '@/model';
 import { TSpecimen } from '@/types/project';
 import s from './table-card.module.scss';
@@ -29,7 +21,7 @@ export const ColsCard = ({ report }: TProps) => {
     purpose: EModalPurpose.REPORT_DELETE,
     recordId: report.id,
   });
-  const width = report.project_images?.length ? 100 / project_images.length : 0;
+  const pics = [report.pic1, report.pic2].filter(Boolean);
 
   return (
     <>
@@ -42,11 +34,6 @@ export const ColsCard = ({ report }: TProps) => {
           {top && (
             <div className={cn(s.favoriteIcon, s.icon)}>
               <StarFilledIcon />
-            </div>
-          )}
-          {report.archived && (
-            <div className={cn(s.archivedIcon, s.icon)}>
-              <CloudIcon />
             </div>
           )}
         </div>
@@ -70,13 +57,6 @@ export const ColsCard = ({ report }: TProps) => {
                 </div>
                 {t('table.add-to-favourites')}
               </div>
-              <div className={s.moreActionBtn}>
-                <div className={cn(s.moreIcon, report.archived && s.active)}>
-                  {report.archived ? <CloudFilledIcon /> : <CloudIcon />}
-                </div>
-
-                {t('table.add-to-archive')}
-              </div>
               <div className={s.moreDeleteBtn} onClick={openModal}>
                 <CloseIcon />
                 {t('delete')}
@@ -84,7 +64,7 @@ export const ColsCard = ({ report }: TProps) => {
             </div>
           </div>
         </div>
-
+        {/*
         <div className={s.info}>
           {report.grain && (
             <div className={s.infoItem}>{`${t('table.fields.grain')}: ${
@@ -102,24 +82,21 @@ export const ColsCard = ({ report }: TProps) => {
             }`}</div>
           )}
         </div>
-        <div className={s.cardImgs}>
-          {report.project_images &&
-            report.project_images.map((e, i) => {
-              return (
-                <Image
-                  key={`project_img_${e}_${i}`}
-                  src={e}
-                  className={s.projectImage}
-                  alt={report.title}
-                  style={{
-                    width: `${width}%`,
-                  }}
-                  width={302}
-                  height={181}
-                />
-              );
-            })}
-        </div>
+        */}
+        {pics.length && (
+          <div className={s.cardImgs}>
+            {pics.map((e, i) => (
+              <Image
+                key={`project_img_${e}_${i}`}
+                src={e}
+                className={s.projectImage}
+                alt={report.title}
+                width={302}
+                height={181}
+              />
+            ))}
+          </div>
+        )}
         <div className={s.date}>{formatDate(report.created_at)}</div>
       </div>
     </>

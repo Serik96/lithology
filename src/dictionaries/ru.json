@@ -5,6 +5,10 @@
   "confirm": "Confirm",
   "delete": "Delete",
   "scale": "Scale",
+  "number": "Number",
+  "date": "Date",
+  "time": "Time",
+  "author": "Author",
   "auth": {
     "sign-up": "Sign up",
     "email": "E-mail",
@@ -69,6 +73,7 @@
     },
     "reports": {
       "main": "Reports",
+      "report": "Report",
       "all": "All reports",
       "create": "Create report",
       "upload-title": "Upload thin section images",

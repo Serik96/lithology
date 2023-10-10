@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { ChangeEvent, useState } from 'react';
 import { Breadcrumbs, Button, RangeInput } from '@/components/ui';
 import ImgUploader from '@/components/ui/img-uploader';
-import { EAlignValues } from '@/enums';
+import { EAlignValue } from '@/enums';
 import { ArrowSquareRightIcon } from '@/icons';
 import { reportsCreateBreadcrumbs } from './const';
 import s from './create.module.scss';
@@ -17,11 +17,12 @@ const Create = () => {
     const name = event.target.name;
     const file = event.target.files?.[0];
 
-    setPictures(prevState => ({
-      ...(prevState || {}),
-      [name]: file,
-    }));
-    console.log(pictures);
+    if (file) {
+      setPictures(prevState => ({
+        ...(prevState || {}),
+        [name]: file,
+      }));
+    }
   };
 
   const hasGenerateBtn =
@@ -48,7 +49,7 @@ const Create = () => {
             name="pic2"
             onChange={handleChange}
             label={t('navigation.reports.upload-image')}
-            btnAlignment={EAlignValues.RIGHT}
+            btnAlignment={EAlignValue.RIGHT}
           />
         </div>
         {hasGenerateBtn && (

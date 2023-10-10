@@ -1,0 +1,54 @@
+@import 'src/styles/global/mixins';
+
+.report {
+  .heading {
+    margin: 40px 0 24px 0;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      .label {
+        @include bodyFontRegularS;
+        color: var(--gray-200);
+      }
+
+      .value {
+        @include bodyFontRegularL;
+        display: flex;
+        gap: 10px;
+
+        .avatar {
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+
+  .compareImage {
+    max-width: 1008px;
+
+    .compareIcon {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 3px;
+        border: 1px solid var(--black-400);
+        border-radius: 4px;
+        background-color: var(--white-400);
+      }
+    }
+  }
+}

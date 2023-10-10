@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { Modal } from '@/components/ui/modal';
-import { ESize } from '@/enums';
+import { ESizeValue } from '@/enums';
 import { EModalPurpose } from '@/enums/modal';
 import { ModalModel, SpecimenModel } from '@/model';
 
@@ -28,7 +28,7 @@ export const ReportDeleteModal: FC = () => {
       purpose={PURPOSE}
       title={t('table.report-delete', { report: report.title })}
       description={t('table.report-delete-description')}
-      maxWidth={ESize.md}
+      maxWidth={ESizeValue.md}
       onConfirm={handleConfirm}
       confirmBtnText={t('delete')}
     />

@@ -13,7 +13,7 @@ body {
   color: var(--black-400);
   font-family: var(--font-body);
   background-color: var(--amber-300);
-  margin: 0px;
+  margin: 0;
 }
 
 h1,
@@ -130,4 +130,8 @@ a {
 
 .hideScroll {
   overflow-y: hidden;
+}
+
+.not-found-page {
+  @include disableHeaderFooter;
 }

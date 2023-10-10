@@ -1,5 +1,5 @@
 export * from './currency';
 export * from './card';
 export * from './sort';
-export * from './size-values';
-export * from './align-values';
+export * from './size-value';
+export * from './align-value';

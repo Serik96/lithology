@@ -32,7 +32,10 @@ export const RangeInput = ({
     }
   };
 
-  const thumbPercentage = ((value - min) / (max - min)) * 100;
+  /* thumbPercentage - indent from the left edge for the slider  */
+  const maxMinDiff = max - min;
+  const thumbPercentage = maxMinDiff ? ((value - min) / maxMinDiff) * 100 : 0;
+  /* thumbAlignmentValue - corrects the value of the slider  */
   const thumbAlignmentValue = thumbPercentage <= 50 ? 0 : 24;
 
   return (

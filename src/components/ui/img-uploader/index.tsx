@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { ChangeEvent, useState } from 'react';
 import { Button, Loader } from '@/components/ui';
-import { EAlignValues } from '@/enums';
+import { EAlignValue } from '@/enums';
 import { cn } from '@/helpers';
 import { AddIcon, ExcludeIcon } from '@/icons';
 import s from './file-uploader.module.scss';
@@ -16,7 +16,7 @@ type TProps = {
   className?: string;
   loading?: boolean;
   imgLink?: string;
-  btnAlignment?: EAlignValues;
+  btnAlignment?: EAlignValue;
 };
 
 const ImgUploader = ({
@@ -76,7 +76,7 @@ const ImgUploader = ({
               <div className={s.icon}>
                 <ExcludeIcon />
               </div>
-              <div className={s.label}>{label ?? ''}</div>
+              {label && <div className={s.label}>{label}</div>}
             </>
           )}
         </div>
