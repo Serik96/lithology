@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'litholog-frontend',
       script: './node_modules/.bin/next',
-      args: 'start -p 9510',
+      args: 'start -p 9520',
       instances: 1,
       autorestart: true,
       exec_mode: 'fork',
