@@ -135,3 +135,7 @@ a {
 .hideScroll {
   overflow-y: hidden;
 }
+
+.not-found-page {
+  @include disableHeaderFooter;
+}

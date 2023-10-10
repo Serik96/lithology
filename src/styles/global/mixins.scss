@@ -84,3 +84,17 @@
     border: 1px solid var(--blue-400);
   }
 }
+
+
+@mixin disableHeaderFooter {
+  header,
+  footer {
+    display: none !important;
+  }
+
+  [class="container"] {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
