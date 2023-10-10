@@ -69,7 +69,16 @@
       "main": "Reports",
       "all": "All reports",
       "create": "Create report"
-    }
+    },
+    "cabinet": {
+      "company": "Company profile",
+      "members": "Members",
+      "change-email": "Change e-mail",
+      "change-password": "Change password",
+      "subscribtion": "Subscription",
+      "main": "Edit user profile"
+    },
+    "other-page": "Other page"
   },
   "email-sent": "We have sent you an e-mail. Follow the link in the e-mail.",
   "back-to-sign-in": "Back to sign in",
@@ -125,5 +134,19 @@
       "money-back": "15-day money-back guarantee"
     },
     "buy": "Buy"
+  },
+  "cabinet": {
+    "change-avatar": "Change avatar",
+    "name": {
+      "first": "First name",
+      "last": "Last name"
+    },
+    "email": "E-mail",
+    "phone": "Phone number",
+    "company": "Company name",
+    "position": "Position",
+    "role": "Role",
+    "rights": "Rights",
+    "save": "Save"
   }
 }

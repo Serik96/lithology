@@ -1,0 +1,46 @@
+@import "src/styles/global/mixins";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  .profile {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .information {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .changeAvatar {
+        @include bodyFontMediumM;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+
+  .formBody {
+    max-width: 576px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 48px 16px;
+
+    .formFields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px 16px;
+      grid-column: 1 / 3;
+    }
+  }
+}

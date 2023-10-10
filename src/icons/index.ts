@@ -22,6 +22,12 @@ import ProfileIcon from '../../public/icons/profile.svg';
 import SearchIcon from '../../public/icons/search.svg';
 import StarFilledIcon from '../../public/icons/star-filled.svg';
 import StarIcon from '../../public/icons/star.svg';
+import BuildsIcon from '../../public/icons/builds.svg';
+import PayIcon from '../../public/icons/pay.svg';
+import UsersIcon from '../../public/icons/user-list.svg';
+import LockIcon from '../../public/icons/lock.svg';
+import UnlockIcon from '../../public/icons/lock-open.svg';
+import EmailIcon from '../../public/icons/e-mail.svg';
 
 export {
   ArrowSquareRightIcon,
@@ -48,4 +54,10 @@ export {
   StarFilledIcon,
   NotificationIcon,
   MoreIcon,
+  BuildsIcon,
+  PayIcon,
+  UsersIcon,
+  LockIcon,
+  UnlockIcon,
+  EmailIcon,
 };

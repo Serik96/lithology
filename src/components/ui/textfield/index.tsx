@@ -14,6 +14,7 @@ type TProps = {
   Icon?: FC;
   onChange?: (value: string) => void;
   multiline?: boolean;
+  readonly?: boolean;
 };
 
 export const TextFieldRaw: FC<TProps> = ({
@@ -26,6 +27,7 @@ export const TextFieldRaw: FC<TProps> = ({
   onChange,
   multiline,
   Icon,
+  readonly = false,
 }) => {
   const [valueState, setValueState] = useState(value);
 
@@ -41,6 +43,7 @@ export const TextFieldRaw: FC<TProps> = ({
       onChange={handleChange}
       placeholder={placeholder}
       className={cn(s.input, className)}
+      readOnly={readonly}
     />
   ) : (
     <input
@@ -50,6 +53,7 @@ export const TextFieldRaw: FC<TProps> = ({
       onChange={handleChange}
       placeholder={placeholder}
       className={cn(s.input, className, Icon && s.withIcon)}
+      readOnly={readonly}
     />
   );
 
