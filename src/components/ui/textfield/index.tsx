@@ -27,7 +27,7 @@ export const TextFieldRaw: FC<TProps> = ({
   onChange,
   multiline,
   Icon,
-  readonly = false,
+  readonly,
 }) => {
   const [valueState, setValueState] = useState(value);
 

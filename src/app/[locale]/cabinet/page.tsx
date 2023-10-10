@@ -1,13 +1,13 @@
 'use client';
 
-import { Breadcrumbs, Button, TextField } from '@/components/ui';
-import { useTranslations } from 'next-intl';
-import { cabinetBreadcrumbs, cabinetSideLinks } from './const';
-import s from './cabinet.module.scss';
-import { ArrowSquareRightIcon, ProfileIcon } from '@/icons';
-import { CabinetContainer } from '@/components/cabinet-container';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { CabinetContainer } from '@/components/cabinet-container';
+import { Breadcrumbs, Button, TextField } from '@/components/ui';
 import { cn } from '@/helpers';
+import { ArrowSquareRightIcon, ProfileIcon } from '@/icons';
+import s from './cabinet.module.scss';
+import { cabinetBreadcrumbs, cabinetSideLinks } from './const';
 
 const Cabinet = () => {
   const t = useTranslations();

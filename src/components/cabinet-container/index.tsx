@@ -17,15 +17,13 @@ export const CabinetContainer = ({
   description,
   heading,
   onSidebarClick,
-}: TProps) => {
-  return (
-    <div className={s.cabinet}>
-      <Sidebar links={sidebarLinks} onClick={onSidebarClick} />
-      <div className={s.wrapper}>
-        <h1 className={s.heading}>{heading}</h1>
-        {description && <p className={s.description}>{description}</p>}
-        {children}
-      </div>
+}: TProps) => (
+  <div className={s.cabinet}>
+    <Sidebar links={sidebarLinks} onClick={onSidebarClick} />
+    <div className={s.wrapper}>
+      <h1 className={s.heading}>{heading}</h1>
+      {description && <p className={s.description}>{description}</p>}
+      {children}
     </div>
-  );
-};
+  </div>
+);

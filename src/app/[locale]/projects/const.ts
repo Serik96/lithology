@@ -6,7 +6,7 @@ import { TBreadcrumbs, TSidebarLink } from '@/types';
 export const projectsBreadcrumbs: TBreadcrumbs[] = [
   {
     label: 'navigation.home',
-    href: routes.project.cabinet.main,
+    href: routes.project.profile.main,
   },
   {
     label: 'navigation.all-projects.main',

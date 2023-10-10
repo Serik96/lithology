@@ -10,7 +10,7 @@ export const routes = {
     },
     notifications: '/notifications',
     settings: '/settings',
-    cabinet: {
+    profile: {
       main: '/cabinet',
       company: '/cabinet/company',
     },
