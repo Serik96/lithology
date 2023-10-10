@@ -10,7 +10,8 @@ export const routes = {
     },
     notifications: '/notifications',
     settings: '/settings',
-    cabinet: '/cabinet',
+    cabinet: '/dashboard',
+    personal: '/personal',
     subscription: {
       main: '/subscription',
       purchase: '/subscription/purchase',
@@ -20,6 +21,7 @@ export const routes = {
     main: '/',
     news: '/news',
     support: '/support',
+    notFound: '/not-found',
   },
   auth: {
     signIn: '/sign-in',

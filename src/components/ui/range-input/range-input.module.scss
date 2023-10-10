@@ -1,0 +1,79 @@
+@import 'src/styles/global/mixins';
+
+.range {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+
+  .label,
+  .value {
+    @include bodyFontRegularS;
+  }
+
+  .wrapper {
+    border: 1px solid var(--gray-100);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    padding: 9px 16px;
+
+    .rangeInput {
+      width: 80%;
+      position: relative;
+      height: 24px;
+      display: flex;
+      align-items: center;
+
+      &:active {
+        cursor: grab;
+      }
+
+      .input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+        border: none;
+
+        &:active,
+        &:focus {
+          cursor: grab;
+        }
+      }
+
+      .line {
+        width: 100%;
+        height: 1px;
+        background-color: var(--gray-100);
+
+        &:active {
+          cursor: grab;
+        }
+      }
+
+      .thumb {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        border: 2px solid var(--white-400);
+        background-color: var(--black-400);
+        filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.12));
+
+        &:active {
+          cursor: grab;
+        }
+      }
+    }
+  }
+}

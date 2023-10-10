@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { PropsWithChildren, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from '@/components/ui';
-import { ESize } from '@/enums';
+import { ESizeValue } from '@/enums';
 import { EModalPurpose } from '@/enums/modal';
 import { cn } from '@/helpers';
 import { CloseFilledIcon } from '@/icons';
@@ -15,7 +15,7 @@ type TProps = PropsWithChildren<{
   onConfirm: VoidFunction;
   title: string;
   description: string;
-  maxWidth: ESize;
+  maxWidth: ESizeValue;
   cancelBtnText?: string;
   confirmBtnText?: string;
 }>;
@@ -58,7 +58,7 @@ export const Modal = ({
   return (
     <div className={cn(s.modal, isOpened && s.open)}>
       <div className={s.bg} onClick={handleClose} />
-      <div className={cn(s.wrapper, s?.[maxWidth ?? ESize.md])}>
+      <div className={cn(s.wrapper, s?.[maxWidth ?? ESizeValue.md])}>
         <div className={s.closeBtn} onClick={handleClose}>
           <CloseFilledIcon />
         </div>

@@ -15,7 +15,7 @@ export const Sidebar = ({ links, onClick }: TProps) => {
 
   return (
     <nav className={s.sidebar}>
-      <ul className={s.list}>
+      <ul className={cn(s.list, links.length === 1 && s.oneItemList)}>
         {links.map(({ Icon, href, isBottom, label, type }, i) => (
           <li
             key={`sidebar__link_${i}`}

@@ -1,4 +1,15 @@
 export const tempData = {
+  report: {
+    id: 15,
+    created_at: '2023-09-22T15:53:14.266Z',
+    author: {
+      avatar: '/temp/avatar.png',
+      first_name: 'Islam',
+      last_name: 'Nazaraliev',
+    },
+    pic1: '/temp/before.png',
+    pic2: '/temp/after.png',
+  },
   user: {
     id: 1,
     company_id: 2,
