@@ -6,12 +6,13 @@ import { Breadcrumbs, Button, RangeInput } from '@/components/ui';
 import ImgUploader from '@/components/ui/img-uploader';
 import { EAlignValue } from '@/enums';
 import { ArrowSquareRightIcon } from '@/icons';
-import { reportsCreateBreadcrumbs } from './const';
+import { picturesInitialValue, reportsCreateBreadcrumbs } from './const';
 import s from './create.module.scss';
+import { TPictures } from './types';
 
 const Create = () => {
   const t = useTranslations();
-  const [pictures, setPictures] = useState<object>();
+  const [pictures, setPictures] = useState<TPictures>(picturesInitialValue);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;
@@ -24,12 +25,6 @@ const Create = () => {
       }));
     }
   };
-
-  const hasGenerateBtn =
-    typeof pictures === 'object'
-      ? Object.prototype.hasOwnProperty.call(pictures, 'pic1') &&
-        Object.prototype.hasOwnProperty.call(pictures, 'pic2')
-      : false;
 
   return (
     <>
@@ -52,7 +47,7 @@ const Create = () => {
             btnAlignment={EAlignValue.RIGHT}
           />
         </div>
-        {hasGenerateBtn && (
+        {pictures?.pic1 && pictures?.pic2 && (
           <div className={s.btns}>
             <Button className={s.generateBtn}>
               {t('navigation.reports.generate')}
