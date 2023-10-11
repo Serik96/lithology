@@ -80,6 +80,13 @@
       "upload-image": "Upload image",
       "change-image": "Change image",
       "generate": "Generate a report"
+    },
+    "cabinet": {
+      "company": "Company profile",
+      "members": "Members",
+      "change-email": "Change e-mail",
+      "change-password": "Change password",
+      "subscribtion": "Subscription"
     }
   },
   "email-sent": "We have sent you an e-mail. Follow the link in the e-mail.",

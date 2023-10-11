@@ -10,8 +10,10 @@ export const routes = {
     },
     notifications: '/notifications',
     settings: '/settings',
-    cabinet: '/dashboard',
-    personal: '/personal',
+    profile: {
+      main: '/cabinet',
+      company: '/cabinet/company',
+    },
     subscription: {
       main: '/subscription',
       purchase: '/subscription/purchase',
@@ -33,6 +35,10 @@ export const routes = {
     changePassword: {
       main: '/change-password',
       confirm: '/change-password/confirm',
+    },
+    changeEmail: {
+      main: '/change-email',
+      confirm: '/change-email/confirm',
     },
   },
 };

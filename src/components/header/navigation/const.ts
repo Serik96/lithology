@@ -11,7 +11,7 @@ export const navLinks: TNavLink[] = [
   },
   {
     label: null,
-    href: routes.project.cabinet,
+    href: routes.project.profile.main,
     icon: HomeIcon,
   },
   {
