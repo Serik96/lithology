@@ -13,7 +13,7 @@ body {
   color: var(--black-400);
   font-family: var(--font-body);
   background-color: var(--amber-300);
-  margin: 0px;
+  margin: 0;
 }
 
 h1,
@@ -87,11 +87,7 @@ select {
 input,
 textarea {
   @include bodyFontRegularS;
-  border-radius: 4px;
-  border: 1px solid var(--gray-400);
-  background-color: var(--amber-400);
-  padding: 9px 16px;
-  transition: all 0.2s;
+  @include input;
 
   &:hover,
   &:focus,

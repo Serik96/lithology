@@ -10,7 +10,10 @@ export const routes = {
     },
     notifications: '/notifications',
     settings: '/settings',
-    cabinet: '/cabinet',
+    profile: {
+      main: '/cabinet',
+      company: '/cabinet/company',
+    },
     subscription: {
       main: '/subscription',
       purchase: '/subscription/purchase',
@@ -20,6 +23,7 @@ export const routes = {
     main: '/',
     news: '/news',
     support: '/support',
+    notFound: '/not-found',
   },
   auth: {
     signIn: '/sign-in',
@@ -31,6 +35,10 @@ export const routes = {
     changePassword: {
       main: '/change-password',
       confirm: '/change-password/confirm',
+    },
+    changeEmail: {
+      main: '/change-email',
+      confirm: '/change-email/confirm',
     },
   },
 };
