@@ -5,7 +5,7 @@ import { TBreadcrumbs, TSidebarLink } from '@/types';
 export const createBreadcrumbs: TBreadcrumbs[] = [
   {
     label: 'navigation.home',
-    href: routes.project.cabinet,
+    href: routes.project.dashboard,
   },
   {
     label: 'navigation.all-projects.main',
