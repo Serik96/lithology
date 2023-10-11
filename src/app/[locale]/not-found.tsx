@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { useEffect } from 'react';
 import { Button } from '@/components/ui';
 import { routes } from '@/const';
 import { ArrowCircleLeftIcon } from '@/icons';
@@ -7,6 +10,13 @@ import s from './not-found.module.scss';
 
 const NotFound = () => {
   const t = useTranslations();
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    if (body) {
+      body.classList.add('not-found-page');
+    }
+  }, []);
 
   return (
     <div className={s.notFound}>

@@ -9,8 +9,10 @@ import CloseFilledIcon from '../../public/icons/close-filled.svg';
 import CloseIcon from '../../public/icons/close.svg';
 import CloudFilledIcon from '../../public/icons/cloud-filled.svg';
 import CloudIcon from '../../public/icons/cloud.svg';
+import CompareIcon from '../../public/icons/compare.svg';
 import DropIcon from '../../public/icons/drop.svg';
 import EmailIcon from '../../public/icons/e-mail.svg';
+import ExcludeIcon from '../../public/icons/exclude.svg';
 import FatrowsIcon from '../../public/icons/fatrows.svg';
 import FolderAddIcon from '../../public/icons/folder-add.svg';
 import UnlockIcon from '../../public/icons/lock-open.svg';
@@ -41,7 +43,9 @@ export {
   CloseFilledIcon,
   CloudIcon,
   CloudFilledIcon,
+  CompareIcon,
   DropIcon,
+  ExcludeIcon,
   FolderIcon,
   FolderAddIcon,
   FatrowsIcon,
