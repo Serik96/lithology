@@ -3,6 +3,8 @@ export const routes = {
     allProjects: {
       main: '/projects',
       create: '/projects/create',
+      created: '/projects/created',
+      edit: '/projects/edit',
     },
     reports: {
       main: '/reports',

@@ -65,6 +65,8 @@
       "archived": "Archived",
       "favourites": "Favourites",
       "create": "Create project",
+      "created": "Created a project",
+      "edit": "Edit project",
       "use-existing": "Use existing project"
     },
     "subscription": {
@@ -143,5 +145,17 @@
       "money-back": "15-day money-back guarantee"
     },
     "buy": "Buy"
+  },
+  "projects": {
+    "name": "Project name",
+    "location": "Location",
+    "industry": "Industry",
+    "gps-coordinates": "GPS coordinates",
+    "connect": "Connect to another project",
+    "save": "Save",
+    "save-changes": "Save changes",
+    "folder-created": "Folder created",
+    "view-project": "View project",
+    "list-of-projects": "The project is now in your list of projects."
   }
 }
