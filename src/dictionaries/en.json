@@ -1,6 +1,7 @@
 {
   "litholog": "Litholog",
   "search": "Search",
+  "type-to-search": "Type to search",
   "cancel": "Cancel",
   "confirm": "Confirm",
   "delete": "Delete",
@@ -86,8 +87,21 @@
       "members": "Members",
       "change-email": "Change e-mail",
       "change-password": "Change password",
-      "subscribtion": "Subscription"
-    }
+      "subscribtion": "Subscription",
+      "main": "Edit user profile"
+    },
+    "company-cabinet": {
+      "user": "User profile",
+      "members": "Members",
+      "main": "Edit company profile"
+    },
+    "company-members": {
+      "user": "User profile",
+      "company": "Company profile",
+      "add": "Add member",
+      "main": "Members"
+    },
+    "other-page": "Other page"
   },
   "email-sent": "We have sent you an e-mail. Follow the link in the e-mail.",
   "back-to-sign-in": "Back to sign in",
@@ -143,5 +157,40 @@
       "money-back": "15-day money-back guarantee"
     },
     "buy": "Buy"
+  },
+  "cabinet": {
+    "change-avatar": "Change avatar",
+    "name": {
+      "first": "First name",
+      "last": "Last name"
+    },
+    "email": "E-mail",
+    "phone": "Phone number",
+    "company": "Company name",
+    "position": "Position",
+    "role": "Role",
+    "rights": "Rights",
+    "save": "Save"
+  },
+  "company-cabinet": {
+    "change-avatar": "Change avatar",
+    "name": "Legal name",
+    "vat": "VAT ID",
+    "country": "Country",
+    "city": "City",
+    "address": "Street and number",
+    "zip": "Zip",
+    "industry": "Industry",
+    "save": "Save"
+  },
+  "company-members": {
+    "filter-fields": {
+      "role": "Role",
+      "rights": "Rights"
+    },
+    "not-found": "No members found"
+  },
+  "member-card": {
+    "description": "{projects} projects, {reports} reports"
   }
 }

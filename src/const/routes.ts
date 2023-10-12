@@ -13,7 +13,10 @@ export const routes = {
     dashboard: '/dashboard',
     profile: {
       main: '/cabinet',
-      company: '/cabinet/company',
+      company: {
+        main: '/cabinet/company',
+        members: '/cabinet/company/members'
+      }
     },
     subscription: {
       main: '/subscription',

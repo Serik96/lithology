@@ -17,7 +17,7 @@ export const cabinetSideLinks: TSidebarLink[] = [
   {
     label: 'navigation.cabinet.company',
     Icon: BuildsIcon,
-    href: routes.project.profile.company,
+    href: routes.project.profile.company.main,
   },
   {
     label: 'navigation.cabinet.members',

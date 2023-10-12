@@ -9,7 +9,7 @@ export const companyCabinetBreadcrumbs: TBreadcrumbs[] = [
   },
   {
     label: 'navigation.other-page',
-    href: routes.project.profile.company,
+    href: routes.project.profile.company.members,
   },
 ];
 
@@ -22,6 +22,6 @@ export const companyCabinetSideLinks: TSidebarLink[] = [
   {
     label: 'navigation.company-cabinet.members',
     Icon: UsersIcon,
-    href: routes.project.settings,
+    href: routes.project.profile.company.members,
   },
 ];
