@@ -291,4 +291,30 @@ export const tempData = {
       },
     },
   ],
+  members: [
+    {
+      avatar: '/temp/member-avatar.png',
+      name: 'Roman Nazarenko',
+      projects: 14,
+      reports: 9,
+    },
+    {
+      avatar: '/temp/member-avatar.png',
+      name: 'Roman Nazarenko',
+      projects: 12,
+      reports: 10,
+    },
+    {
+      avatar: '/temp/member-avatar.png',
+      name: 'Roman Nazarenko',
+      projects: 17,
+      reports: 5,
+    },
+    {
+      avatar: '/temp/member-avatar.png',
+      name: 'Roman Nazarenko',
+      projects: 7,
+      reports: 12,
+    },
+  ],
 };

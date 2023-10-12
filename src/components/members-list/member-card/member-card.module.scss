@@ -1,0 +1,29 @@
+@import "src/styles/global/mixins";
+
+.card { 
+  background: var(--amber-200);
+  padding: 8px 12px;
+  padding-right: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+  }
+
+  .information{
+    h4 {
+      @include bodyFontRegularM;
+      color: var(--black-400);
+    }
+
+    p {
+      @include bodyFontRegularS;
+      color: var(--gray-200);
+    }
+  }
+}
