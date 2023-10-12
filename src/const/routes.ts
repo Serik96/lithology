@@ -5,6 +5,7 @@ export const routes = {
       create: '/projects/create',
       created: '/projects/created',
       edit: '/projects/edit',
+      history: '/projects/history',
     },
     reports: {
       main: '/reports',

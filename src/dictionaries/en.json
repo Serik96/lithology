@@ -66,6 +66,7 @@
       "favourites": "Favourites",
       "create": "Create project",
       "created": "Created a project",
+      "history": "History project",
       "edit": "Edit project",
       "use-existing": "Use existing project"
     },
@@ -156,6 +157,7 @@
     "save-changes": "Save changes",
     "folder-created": "Folder created",
     "view-project": "View project",
-    "list-of-projects": "The project is now in your list of projects."
+    "list-of-projects": "The project is now in your list of projects",
+    "history-report": "History report #"
   }
 }

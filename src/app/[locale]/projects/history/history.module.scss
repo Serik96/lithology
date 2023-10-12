@@ -1,0 +1,26 @@
+@import "src/styles/global/mixins";
+
+.historyProject {
+  display: flex;
+  width: fit-content;
+  margin: 40px auto 165px auto;
+  min-height: calc(100vh - 615px);
+
+  .wrapper {
+    .heading {
+      @include fontHeadingXL;
+      max-width: 488px;
+    }
+
+    .description {
+      @include bodyFontRegularM;
+      max-width: 312px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      max-width: 336px;
+      margin-top: 48px;
+    }
+  }
+}

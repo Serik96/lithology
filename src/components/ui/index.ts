@@ -1,6 +1,5 @@
 export * from './button';
 export * from './textfield';
-export * from './selectfield';
 export * from './logo';
 export * from './breadcrumbs';
 export * from './loader';
