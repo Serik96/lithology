@@ -75,11 +75,3 @@ export type TSpecimen = {
   created_at: string;
   updated_at: string;
 };
-
-// @todo: уточнить и переработать тип
-export type TMember = {
-  avatar: string;
-  name: string;
-  projects: number;
-  reports: number;
-};

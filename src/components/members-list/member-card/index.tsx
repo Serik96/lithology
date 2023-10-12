@@ -1,24 +1,42 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/helpers';
-import { TMember } from '@/types';
+import { ProfileIcon } from '@/icons';
+import { TUser } from '@/types/user';
 import s from './member-card.module.scss';
 
 type TProps = {
-  member: TMember;
+  user: TUser;
 };
 
-export const MemberCard = ({ member: { avatar, name, projects, reports } }: TProps) => {
+export const MemberCard = ({ user: { avatar, first_name, last_name } }: TProps) => {
   const t = useTranslations();
 
+  // @todo: узнать не линка ли это на страницу пользователя
   return (
     <div className={cn(s.card)}>
-      <Image className={s.avatar} src={avatar} alt={`${name} profile image`} width={128} height={128} />
+      {avatar ? (
+        <Image
+          className={s.avatar}
+          src={avatar}
+          alt={`${first_name} ${last_name} profile image`}
+          width={128}
+          height={128}
+        />
+      ) : (
+        // @todo: переделать отображение, если понадобится
+        <div className={cn(s.avatar, s.withoutImage)}>
+          <ProfileIcon />
+        </div>
+      )}
 
       <div className={s.information}>
-        <h4>{name}</h4>
-        <p>{t('member-card.description', { projects, reports })}</p>
+        <h4>{`${first_name} ${last_name}`}</h4>
+        {/* @todo: убрать хардкод, когда появится подложка на бэке */}
+        <p>{t('member-card.description', { projects: 17, reports: 9 })}</p>
       </div>
+
+      {/* @todo: добавить управление ролью и правами пользователя */}
     </div>
   );
 };

@@ -9,14 +9,14 @@ import { tempData } from '@/const/tmp-data';
 import { ESortDirection } from '@/enums';
 import { cn } from '@/helpers';
 import { DropIcon, SearchIcon } from '@/icons';
-import { TMember } from '@/types';
+import { TUser } from '@/types';
 import { membersBreadcrumbs, membersSideLinks, sortInitialValue } from './const';
 import s from './members.module.scss';
 
 const Members = () => {
   const t = useTranslations();
   const [filters, setFilters] = useState(sortInitialValue);
-  const [members, setMembers] = useState<TMember[]>();
+  const [members, setMembers] = useState<TUser[]>();
 
   const handleSidebarAction = (type?: string) => {
     console.log(type);
@@ -81,7 +81,13 @@ const Members = () => {
               </div>
             ))}
           </div>
-          {members && <MembersList members={members} />}
+          {members &&
+            (members.length > 0 ? (
+              <MembersList users={members} />
+            ) : (
+              // @todo: переделать отображение, когда будет готов дизайн
+              <div className={s.emptyMembers}>{t('company-members.not-found')}</div>
+            ))}
         </div>
       </CabinetContainer>
     </>

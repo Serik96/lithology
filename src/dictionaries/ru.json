@@ -187,7 +187,8 @@
     "filter-fields": {
       "role": "Role",
       "rights": "Rights"
-    }
+    },
+    "not-found": "No members found"
   },
   "member-card": {
     "description": "{projects} projects, {reports} reports"

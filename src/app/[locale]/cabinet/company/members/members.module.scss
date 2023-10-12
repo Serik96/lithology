@@ -29,7 +29,8 @@
     }
   }
 
-  .members {
+  .emptyMembers { 
+    @include fontHeadingL;
     margin-top: 32px;
   }
 }
