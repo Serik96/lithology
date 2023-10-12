@@ -4,7 +4,7 @@ import { TBreadcrumbs } from '@/types';
 export const reportBreadcrumbs: TBreadcrumbs[] = [
   {
     label: 'navigation.home',
-    href: routes.project.profile.main,
+    href: routes.project.dashboard,
   },
   {
     label: 'navigation.reports.main',
