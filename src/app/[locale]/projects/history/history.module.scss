@@ -9,18 +9,7 @@
   .wrapper {
     .heading {
       @include fontHeadingXL;
-      max-width: 488px;
-    }
-
-    .description {
-      @include bodyFontRegularM;
-      max-width: 312px;
-      margin-top: 8px;
-    }
-
-    .btn {
-      max-width: 336px;
-      margin-top: 48px;
+      margin-bottom: 24px;
     }
   }
 }

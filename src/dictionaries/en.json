@@ -121,7 +121,10 @@
       "a-z": "A-Z",
       "creation-date": "Creation date",
       "change-date": "Date of change",
-      "comment-date": "Comment date"
+      "comment-date": "Comment date",
+      "all-notification": "All notification",
+      "all-users": "All users",
+      "all-date": "All date"
     },
     "add-to-favourites": "Add to favourites",
     "add-to-archive": "Add to archive",
