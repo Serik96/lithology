@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { cn } from '@/helpers';
 import { BookIcon, ProfileIcon } from '@/icons';
 import { TUser } from '@/types';
-import StatisticItem from './statistic-item/insex';
+import StatsItem from './stats-item';
 import s from './user-information.module.scss';
 
 type TProps = {
@@ -35,10 +35,10 @@ const UserInformation = ({ user: { avatar, first_name, last_name } }: TProps) =>
       <div className={s.information}>
         <h1 className={s.name}>{`${first_name} ${last_name.at(0)}.`}</h1>
         {/* @todo: убрать хардкод, во время подключения к беку */}
-        <div className={s.statistics}>
-          <StatisticItem Icon={BookIcon} label={'Viewer/Editor'} />
-          <StatisticItem Icon={BookIcon} label={t('user.projects', { projects: 3 })} />
-          <StatisticItem Icon={BookIcon} label={t('user.reports', { reports: 24 })} />
+        <div className={s.stats}>
+          <StatsItem Icon={BookIcon} label={'Viewer/Editor'} />
+          <StatsItem Icon={BookIcon} label={t('user.projects', { projects: 3 })} />
+          <StatsItem Icon={BookIcon} label={t('user.reports', { reports: 24 })} />
         </div>
       </div>
     </div>
