@@ -10,7 +10,7 @@ export const membersBreadcrumbs: TBreadcrumbs[] = [
   },
   {
     label: 'navigation.other-page',
-    href: routes.project.profile.company.members,
+    href: routes.project.profile.company.members.main,
   },
 ];
 
@@ -29,6 +29,7 @@ export const membersSideLinks: TSidebarLink[] = [
     label: 'navigation.company-members.add',
     Icon: AddIcon,
     isBottom: true,
+    href: routes.project.profile.company.members.add,
   },
 ];
 
