@@ -1,6 +1,7 @@
 {
   "litholog": "Litholog",
   "search": "Search",
+  "type-to-search": "Type to search",
   "cancel": "Cancel",
   "confirm": "Confirm",
   "delete": "Delete",
@@ -94,6 +95,13 @@
       "members": "Members",
       "main": "Edit company profile"
     },
+    "company-members": {
+      "user": "User profile",
+      "company": "Company profile",
+      "add": "Add member",
+      "main": "Members"
+    },
+    "add-member": "Add a new team member",
     "other-page": "Other page"
   },
   "email-sent": "We have sent you an e-mail. Follow the link in the e-mail.",
@@ -175,5 +183,21 @@
     "zip": "Zip",
     "industry": "Industry",
     "save": "Save"
+  },
+  "company-members": {
+    "filter-fields": {
+      "role": "Role",
+      "rights": "Rights"
+    },
+    "not-found": "No members found"
+  },
+  "member-card": {
+    "description": "{projects} projects, {reports} reports"
+  },
+  "add-member": {
+    "email": "E-mail",
+    "role": "Role",
+    "rights": "Rights",
+    "invite": "Invite"
   }
 }

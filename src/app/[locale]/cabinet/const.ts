@@ -17,12 +17,12 @@ export const cabinetSideLinks: TSidebarLink[] = [
   {
     label: 'navigation.cabinet.company',
     Icon: BuildsIcon,
-    href: routes.project.profile.company,
+    href: routes.project.profile.company.main,
   },
   {
     label: 'navigation.cabinet.members',
     Icon: UsersIcon,
-    href: routes.project.settings,
+    href: routes.project.profile.company.members.main,
   },
   {
     label: 'navigation.cabinet.change-email',
