@@ -199,5 +199,9 @@
     "role": "Role",
     "rights": "Rights",
     "invite": "Invite"
+  },
+  "user": {
+    "projects": "{projects} projects",
+    "reports": "{reports} reports"
   }
 }

@@ -1,0 +1,9 @@
+@import 'src/styles/global/mixins';
+
+.userContainer {
+  margin: 48px auto 200px;
+  max-width: 672px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
