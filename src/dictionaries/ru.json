@@ -101,6 +101,7 @@
       "add": "Add member",
       "main": "Members"
     },
+    "add-member": "Add a new team member",
     "other-page": "Other page"
   },
   "email-sent": "We have sent you an e-mail. Follow the link in the e-mail.",
@@ -192,5 +193,11 @@
   },
   "member-card": {
     "description": "{projects} projects, {reports} reports"
+  },
+  "add-member": {
+    "email": "E-mail",
+    "role": "Role",
+    "rights": "Rights",
+    "invite": "Invite"
   }
 }

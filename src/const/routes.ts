@@ -15,7 +15,10 @@ export const routes = {
       main: '/cabinet',
       company: {
         main: '/cabinet/company',
-        members: '/cabinet/company/members'
+        members: {
+          main: '/cabinet/company/members',
+          add: '/cabinet/company/members/add'
+        }
       }
     },
     subscription: {
