@@ -1,0 +1,37 @@
+@import 'src/styles/global/mixins';
+
+.searchInput {
+  width: 100%;
+  max-width: 672px;
+  
+  .form {
+    width: 100%;
+    min-width: 672px;
+  }
+  
+  .filters {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+
+    .filter {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+
+      .filterIcon {
+        display: flex;
+
+        &.reversed {
+          transform: rotate(180deg);
+        }
+
+        svg {
+          @include icon;
+        }
+      }
+    }
+  }
+}
