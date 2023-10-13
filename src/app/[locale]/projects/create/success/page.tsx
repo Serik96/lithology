@@ -5,16 +5,16 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowSquareRightIcon } from '@/icons';
-import { createdBreadcrumbs } from './const';
-import s from './created.module.scss';
+import { successBreadcrumbs } from './const';
+import s from './success.module.scss';
 
 const Created = () => {
   const t = useTranslations();
 
   return (
     <>
-      <Breadcrumbs navLinks={createdBreadcrumbs} />
-      <div className={s.createdProject}>
+      <Breadcrumbs navLinks={successBreadcrumbs} />
+      <div className={s.successProject}>
         <div className={s.wrapper}>
           <h1 className={s.heading}>{t('projects.folder-created')}</h1>
           <p className={s.description}>{t('projects.list-of-projects')}</p>

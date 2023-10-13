@@ -3,7 +3,7 @@ export const routes = {
     allProjects: {
       main: '/projects',
       create: '/projects/create',
-      created: '/projects/created',
+      success: '/projects/create/success',
       edit: '/projects/edit',
       history: '/projects/history',
     },

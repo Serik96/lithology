@@ -1,7 +1,7 @@
 import { routes } from '@/const';
 import { TBreadcrumbs } from '@/types';
 
-export const createdBreadcrumbs: TBreadcrumbs[] = [
+export const successBreadcrumbs: TBreadcrumbs[] = [
   {
     label: 'navigation.home',
     href: routes.public.main,
@@ -11,7 +11,11 @@ export const createdBreadcrumbs: TBreadcrumbs[] = [
     href: routes.project.allProjects.main,
   },
   {
+    label: 'navigation.all-projects.create',
+    href: routes.project.allProjects.create,
+  },
+  {
     label: 'navigation.all-projects.created',
-    href: routes.project.allProjects.created,
+    href: routes.project.allProjects.success,
   },
 ];
