@@ -129,21 +129,31 @@ export const tempData = {
       id: 1,
       slug: 'Popular',
       title: 'Basic',
-      content: 'Fishtext is used by designers, planners typography in action.',
+      content:
+        'Fishtext is used by designers, planners and frontenders when they need to quickly ' +
+        'fill mockups or prototypes with content. It\'s test content that shouldn\'t carry any meaning,' +
+        ' just to show the presence of the text itself or to demonstrate typography in action.',
       price: 10000,
     },
     {
       id: 2,
       slug: 'Popular',
       title: 'Basic',
-      content: 'Fishtext is used by designers, planners typography in action.',
+      content:
+        'Fishtext is used by designers, planners and frontenders when they need to quickly ' +
+        'fill mockups or prototypes with content. It\'s test content that shouldn\'t carry any meaning,' +
+        ' just to show the presence of the text itself or to demonstrate typography in action.',
       price: 10000,
+      isRecomended: true,
     },
     {
       id: 3,
       slug: 'Popular',
       title: 'Basic',
-      content: 'Fishtext is used by designers, planners typography in action.',
+      content:
+        'Fishtext is used by designers, planners and frontenders when they need to quickly ' +
+        'fill mockups or prototypes with content. It\'s test content that shouldn\'t carry any meaning,' +
+        ' just to show the presence of the text itself or to demonstrate typography in action.',
       price: 10000,
     },
   ],

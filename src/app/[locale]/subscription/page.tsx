@@ -1,54 +1,34 @@
-import Image from 'next/image';
+'use client';
+
 import { useTranslations } from 'next-intl';
-import { Breadcrumbs, Button } from '@/components/ui';
-import { currencySigns } from '@/const';
+import { useEffect, useState } from 'react';
+import AdvantagesList from '@/components/advantages-list';
+import PlansList from '@/components/plans-list';
+import { Breadcrumbs } from '@/components/ui';
 import { tempData } from '@/const/tmp-data';
-import { ECurrencySign } from '@/enums';
-import { complexStr } from '@/helpers';
-import { ArrowSquareRightIcon } from '@/icons';
-import { subscriptionBreadcrumbs } from './const';
+import { TPricePlan } from '@/types';
+import { subscriptionAdvantages, subscriptionBreadcrumbs } from './const';
 import s from './subscription.module.scss';
 
 const Subscription = () => {
   const t = useTranslations();
+  const [plans, setPlans] = useState<TPricePlan[]>();
+
+  const getPlans = () => {
+    setPlans(tempData.pricePlans);
+  };
+
+  useEffect(() => {
+    getPlans();
+  }, []);
 
   return (
     <>
       <Breadcrumbs navLinks={subscriptionBreadcrumbs} />
-      <div className={s.subscription}>
-        <h1 className={s.heading}>{t('subscription.title')}</h1>
-        <div className={s.offers}>
-          <div className={s.card}>
-            <Image width={48} height={48} alt={t('icons.line')} src="/icons/flash.svg" />
-            <p className={s.description}>{t('subscription.offers.free-projects')}</p>
-          </div>
-          <div className={s.card}>
-            <Image
-              width={48}
-              height={48}
-              alt={t('icons.line')}
-              src="/icons/discount.svg"
-            />
-            <p className={s.description}>{t('subscription.offers.money-back')}</p>
-          </div>
-        </div>
-        <ul className={s.pricePlanList}>
-          {tempData.pricePlans.map(e => (
-            <li className={s.card} key={e.id}>
-              <p className={s.slug}>{e.slug}</p>
-              <h2 className={s.title}>{e.title}</h2>
-              <p className={s.content}>{e.content}</p>
-
-              <Button variant="bordered">
-                {complexStr(
-                  [t('subscription.buy'), currencySigns[ECurrencySign.usd] + e.price],
-                  ' ',
-                )}
-                <ArrowSquareRightIcon />
-              </Button>
-            </li>
-          ))}
-        </ul>
+      <div className={s.subscriptionContainer}>
+        <h1 className={s.heading}>{t('navigation.subscription.main')}</h1>
+        <AdvantagesList advantages={subscriptionAdvantages} />
+        {plans && <PlansList plans={plans} />}
       </div>
     </>
   );

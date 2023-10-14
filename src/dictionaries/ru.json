@@ -152,12 +152,11 @@
     "send": "Send"
   },
   "subscription": {
-    "title": "Subscription",
-    "offers": {
+    "advantages": {
       "free-projects": "Join now to get 50 projects for free",
       "money-back": "15-day money-back guarantee"
     },
-    "buy": "Buy"
+    "buy": "Buy {sign}{price}"
   },
   "cabinet": {
     "change-avatar": "Change avatar",
