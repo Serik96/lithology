@@ -40,12 +40,12 @@ export const routes = {
       confirm: '/reset-password/confirm',
     },
     changePassword: {
-      main: '/change-password',
-      confirm: '/change-password/confirm',
+      main: '/cabinet/change-password',
+      confirm: '/cabinet/change-password/confirm',
     },
     changeEmail: {
-      main: '/change-email',
-      confirm: '/change-email/confirm',
+      main: '/cabinet/change-email',
+      confirm: '/cabinet/change-email/confirm',
     },
   },
 };

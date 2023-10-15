@@ -14,8 +14,6 @@
     "sign-up": "Sign up",
     "email": "E-mail",
     "password": "Password",
-    "old-password": "Old password",
-    "new-password": "New password",
     "has-account": "Do you have an account?",
     "sign-in": {
       "forgot-password": "Forgot password?",
@@ -199,5 +197,16 @@
     "role": "Role",
     "rights": "Rights",
     "invite": "Invite"
+  },
+  "change-password": {
+    "old": {
+      "label": "Old password",
+      "placeholder": "••••••••"
+    },
+    "new": {
+      "label": "Old password",
+      "placeholder": "••••••••"
+    },
+    "change": "Change password"
   }
 }
