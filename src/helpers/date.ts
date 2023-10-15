@@ -16,3 +16,12 @@ export const formatTime = (dateStr: string) => {
 
   return `${hours}:${minutes}:${seconds}`;
 };
+
+export const formatHour = (dateStr: string) => {
+  const date = new Date(dateStr);
+
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+
+  return `${hours}:${minutes}`;
+};

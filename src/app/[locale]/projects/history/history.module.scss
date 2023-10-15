@@ -1,15 +1,32 @@
 @import "src/styles/global/mixins";
 
-.historyProject {
-  display: flex;
-  width: fit-content;
+.historyWrapper {
+  max-width: 672px;
   margin: 40px auto 165px auto;
-  min-height: calc(100vh - 615px);
 
-  .wrapper {
-    .heading {
-      @include fontHeadingXL;
-      margin-bottom: 24px;
+  .filters {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+
+    .filter {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+
+      .filterIcon {
+        display: flex;
+
+        &.reversed {
+          transform: rotate(180deg);
+        }
+
+        svg {
+          @include icon;
+        }
+      }
     }
   }
 }
