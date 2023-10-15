@@ -1,0 +1,51 @@
+@import 'src/styles/global/mixins';
+
+.doneChangePassword {
+  width: fit-content;
+  min-height: calc(100vh - 615px);
+  margin: 40px auto 200px auto;
+
+  .heading {
+    @include fontHeadingXL;
+    color: var(--green-400);
+  }
+
+  .doneSection {
+    width: 752px;
+    display: flex;
+    justify-content: space-between;
+
+    .information {
+      margin-top: 16px;
+
+      .description {
+        @include bodyFontRegularM;
+      }
+
+      .backButton {
+        max-width: 280px;
+        justify-content: start;
+        gap: 12px;
+        margin-top: 48px;
+      }
+    }
+
+    .sticker {
+      position: relative;
+      height: fit-content;
+
+      .stickerImg {
+        position: relative;
+        z-index: 1;
+        margin-top: -48px;
+        transform: rotate(-2deg);
+      }
+
+      .stickerLine {
+        position: absolute;
+        bottom: -98px;
+        left: -210%;
+      }
+    }
+  }
+}

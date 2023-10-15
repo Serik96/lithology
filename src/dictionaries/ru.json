@@ -53,7 +53,8 @@
     "back": "Back",
     "change-password": {
       "main": "Change password",
-      "confirm": "Confirm change"
+      "confirm": "Confirm change",
+      "done": "Changed"
     },
     "reset-password": "Reset password",
     "email-confirm": "E-mail confirmation",
@@ -214,6 +215,11 @@
     "confirm": {
       "main": "Confirm the change at the e-mail",
       "sent": "We have sent you an e-mail. Follow the link in the e-mail.",
+      "back": "Back to settings"
+    },
+    "done": {
+      "main": "We change the password",
+      "use-new": "You can now use your new password when logging in.",
       "back": "Back to settings"
     }
   }

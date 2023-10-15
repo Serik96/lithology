@@ -42,6 +42,7 @@ export const routes = {
     changePassword: {
       main: '/cabinet/change-password',
       confirm: '/cabinet/change-password/confirm',
+      done: '/cabinet/change-password/done',
     },
     changeEmail: {
       main: '/cabinet/change-email',
