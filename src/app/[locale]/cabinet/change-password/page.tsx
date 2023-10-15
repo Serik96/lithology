@@ -13,7 +13,7 @@ const ChangePassword = () => {
     <>
       <Breadcrumbs navLinks={changePasswordBreadcrumbs} />
       <div className={s.changePassword}>
-        <h1 className={s.heading}>{t('navigation.change-password')}</h1>
+        <h1 className={s.heading}>{t('navigation.change-password.main')}</h1>
         <section className={s.changeSection}>
           <form className={s.form}>
             <div className={s.formBody}>

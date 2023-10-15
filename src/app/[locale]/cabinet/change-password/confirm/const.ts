@@ -7,11 +7,11 @@ export const confirmBreadcrumbs: TBreadcrumbs[] = [
     href: routes.public.main,
   },
   {
-    label: 'navigation.change-password',
+    label: 'navigation.change-password.main',
     href: routes.auth.changePassword.main,
   },
   {
-    label: 'navigation.email-confirm',
+    label: 'navigation.change-password.confirm',
     href: routes.auth.changePassword.confirm,
   },
 ];
