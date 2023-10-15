@@ -14,6 +14,7 @@ const Subscription = () => {
   const t = useTranslations();
   const [plans, setPlans] = useState<TPricePlan[]>();
 
+  /* todo: тут будет функция с подключенным бэком  */
   const getPlans = () => {
     setPlans(tempData.pricePlans);
   };
