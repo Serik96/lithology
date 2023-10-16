@@ -2,8 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
-import AdvantagesList from '@/components/advantages-list';
-import PlansList from '@/components/plans-list';
+import { AdvantagesList } from '@/components/advantages-list';
+import { PlansList } from '@/components/plans-list';
 import { Breadcrumbs } from '@/components/ui';
 import { tempData } from '@/const/tmp-data';
 import { TPricePlan } from '@/types';

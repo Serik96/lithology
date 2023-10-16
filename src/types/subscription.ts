@@ -19,7 +19,7 @@ export type TPricePlan = {
   title: string;
   content: string;
   price: number;
-  isRecomended?: boolean;
+  top?: boolean;
 };
 
 export type TAdvantage = {

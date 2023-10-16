@@ -6,12 +6,10 @@ type TProps = {
   advantages: TAdvantage[];
 };
 
-const AdvantagesList = ({ advantages }: TProps) => (
+export const AdvantagesList = ({ advantages }: TProps) => (
   <ul className={s.advantagesWrapper}>
     {advantages.map((a, i) => (
       <AdvantageItem key={`advantage_${i}`} item={a} />
     ))}
   </ul>
 );
-
-export default AdvantagesList;

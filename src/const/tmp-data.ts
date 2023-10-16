@@ -144,7 +144,7 @@ export const tempData = {
         'fill mockups or prototypes with content. It\'s test content that shouldn\'t carry any meaning,' +
         ' just to show the presence of the text itself or to demonstrate typography in action.',
       price: 10000,
-      isRecomended: true,
+      top: true,
     },
     {
       id: 3,
