@@ -16,3 +16,9 @@ export function formatCurrency(
 
   return sign + a;
 }
+
+export function separateThousands(amount: number, delimiter = ',') {
+  const a = amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, delimiter);
+
+  return a;
+}
