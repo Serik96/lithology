@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { cn, formatDate, formatHour } from '@/helpers';
+import { cn, formatDate, formatTime } from '@/helpers';
 import { ProfileIcon } from '@/icons';
 import { TNotification } from '@/types/project';
 import s from './notification-card.module.scss';
@@ -29,7 +29,7 @@ export const NotificationCard = ({
 
       <div className={s.information}>
         <h4>{description}</h4>
-        <p>{`${formatHour(created_at)}, ${formatDate(created_at)}`}</p>
+        <p>{`${formatTime(created_at, true)}, ${formatDate(created_at)}`}</p>
       </div>
     </div>
   );
