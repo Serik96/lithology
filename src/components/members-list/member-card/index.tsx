@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next-intl/link';
 import { cn } from '@/helpers';
 import { ProfileIcon } from '@/icons';
-import { getUserHref } from '@/model/user/domain';
+import { UserModel } from '@/model';
 import { TUser } from '@/types/user';
 import s from './member-card.module.scss';
 
@@ -16,7 +16,7 @@ export const MemberCard = ({ user: { id, avatar, first_name, last_name } }: TPro
 
   // @todo: узнать не линка ли это на страницу пользователя
   return (
-    <Link className={cn(s.card)} href={getUserHref({ userId: id })}>
+    <Link className={cn(s.card)} href={UserModel.domain.getUserHref({ userId: id })}>
       {avatar ? (
         <Image
           className={s.avatar}
