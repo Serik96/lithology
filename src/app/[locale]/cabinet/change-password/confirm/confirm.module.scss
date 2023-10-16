@@ -1,0 +1,50 @@
+@import 'src/styles/global/mixins';
+
+.confirmChangePassword {
+  width: fit-content;
+  min-height: calc(100vh - 615px);
+  margin: 40px auto 200px auto;
+  display: flex;
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    width: 500px;
+
+    .heading {
+      @include fontHeadingXL;
+      color: var(--black-400);
+    }
+
+    .description {
+      @include bodyFontRegularM;
+      margin-top: 16px;
+    }
+
+    // @todo: вынести в отдельный вариант кнопки
+    .backButton {
+      max-width: 280px;
+      justify-content: start;
+      gap: 12px;
+      margin-top: 48px;
+    }
+  }
+
+  .sticker {
+    position: relative;
+    height: fit-content;
+
+    .stickerImg {
+      position: relative;
+      z-index: 1;
+      margin-top: 0px;
+      transform: rotate(-2deg);
+    }
+
+    .stickerLine {
+      position: absolute;
+      bottom: -98px;
+      left: -210%;
+    }
+  }
+}
