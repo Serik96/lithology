@@ -133,7 +133,15 @@ export const tempData = {
         'Fishtext is used by designers, planners and frontenders when they need to quickly ' +
         'fill mockups or prototypes with content. It\'s test content that shouldn\'t carry any meaning,' +
         ' just to show the presence of the text itself or to demonstrate typography in action.',
+      ru_title: '',
+      ru_content: '',
       price: 10000,
+      discount: 0,
+      period: '',
+      pic: '',
+      top: false,
+      created_at: '2023-09-22T15:53:14.266Z',
+      updated_at: '2023-09-22T15:53:14.266Z',
     },
     {
       id: 2,
@@ -143,8 +151,15 @@ export const tempData = {
         'Fishtext is used by designers, planners and frontenders when they need to quickly ' +
         'fill mockups or prototypes with content. It\'s test content that shouldn\'t carry any meaning,' +
         ' just to show the presence of the text itself or to demonstrate typography in action.',
+      ru_title: '',
+      ru_content: '',
       price: 10000,
+      discount: 0,
+      period: '',
+      pic: '',
       top: true,
+      created_at: '2023-09-22T15:53:14.266Z',
+      updated_at: '2023-09-22T15:53:14.266Z',
     },
     {
       id: 3,
@@ -154,7 +169,15 @@ export const tempData = {
         'Fishtext is used by designers, planners and frontenders when they need to quickly ' +
         'fill mockups or prototypes with content. It\'s test content that shouldn\'t carry any meaning,' +
         ' just to show the presence of the text itself or to demonstrate typography in action.',
+      ru_title: '',
+      ru_content: '',
       price: 10000,
+      discount: 0,
+      period: '',
+      pic: '',
+      top: false,
+      created_at: '2023-09-22T15:53:14.266Z',
+      updated_at: '2023-09-22T15:53:14.266Z',
     },
   ],
   projects: [
