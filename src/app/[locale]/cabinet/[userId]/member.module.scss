@@ -6,4 +6,9 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  .emptyFolders {
+    @include fontHeadingL;
+    margin-top: 32px;
+  }
 }

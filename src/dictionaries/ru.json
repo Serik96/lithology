@@ -202,6 +202,7 @@
   },
   "user": {
     "projects": "{projects} projects",
-    "reports": "{reports} reports"
+    "reports": "{reports} reports",
+    "no-folders": "User folders not found"
   }
 }

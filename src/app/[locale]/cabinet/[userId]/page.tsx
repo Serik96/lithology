@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { DataTable } from '@/components/data-table';
 import { FoldersList } from '@/components/folders-list';
@@ -12,6 +13,8 @@ import { userBreadcrumbs } from './const';
 import s from './member.module.scss';
 
 const Member = () => {
+  const t = useTranslations();
+
   const [rowType, setRowType] = useState(ECardType.ROW);
   const [user, setUser] = useState<TUser>();
   const [folders, setFolders] = useState<TFolder[]>();
@@ -38,7 +41,12 @@ const Member = () => {
       <div className={s.userContainer}>
         {user && <UserInformation user={user} />}
         <DataTable showTypeToggle rowType={rowType} setRowType={setRowType}>
-          {folders && <FoldersList folders={folders} type={rowType} />}
+          {folders && folders.length > 0 ? (
+            <FoldersList folders={folders} type={rowType} />
+          ) : (
+            // @todo: переделать отображение, когда будет готов дизайн
+            <div className={s.emptyFolders}>{t('user.no-folders')}</div>
+          )}
         </DataTable>
       </div>
     </>
