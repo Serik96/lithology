@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import Link from 'next-intl/link';
 import { cn } from '@/helpers';
 import { ProfileIcon } from '@/icons';
+import { UserModel } from '@/model';
 import { TUser } from '@/types/user';
 import s from './member-card.module.scss';
 
@@ -9,12 +11,12 @@ type TProps = {
   user: TUser;
 };
 
-export const MemberCard = ({ user: { avatar, first_name, last_name } }: TProps) => {
+export const MemberCard = ({ user: { id, avatar, first_name, last_name } }: TProps) => {
   const t = useTranslations();
 
   // @todo: узнать не линка ли это на страницу пользователя
   return (
-    <div className={cn(s.card)}>
+    <Link className={cn(s.card)} href={UserModel.domain.getUserHref({ userId: id })}>
       {avatar ? (
         <Image
           className={s.avatar}
@@ -37,6 +39,6 @@ export const MemberCard = ({ user: { avatar, first_name, last_name } }: TProps) 
       </div>
 
       {/* @todo: добавить управление ролью и правами пользователя */}
-    </div>
+    </Link>
   );
 };

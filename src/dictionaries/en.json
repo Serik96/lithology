@@ -110,10 +110,6 @@
   "back-to-sign-in": "Back to sign in",
   "email-confirm-page-heading": "Confirm the change at the e-mail",
   "reset-page-heading": "We reset the password",
-  "back-to-settings": "Back to settings",
-  "you-bought-the": "You bought the ",
-  "subscription-expiration-date": "Subscription expiration date: ",
-  "tariff": "Tariff",
   "notifications": {
     "title": "{count, plural, =1 {# notification} other {# notifications}}."
   },
@@ -154,12 +150,16 @@
     "send": "Send"
   },
   "subscription": {
-    "title": "Subscription",
-    "offers": {
+    "advantages": {
       "free-projects": "Join now to get 50 projects for free",
       "money-back": "15-day money-back guarantee"
     },
-    "buy": "Buy"
+    "buy": "Buy {sign}{price}"
+  },
+  "subscription-purchase": {
+    "bought": "You bought the {name} tariff",
+    "expires-at": "Subscription expiration date: {date}",
+    "back": "Back to settings"
   },
   "cabinet": {
     "change-avatar": "Change avatar",
@@ -222,5 +222,10 @@
       "use-new": "You can now use your new password when logging in.",
       "back": "Back to settings"
     }
+  },
+  "user": {
+    "projects": "{projects} projects",
+    "reports": "{reports} reports",
+    "no-folders": "User folders not found"
   }
 }

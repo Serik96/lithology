@@ -1,30 +1,12 @@
 @import "src/styles/global/mixins";
 
-.subscription {
-  margin-top: 48px;
-  min-height: calc(100vh - 116px);
+.subscriptionContainer {
+  margin: 48px auto 140px;
 
   .heading {
     @include fontHeadingXXL;
     font-weight: var(--text-weight-base);
     margin-bottom: 24px;
-  }
-
-  .offers {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    .card {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-
-      .description {
-        @include bodyFontMediumL;
-        max-width: 467px;
-      }
-    }
   }
 
   .pricePlanList {
