@@ -1,5 +1,6 @@
 import { routes } from '@/const';
-import { TBreadcrumbs } from '@/types';
+import { DiscountIcon, FlashIcon } from '@/icons';
+import { TAdvantage, TBreadcrumbs } from '@/types';
 
 export const subscriptionBreadcrumbs: TBreadcrumbs[] = [
   {
@@ -7,7 +8,18 @@ export const subscriptionBreadcrumbs: TBreadcrumbs[] = [
     href: routes.public.main,
   },
   {
-    label: 'subscription.title',
+    label: 'navigation.subscription.main',
     href: routes.project.subscription.main,
   },
 ];
+
+export const subscriptionAdvantages: TAdvantage[] = [
+  {
+    Icon: FlashIcon,
+    label: 'subscription.advantages.free-projects'
+  },
+  {
+    Icon: DiscountIcon,
+    label: 'subscription.advantages.money-back'
+  },
+]

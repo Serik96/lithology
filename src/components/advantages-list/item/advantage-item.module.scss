@@ -1,0 +1,18 @@
+@import 'src/styles/global/mixins';
+
+.advantageItem {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  svg {
+    width: 48px;
+    height: 48px;
+    color: var(--orange-500);
+  }
+
+  .label {
+    @include bodyFontMediumL;
+    color: var(--black-400);
+  }
+}

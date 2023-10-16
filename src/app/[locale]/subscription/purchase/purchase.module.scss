@@ -1,42 +1,52 @@
-@import "src/styles/global/mixins";
+@import 'src/styles/global/mixins';
 
 .purchase {
-  display: flex;
   width: fit-content;
-  margin: 40px auto 165px auto;
   min-height: calc(100vh - 615px);
+  margin: 40px auto 200px auto;
 
-  .wrapper {
-    .heading {
-      @include fontHeadingXL;
-      color: var(--green-400);
-    }
-
-    .description {
-      @include bodyFontRegularM;
-      margin-top: 16px;
-    }
-
-    .btn {
-      max-width: 280px;
-      margin-top: 40px;
-      justify-content: flex-start;
-      gap: 12px;
-    }
+  .heading {
+    @include fontHeadingXL;
+    color: var(--green-400);
   }
 
-  .sticker {
-    position: relative;
-    height: fit-content;
+  .subscriptionSection {
+    width: 752px;
+    display: flex;
+    justify-content: space-between;
 
-    .stickerImg {
-      margin-top: 38px;
+    .information {
+      margin-top: 16px;
+
+      .description {
+        @include bodyFontRegularM;
+      }
+      
+      // @todo: вынести в отдельный вариант кнопки
+      .backButton {
+        max-width: 280px;
+        justify-content: start;
+        gap: 12px;
+        margin-top: 48px;
+      }
     }
 
-    .stickerLine {
-      position: absolute;
-      bottom: -98px;
-      left: -198%;
+    .sticker {
+      position: relative;
+      height: fit-content;
+
+      .stickerImg {
+        position: relative;
+        z-index: 1;
+        margin-top: -48px;
+        transform: rotate(-2deg);
+      }
+
+      .stickerLine {
+        position: absolute;
+        bottom: -98px;
+        left: -210%;
+      }
     }
   }
 }
