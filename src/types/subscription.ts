@@ -13,6 +13,7 @@ export type TPricePlan = {
   pic: string;
   top: boolean;
   created_at: string;
+  updated_at: string;
 };
 
 export type TAdvantage = {
