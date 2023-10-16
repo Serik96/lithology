@@ -199,5 +199,10 @@
     "role": "Role",
     "rights": "Rights",
     "invite": "Invite"
+  },
+  "user": {
+    "projects": "{projects} projects",
+    "reports": "{reports} reports",
+    "no-folders": "User folders not found"
   }
 }

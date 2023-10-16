@@ -1,0 +1,11 @@
+@import 'src/styles/global/mixins';
+
+.statsItem {
+  display: flex;
+  gap: 8px;
+
+  .label {
+    @include bodyFontMediumM;
+    color: var(--black-400);
+  }
+}
