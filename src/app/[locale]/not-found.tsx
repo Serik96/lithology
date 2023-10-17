@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 import { Button } from '@/components/ui';
 import { routes } from '@/const';
+import { EButtonVariant } from '@/enums';
 import { ArrowCircleLeftIcon } from '@/icons';
 import s from './not-found.module.scss';
 
@@ -37,7 +38,7 @@ const NotFound = () => {
         <div className={s.titleWrapper}>
           <h1 className={s.heading}>{t('not-found.404')}</h1>
           <p className={s.description}>{t('not-found.heading')}</p>
-          <Button variant="secondary" href={routes.public.main}>
+          <Button variant={EButtonVariant.secondary} href={routes.public.main}>
             <ArrowCircleLeftIcon />
             {t('not-found.back')}
           </Button>

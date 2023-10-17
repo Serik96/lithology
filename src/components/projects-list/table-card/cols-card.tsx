@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { Button } from '@/components/ui';
 import { routes } from '@/const';
+import { EButtonVariant } from '@/enums';
 import { cn, formatDate } from '@/helpers';
 import {
   CloseIcon,
@@ -78,7 +79,7 @@ export const ColsCard = ({
 
       <div className={s.date}>{`${t('table.created')}: ${formatDate(created_at)}`}</div>
 
-      <Button variant={'info'} className={s.reportsBtn}>
+      <Button variant={EButtonVariant.info} className={s.reportsBtn}>
         {t('table.reports', { count: reportsCount })}
       </Button>
     </div>

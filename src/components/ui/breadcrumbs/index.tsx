@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui';
+import { EButtonVariant } from '@/enums';
 import { ArrowLeftIcon } from '@/icons';
 import { TBreadcrumbs } from '@/types';
 import s from './breadcrumbs.module.scss';
@@ -15,7 +16,7 @@ export const Breadcrumbs = ({ navLinks }: TProps) => {
 
   return (
     <nav className={s.breadcrumbs}>
-      <Button href={backLink} variant="outlined">
+      <Button href={backLink} variant={EButtonVariant.outlined}>
         <ArrowLeftIcon />
         {t('navigation.back')}
       </Button>

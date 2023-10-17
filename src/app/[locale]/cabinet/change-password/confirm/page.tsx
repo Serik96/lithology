@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
+import { EButtonVariant } from '@/enums';
 import { ArrowSquareLeftIcon } from '@/icons';
 import s from './confirm.module.scss';
 import { confirmBreadcrumbs } from './const';
@@ -19,7 +20,7 @@ const Confirm = () => {
         <div className={s.wrapper}>
           <h1 className={s.heading}>{t('change-password.confirm.main')}</h1>
           <p className={s.description}>{t('change-password.confirm.sent')}</p>
-          <Button href={routes.auth.signIn} className={s.backButton}>
+          <Button href={routes.auth.signIn} variant={EButtonVariant.back}>
             <ArrowSquareLeftIcon />
             {t('change-password.confirm.back')}
           </Button>

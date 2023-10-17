@@ -7,7 +7,7 @@ export const changePasswordBreadcrumbs: TBreadcrumbs[] = [
     href: routes.public.main,
   },
   {
-    label: 'navigation.change-password',
+    label: 'navigation.change-password.main',
     href: routes.auth.changePassword.main,
   },
 ];

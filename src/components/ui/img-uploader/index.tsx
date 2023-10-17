@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { ChangeEvent, useState } from 'react';
 import { Button, Loader } from '@/components/ui';
-import { EAlignValue } from '@/enums';
+import { EAlignValue, EButtonVariant } from '@/enums';
 import { cn } from '@/helpers';
 import { AddIcon, ExcludeIcon } from '@/icons';
 import s from './file-uploader.module.scss';
@@ -83,7 +83,7 @@ const ImgUploader = ({
       </div>
       {img && (
         <Button
-          variant="outlined"
+          variant={EButtonVariant.outlined}
           className={cn(s.changeImg, btnAlignment && s[btnAlignment])}
         >
           <label htmlFor={inputId} className={s.changeImgLabel}>

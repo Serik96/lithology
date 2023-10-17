@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
+import { EButtonVariant } from '@/enums';
 import { ArrowSquareLeftIcon } from '@/icons';
 import { confirmBreadcrumbs } from './const';
 import s from './done.module.scss';
@@ -20,7 +21,7 @@ const Done = () => {
         <section className={s.doneSection}>
           <div className={s.information}>
             <p className={s.description}>{t('change-password.done.use-new')}</p>
-            <Button href={routes.auth.signIn} className={s.backButton}>
+            <Button href={routes.auth.signIn} variant={EButtonVariant.back}>
               <ArrowSquareLeftIcon />
               {t('change-password.done.back')}
             </Button>
