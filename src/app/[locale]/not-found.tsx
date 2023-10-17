@@ -38,7 +38,7 @@ const NotFound = () => {
         <div className={s.titleWrapper}>
           <h1 className={s.heading}>{t('not-found.404')}</h1>
           <p className={s.description}>{t('not-found.heading')}</p>
-          <Button variant={EButtonVariant.secondary} href={routes.public.main}>
+          <Button variant={EButtonVariant.SECONDARY} href={routes.public.main}>
             <ArrowCircleLeftIcon />
             {t('not-found.back')}
           </Button>

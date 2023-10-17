@@ -21,7 +21,7 @@ const Done = () => {
         <section className={s.doneSection}>
           <div className={s.information}>
             <p className={s.description}>{t('change-password.done.use-new')}</p>
-            <Button href={routes.auth.signIn} variant={EButtonVariant.back}>
+            <Button href={routes.auth.signIn} variant={EButtonVariant.BACK}>
               <ArrowSquareLeftIcon />
               {t('change-password.done.back')}
             </Button>

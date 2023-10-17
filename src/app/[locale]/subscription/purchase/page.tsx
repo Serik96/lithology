@@ -41,7 +41,7 @@ const Purchase = () => {
                 {/* @todo: поменять дату, когда будет бек */}
                 {t('subscription-purchase.expires-at', { date: formatDate(Date()) })}
               </p>
-              <Button href={routes.project.profile.main} variant={EButtonVariant.back}>
+              <Button href={routes.project.profile.main} variant={EButtonVariant.BACK}>
                 <ArrowSquareRightIcon />
                 {t('subscription-purchase.back')}
               </Button>

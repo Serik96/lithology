@@ -22,7 +22,7 @@ const PlanItem = ({ plan: { slug, title, content, price, top } }: TProps) => {
         <p className={s.description}>{content}</p>
       </div>
 
-      <Button variant={!top ? EButtonVariant.bordered : undefined}>
+      <Button variant={!top ? EButtonVariant.BORDERED : undefined}>
         {t('subscription.buy', {
           sign: currencySigns[ECurrencySign.usd],
           price: separateThousands(price, ','),

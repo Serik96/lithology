@@ -20,7 +20,7 @@ const Confirm = () => {
         <div className={s.wrapper}>
           <h1 className={s.heading}>{t('reset-page-heading')}</h1>
           <p className={s.description}>{t('email-sent')}</p>
-          <Button href={routes.auth.signIn} variant={EButtonVariant.back}>
+          <Button href={routes.auth.signIn} variant={EButtonVariant.BACK}>
             <ArrowSquareLeftIcon />
             {t('back-to-sign-in')}
           </Button>

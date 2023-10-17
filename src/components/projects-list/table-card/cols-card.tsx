@@ -79,7 +79,7 @@ export const ColsCard = ({
 
       <div className={s.date}>{`${t('table.created')}: ${formatDate(created_at)}`}</div>
 
-      <Button variant={EButtonVariant.info} className={s.reportsBtn}>
+      <Button variant={EButtonVariant.INFO} className={s.reportsBtn}>
         {t('table.reports', { count: reportsCount })}
       </Button>
     </div>

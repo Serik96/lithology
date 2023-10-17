@@ -16,7 +16,7 @@ export const Breadcrumbs = ({ navLinks }: TProps) => {
 
   return (
     <nav className={s.breadcrumbs}>
-      <Button href={backLink} variant={EButtonVariant.outlined}>
+      <Button href={backLink} variant={EButtonVariant.OUTLINED}>
         <ArrowLeftIcon />
         {t('navigation.back')}
       </Button>

@@ -68,14 +68,14 @@ export const Modal = ({
         <div className={s.buttons}>
           <Button
             className={s.cancelBtn}
-            variant={EButtonVariant.infoBlack}
+            variant={EButtonVariant.INFO_BLACK}
             onClick={handleClose}
           >
             {cancelBtnText ?? t('cancel')}
           </Button>
           <Button
             className={s.confirmBtn}
-            variant={EButtonVariant.red}
+            variant={EButtonVariant.RED}
             onClick={onConfirm}
           >
             {confirmBtnText ?? t('confirm')}

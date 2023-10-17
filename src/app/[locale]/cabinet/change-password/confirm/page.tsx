@@ -20,7 +20,7 @@ const Confirm = () => {
         <div className={s.wrapper}>
           <h1 className={s.heading}>{t('change-password.confirm.main')}</h1>
           <p className={s.description}>{t('change-password.confirm.sent')}</p>
-          <Button href={routes.auth.signIn} variant={EButtonVariant.back}>
+          <Button href={routes.auth.signIn} variant={EButtonVariant.BACK}>
             <ArrowSquareLeftIcon />
             {t('change-password.confirm.back')}
           </Button>

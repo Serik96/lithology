@@ -83,7 +83,7 @@ const ImgUploader = ({
       </div>
       {img && (
         <Button
-          variant={EButtonVariant.outlined}
+          variant={EButtonVariant.OUTLINED}
           className={cn(s.changeImg, btnAlignment && s[btnAlignment])}
         >
           <label htmlFor={inputId} className={s.changeImgLabel}>
