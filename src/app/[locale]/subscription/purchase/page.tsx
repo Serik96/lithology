@@ -7,6 +7,7 @@ import { Button } from '@/components/ui';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { routes } from '@/const';
 import { tempData } from '@/const/tmp-data';
+import { EButtonVariant } from '@/enums';
 import { formatDate } from '@/helpers';
 import { ArrowSquareRightIcon } from '@/icons';
 import { TPricePlan } from '@/types';
@@ -40,7 +41,7 @@ const Purchase = () => {
                 {/* @todo: поменять дату, когда будет бек */}
                 {t('subscription-purchase.expires-at', { date: formatDate(Date()) })}
               </p>
-              <Button href={routes.project.profile.main} className={s.backButton}>
+              <Button href={routes.project.profile.main} variant={EButtonVariant.BACK}>
                 <ArrowSquareRightIcon />
                 {t('subscription-purchase.back')}
               </Button>

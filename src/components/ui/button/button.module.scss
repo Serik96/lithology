@@ -30,6 +30,13 @@
     background-color: var(--orange-500);
   }
 
+  &.back {
+    max-width: 280px;
+    justify-content: start;
+    gap: 12px;
+    margin-top: 48px;
+  }
+
   &.outlined {
     @include btnFocus;
     width: fit-content;
@@ -64,7 +71,7 @@
   }
 
   &.info,
-  &.info-black {
+  &.infoBlack {
     @include btnFocus;
     background-color: transparent;
     color: var(--black-400);
@@ -78,13 +85,13 @@
     border-color: var(--gray-100);
   }
 
-  &.info-black {
+  &.infoBlack {
     @include bodyFontRegularM;
     border-color: var(--black-400);
   }
 
   &.red,
-  &.info-black {
+  &.infoBlack {
     padding: 12px 24px;
   }
 

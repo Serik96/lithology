@@ -28,7 +28,7 @@ export const ReportDeleteModal: FC = () => {
       purpose={PURPOSE}
       title={t('table.report-delete', { report: report.title })}
       description={t('table.report-delete-description')}
-      maxWidth={ESizeValue.md}
+      maxWidth={ESizeValue.MD}
       onConfirm={handleConfirm}
       confirmBtnText={t('delete')}
     />

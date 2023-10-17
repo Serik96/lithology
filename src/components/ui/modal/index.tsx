@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { PropsWithChildren, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from '@/components/ui';
-import { ESizeValue } from '@/enums';
+import { EButtonVariant, ESizeValue } from '@/enums';
 import { EModalPurpose } from '@/enums/modal';
 import { cn } from '@/helpers';
 import { CloseFilledIcon } from '@/icons';
@@ -58,7 +58,7 @@ export const Modal = ({
   return (
     <div className={cn(s.modal, isOpened && s.open)}>
       <div className={s.bg} onClick={handleClose} />
-      <div className={cn(s.wrapper, s?.[maxWidth ?? ESizeValue.md])}>
+      <div className={cn(s.wrapper, s?.[maxWidth ?? ESizeValue.MD])}>
         <div className={s.closeBtn} onClick={handleClose}>
           <CloseFilledIcon />
         </div>
@@ -66,10 +66,18 @@ export const Modal = ({
         {description && <div className={s.description}>{description}</div>}
         {children}
         <div className={s.buttons}>
-          <Button className={s.cancelBtn} variant="info-black" onClick={handleClose}>
+          <Button
+            className={s.cancelBtn}
+            variant={EButtonVariant.INFO_BLACK}
+            onClick={handleClose}
+          >
             {cancelBtnText ?? t('cancel')}
           </Button>
-          <Button className={s.confirmBtn} variant="red" onClick={onConfirm}>
+          <Button
+            className={s.confirmBtn}
+            variant={EButtonVariant.RED}
+            onClick={onConfirm}
+          >
             {confirmBtnText ?? t('confirm')}
           </Button>
         </div>
