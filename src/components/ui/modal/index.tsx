@@ -58,7 +58,7 @@ export const Modal = ({
   return (
     <div className={cn(s.modal, isOpened && s.open)}>
       <div className={s.bg} onClick={handleClose} />
-      <div className={cn(s.wrapper, s?.[maxWidth ?? ESizeValue.md])}>
+      <div className={cn(s.wrapper, s?.[maxWidth ?? ESizeValue.MD])}>
         <div className={s.closeBtn} onClick={handleClose}>
           <CloseFilledIcon />
         </div>
