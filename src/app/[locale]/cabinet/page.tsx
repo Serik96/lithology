@@ -26,7 +26,13 @@ const Cabinet = () => {
       >
         <form className={s.form}>
           <div className={s.profile}>
-            <Image src={'/temp/avatar.png'} alt={''} width={80} height={80} className={s.avatar} />
+            <Image
+              src={'/temp/avatar.png'}
+              alt={''}
+              width={80}
+              height={80}
+              className={s.avatar}
+            />
             <div className={s.information}>
               <h4>Name</h4>
               <a href="#!" className={cn(s.changeAvatar, 'link_active')}>
