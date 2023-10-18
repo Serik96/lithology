@@ -230,13 +230,12 @@
   },
   "change-email": {
     "email": {
-      "label": "Your actual e-mail",
+      "label": "Your new e-mail",
       "placeholder": "example@mail.com"
     },
     "change": "Change e-mail",
     "confirm": {
-      "main": "Confirm the change at the actual e-mail",
-      "new": "Confirm the change at the new e-mail",
+      "main": "Confirm the change at the new e-mail",
       "sent": "We have sent you an e-mail. Follow the link in the e-mail.",
       "back": "Back to settings"
     },
