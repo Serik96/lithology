@@ -20,14 +20,6 @@
       @include bodyFontRegularM;
       margin-top: 16px;
     }
-
-    // @todo: вынести в отдельный вариант кнопки
-    .backButton {
-      max-width: 280px;
-      justify-content: start;
-      gap: 12px;
-      margin-top: 48px;
-    }
   }
 
   .sticker {
