@@ -56,6 +56,11 @@
       "confirm": "Confirm change",
       "done": "Changed"
     },
+    "change-email": {
+      "main": "Change e-mail",
+      "confirm": "Confirm change",
+      "done": "Changed"
+    },
     "reset-password": "Reset password",
     "email-confirm": "E-mail confirmation",
     "reset-confirm": "Reset confirmation",
@@ -220,6 +225,23 @@
     "done": {
       "main": "We change the password",
       "use-new": "You can now use your new password when logging in.",
+      "back": "Back to settings"
+    }
+  },
+  "change-email": {
+    "email": {
+      "label": "Your new e-mail",
+      "placeholder": "example@mail.com"
+    },
+    "change": "Change e-mail",
+    "confirm": {
+      "main": "Confirm the change at the new e-mail",
+      "sent": "We have sent you an e-mail. Follow the link in the e-mail.",
+      "back": "Back to settings"
+    },
+    "done": {
+      "main": "We change the e-mail",
+      "use-new": "You can now use the new email when logging in.",
       "back": "Back to settings"
     }
   },
