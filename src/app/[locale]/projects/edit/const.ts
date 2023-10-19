@@ -2,7 +2,7 @@ import { routes } from '@/const';
 import { FolderAddIcon } from '@/icons';
 import { TBreadcrumbs, TSidebarLink } from '@/types';
 
-export const createBreadcrumbs: TBreadcrumbs[] = [
+export const editBreadcrumbs: TBreadcrumbs[] = [
   {
     label: 'navigation.home',
     href: routes.public.main,
@@ -12,12 +12,12 @@ export const createBreadcrumbs: TBreadcrumbs[] = [
     href: routes.project.allProjects.main,
   },
   {
-    label: 'navigation.all-projects.create',
-    href: routes.project.allProjects.create,
+    label: 'navigation.all-projects.edit',
+    href: routes.project.allProjects.edit,
   },
 ];
 
-export const createSideLinks: TSidebarLink[] = [
+export const editSideLinks: TSidebarLink[] = [
   {
     label: 'navigation.all-projects.main',
     href: routes.project.allProjects.main,

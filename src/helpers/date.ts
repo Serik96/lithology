@@ -7,12 +7,16 @@ export const formatDate = (dateStr: string) => {
   return `${day}.${month}.${year}`;
 };
 
-export const formatTime = (dateStr: string) => {
+export const formatTime = (dateStr: string, withoutSeconds: boolean = false) => {
   const date = new Date(dateStr);
 
   const hours = String(date.getHours()).padStart(2, '0');
   const minutes = String(date.getMinutes()).padStart(2, '0');
   const seconds = String(date.getSeconds()).padStart(2, '0');
 
-  return `${hours}:${minutes}:${seconds}`;
+  if (withoutSeconds) {
+    return `${hours}:${minutes}`;
+  } else {
+    return `${hours}:${minutes}:${seconds}`;
+  }
 };

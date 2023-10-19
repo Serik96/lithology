@@ -75,3 +75,12 @@ export type TSpecimen = {
   created_at: string;
   updated_at: string;
 };
+
+export type TNotification = {
+  id: number;
+  first_name: string;
+  last_name: string;
+  avatar: Nullable<string>;
+  description: string;
+  created_at: string;
+};

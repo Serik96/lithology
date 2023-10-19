@@ -1,0 +1,44 @@
+@import "src/styles/global/mixins";
+
+.successProject {
+  display: flex;
+  width: fit-content;
+  margin: 40px auto 165px auto;
+  min-height: calc(100vh - 615px);
+
+  .wrapper {
+    .heading {
+      @include fontHeadingXXL;
+      color: #29AB65;
+      font-weight: 400;
+      max-width: 488px;
+    }
+
+    .description {
+      @include bodyFontRegularM;
+      max-width: 312px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      max-width: 336px;
+      margin-top: 48px;
+    }
+  }
+
+  .sticker {
+    position: relative;
+    height: fit-content;
+
+    .stickerImg {
+      position: relative;
+      left: 156px;
+    }
+
+    .stickerLine {
+      position: absolute;
+      bottom: -103px;
+      left: -164%;
+    }
+  }
+}

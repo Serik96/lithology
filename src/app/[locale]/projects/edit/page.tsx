@@ -4,18 +4,18 @@ import { useTranslations } from 'next-intl';
 import { ProjectsContainer } from '@/components/projects-container';
 import { Breadcrumbs, Button, TextField } from '@/components/ui';
 import { ArrowSquareRightIcon } from '@/icons';
-import { createBreadcrumbs, createSideLinks } from './const';
-import s from './create.module.scss';
+import { editBreadcrumbs, editSideLinks } from './const';
+import s from './edit.module.scss';
 
-const Create = () => {
+const Edit = () => {
   const t = useTranslations();
 
   return (
     <>
-      <Breadcrumbs navLinks={createBreadcrumbs} />
+      <Breadcrumbs navLinks={editBreadcrumbs} />
       <ProjectsContainer
-        heading={t('navigation.all-projects.create')}
-        sidebarLinks={createSideLinks}
+        heading={t('navigation.all-projects.edit')}
+        sidebarLinks={editSideLinks}
       >
         <form className={s.form}>
           <div className={s.formBody}>
@@ -45,7 +45,7 @@ const Create = () => {
               />
             </div>
             <Button className={s.formBtn}>
-              {t('projects.save')}
+              {t('projects.save-changes')}
               <ArrowSquareRightIcon />
             </Button>
           </div>
@@ -55,4 +55,4 @@ const Create = () => {
   );
 };
 
-export default Create;
+export default Edit;
