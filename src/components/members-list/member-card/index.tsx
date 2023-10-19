@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import Link from 'next-intl/link';
 import { cn } from '@/helpers';
-import { ProfileIcon } from '@/icons';
 import { UserModel } from '@/model';
 import { TUser } from '@/types/user';
 import s from './member-card.module.scss';
@@ -14,7 +13,6 @@ type TProps = {
 export const MemberCard = ({ user: { id, avatar, first_name, last_name } }: TProps) => {
   const t = useTranslations();
 
-  // @todo: узнать не линка ли это на страницу пользователя
   return (
     <Link className={cn(s.card)} href={UserModel.domain.getUserHref({ userId: id })}>
       {avatar ? (
@@ -26,10 +24,7 @@ export const MemberCard = ({ user: { id, avatar, first_name, last_name } }: TPro
           height={128}
         />
       ) : (
-        // @todo: переделать отображение, если понадобится
-        <div className={cn(s.avatar, s.withoutImage)}>
-          <ProfileIcon />
-        </div>
+        <div className={cn(s.avatar, s.withoutImage)}>{first_name[0]}</div>
       )}
 
       <div className={s.information}>

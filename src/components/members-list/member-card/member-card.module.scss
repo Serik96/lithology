@@ -15,16 +15,13 @@
     border-radius: 4px;
 
     &.withoutImage {
+      @include bodyFontRegularL;
+      color: var(--black-400);
+
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: var(--amber-700);
-  
-      svg {
-        width: 24px;
-        height: 24px;
-        color: var(--orange-400);
-      }
+      background-color: var(--blue-400);
     }
   }
 
