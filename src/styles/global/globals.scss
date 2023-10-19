@@ -105,27 +105,6 @@ textarea {
   }
 }
 
-select {
-  @include bodyFontRegularS;
-  @include input;
-
-  &:-webkit-autofill {
-    background-color: var(--amber-400);
-  }
-
-  &:hover {
-    border: 1px solid var(--black-400);
-  }
-
-  &:focus {
-    border: 1px solid var(--gray-400);
-  }
-
-  -webkit-appearance: none; 
-  -moz-appearance: none; 
-  appearance: none; 
-}
-
 textarea {
   resize: vertical;
 }

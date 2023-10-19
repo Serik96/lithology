@@ -32,7 +32,7 @@ export const SelectRaw: FC<TProps> = ({
   const [valueState, setValueState] = useState(value);
   const [isSelectOpen, setIsSelectOpen] = useState(false);
 
-  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValueState(event.target.value);
     onChange?.(event.target.value);
   };
@@ -42,33 +42,38 @@ export const SelectRaw: FC<TProps> = ({
   };
 
   const selectElement = (
-    <select
+    <input
       name={name}
       value={valueState}
-      onClick={toggleSelect}
       onChange={handleChange}
+      placeholder={placeholder}
       disabled={readonly}
       className={cn(s.select, className)}
-    >
-      {placeholder && (
-        <option value="" disabled hidden>
-          {placeholder}
-        </option>
-      )}
-      {options?.map((option, i) => (
-        <option key={`options_${i}`} value={option.value}>
-          {option.label}
-        </option>
-      ))}
-    </select>
+    />
   );
 
   return (
     <div className={s.selectInput}>
       {label && <label className={s.label}>{label}</label>}
       <div className={s.wrapper}>
-        <DropIcon className={isSelectOpen ? s.rotate : ''} />
+        <DropIcon onClick={toggleSelect} className={isSelectOpen ? s.rotate : ''} />
         {selectElement}
+        {isSelectOpen && (
+          <ul>
+            {options.map((option, i) => (
+              <li
+                key={`options_${i}`}
+                onClick={() => {
+                  setValueState(option.value);
+                  onChange?.(option.value);
+                  toggleSelect();
+                }}
+              >
+                {option.label}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );
