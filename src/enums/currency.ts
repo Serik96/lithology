@@ -1,6 +1,6 @@
 export enum ECurrencySign {
-  gbp = 'gbp',
-  eur = 'eur',
-  usd = 'usd',
-  rub = 'rub',
+  GBP = 'gbp',
+  EUR = 'eur',
+  USD = 'usd',
+  RUB = 'rub',
 }

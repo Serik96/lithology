@@ -1,3 +1,4 @@
+import { currencySigns } from '@/const';
 import { ECurrencySign } from '@/enums';
 
 export function round(x: number, precision: number = 2) {
@@ -8,11 +9,11 @@ export function round(x: number, precision: number = 2) {
 
 export function formatCurrency(
   amount: number,
-  currency = ECurrencySign.usd,
+  currency = ECurrencySign.USD,
   precision = 2,
 ) {
   const a = round(amount, precision);
-  const sign = ECurrencySign[currency];
+  const sign = currencySigns[currency];
 
   return sign + a;
 }

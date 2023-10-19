@@ -22,7 +22,7 @@ const ResetPassword = () => {
               <TextField label={t('auth.email')} placeholder={t('auth.email')} />
             </div>
             <Button>
-              {t('navigation.reset-password')}
+              {t('reset-password.reset')}
               <ArrowSquareRightIcon />
             </Button>
           </div>

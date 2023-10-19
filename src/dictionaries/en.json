@@ -14,8 +14,6 @@
     "sign-up": "Sign up",
     "email": "E-mail",
     "password": "Password",
-    "old-password": "Old password",
-    "new-password": "New password",
     "has-account": "Do you have an account?",
     "sign-in": {
       "forgot-password": "Forgot password?",
@@ -53,7 +51,16 @@
     "sign-in": "Sign in",
     "registration": "Registration",
     "back": "Back",
-    "change-password": "Change password",
+    "change-password": {
+      "main": "Change password",
+      "confirm": "Confirm change",
+      "done": "Changed"
+    },
+    "change-email": {
+      "main": "Change e-mail",
+      "confirm": "Confirm change",
+      "done": "Changed"
+    },
     "reset-password": "Reset password",
     "email-confirm": "E-mail confirmation",
     "reset-confirm": "Reset confirmation",
@@ -218,6 +225,44 @@
     "view-project": "View project",
     "list-of-projects": "The project is now in your list of projects",
     "history-report": "History report #"
+  },
+  "change-password": {
+    "old": {
+      "label": "Old password",
+      "placeholder": "••••••••"
+    },
+    "new": {
+      "label": "Old password",
+      "placeholder": "••••••••"
+    },
+    "change": "Change password",
+    "confirm": {
+      "main": "Confirm the change at the e-mail",
+      "sent": "We have sent you an e-mail. Follow the link in the e-mail.",
+      "back": "Back to settings"
+    },
+    "done": {
+      "main": "We change the password",
+      "use-new": "You can now use your new password when logging in.",
+      "back": "Back to settings"
+    }
+  },
+  "change-email": {
+    "email": {
+      "label": "Your new e-mail",
+      "placeholder": "example@mail.com"
+    },
+    "change": "Change e-mail",
+    "confirm": {
+      "main": "Confirm the change at the new e-mail",
+      "sent": "We have sent you an e-mail. Follow the link in the e-mail.",
+      "back": "Back to settings"
+    },
+    "done": {
+      "main": "We change the e-mail",
+      "use-new": "You can now use the new email when logging in.",
+      "back": "Back to settings"
+    }
   },
   "user": {
     "projects": "{projects} projects",

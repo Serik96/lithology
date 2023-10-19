@@ -1,6 +1,7 @@
 import ArchiveTick from '../../public/icons/archive-tick.svg';
 import ArrowCircleLeftIcon from '../../public/icons/arrow-circle-left.svg';
 import ArrowLeftIcon from '../../public/icons/arrow-left.svg';
+import ArrowSquareLeftIcon from '../../public/icons/arrow-square-left.svg';
 import ArrowSquareRightIcon from '../../public/icons/arrow-square-right.svg';
 import BlockIcon from '../../public/icons/block.svg';
 import BookIcon from '../../public/icons/book.svg';
@@ -35,6 +36,7 @@ import UsersIcon from '../../public/icons/user-list.svg';
 
 export {
   ArrowSquareRightIcon,
+  ArrowSquareLeftIcon,
   ArrowLeftIcon,
   ArrowCircleLeftIcon,
   ArchiveTick,

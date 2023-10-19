@@ -1,6 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { FC, PropsWithChildren } from 'react';
+import { EButtonVariant } from '@/enums';
 import { cn } from '@/helpers';
 import s from './button.module.scss';
 
@@ -8,8 +9,7 @@ type TProps = PropsWithChildren<{
   href?: string;
   onClick?: VoidFunction;
   className?: string;
-  // @todo вариант должен быть enum
-  variant?: string;
+  variant?: EButtonVariant;
   disabled?: boolean;
 }>;
 

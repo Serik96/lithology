@@ -27,7 +27,8 @@ const Registration = () => {
             />
           </div>
           <Button className={s.btn}>
-            {t('auth.sign-up')} <ArrowSquareRightIcon />
+            {t('auth.sign-up')}
+            <ArrowSquareRightIcon />
           </Button>
 
           <div className={s.signIn}>

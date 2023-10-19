@@ -1,8 +1,8 @@
 import { ECurrencySign } from '@/enums';
 
 export const currencySigns = {
-  [ECurrencySign.gbp]: '£',
-  [ECurrencySign.eur]: '€',
-  [ECurrencySign.usd]: '$',
-  [ECurrencySign.rub]: '₽',
+  [ECurrencySign.GBP]: '£',
+  [ECurrencySign.EUR]: '€',
+  [ECurrencySign.USD]: '$',
+  [ECurrencySign.RUB]: '₽',
 };

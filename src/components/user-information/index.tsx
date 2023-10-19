@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/helpers';
-import { BookIcon, ProfileIcon } from '@/icons';
+import { BookIcon } from '@/icons';
 import { TUser } from '@/types';
 import StatsItem from './stats-item';
 import s from './user-information.module.scss';
@@ -26,10 +26,7 @@ const UserInformation = ({ user: { avatar, first_name, last_name } }: TProps) =>
           height={110}
         />
       ) : (
-        // @todo: переделать отображение, если понадобится
-        <div className={cn(s.avatar, s.withoutImage)}>
-          <ProfileIcon />
-        </div>
+        <div className={cn(s.avatar, s.withoutImage)}>{first_name[0]}</div>
       )}
 
       <div className={s.information}>

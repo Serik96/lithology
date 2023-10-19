@@ -1,8 +1,8 @@
 export enum ESizeValue {
-  xs = 'xs',
-  sm = 'sm',
-  md = 'md',
-  lg = 'lg',
-  xl = 'xl',
-  xxl = 'xxl',
+  XS = 'xs',
+  SM = 'sm',
+  MD = 'md',
+  LG = 'lg',
+  XL = 'xl',
+  XXL = 'xxl',
 }

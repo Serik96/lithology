@@ -1,26 +1,24 @@
-@import "src/styles/global/mixins";
+@import 'src/styles/global/mixins';
 
-.confirmEmail {
-  display: flex;
+.confirmChangeEmail {
   width: fit-content;
-  margin: 40px auto 165px auto;
   min-height: calc(100vh - 615px);
+  margin: 40px auto 200px auto;
+  display: flex;
 
   .wrapper {
+    position: relative;
+    z-index: 1;
+    width: 500px;
+
     .heading {
       @include fontHeadingXL;
-      max-width: 488px;
+      color: var(--black-400);
     }
 
     .description {
       @include bodyFontRegularM;
-      max-width: 312px;
       margin-top: 16px;
-    }
-
-    .btn {
-      max-width: 280px;
-      margin-top: 40px;
     }
   }
 
@@ -29,13 +27,16 @@
     height: fit-content;
 
     .stickerImg {
-      margin-top: 38px;
+      position: relative;
+      z-index: 1;
+      margin-top: 0px;
+      transform: rotate(-2deg);
     }
 
     .stickerLine {
       position: absolute;
       bottom: -98px;
-      left: -198%;
+      left: -210%;
     }
   }
 }

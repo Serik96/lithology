@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui';
 import { currencySigns } from '@/const';
-import { ECurrencySign } from '@/enums';
+import { EButtonVariant, ECurrencySign } from '@/enums';
 import { cn, separateThousands } from '@/helpers';
 import { ArrowSquareRightIcon } from '@/icons';
 import { TPricePlan } from '@/types';
@@ -22,7 +22,7 @@ const PlanItem = ({ plan: { slug, title, content, price, top } }: TProps) => {
         <p className={s.description}>{content}</p>
       </div>
 
-      <Button variant={!top ? 'bordered' : undefined}>
+      <Button variant={!top ? EButtonVariant.BORDERED : undefined}>
         {t('subscription.buy', {
           sign: currencySigns[ECurrencySign.usd],
           price: separateThousands(price, ','),

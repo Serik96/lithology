@@ -1,41 +1,30 @@
-'use client';
-
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Breadcrumbs, Button, TextField } from '@/components/ui';
+import { Button, TextField } from '@/components/ui';
+import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowSquareRightIcon } from '@/icons';
-import s from './add-member.module.scss';
-import { membersBreadcrumbs } from './const';
+import s from './change-email.module.scss';
+import { changeEmailBreadcrumbs } from './const';
 
-const Members = () => {
+const ChangeEmail = () => {
   const t = useTranslations();
 
   return (
     <>
-      <Breadcrumbs navLinks={membersBreadcrumbs} />
-      <div className={s.addMember}>
-        <h1 className={s.heading}>{t('navigation.add-member')}</h1>
-        <section className={s.addingSection}>
+      <Breadcrumbs navLinks={changeEmailBreadcrumbs} />
+      <div className={s.changeEmail}>
+        <h1 className={s.heading}>{t('navigation.change-email.main')}</h1>
+        <section className={s.changeSection}>
           <form className={s.form}>
             <div className={s.formBody}>
               <div className={s.formFields}>
                 <TextField
-                  label={t('add-member.email')}
-                  placeholder={t('add-member.email')}
-                />
-
-                {/* @todo: переделать на селекты, когда появится дизайн раскрытого списка */}
-                <TextField
-                  label={t('add-member.role')}
-                  placeholder={t('add-member.role')}
-                />
-                <TextField
-                  label={t('add-member.rights')}
-                  placeholder={t('add-member.rights')}
+                  label={t('change-email.email.label')}
+                  placeholder={t('change-email.email.placeholder')}
                 />
               </div>
               <Button>
-                {t('add-member.invite')}
+                {t('change-email.change')}
                 <ArrowSquareRightIcon />
               </Button>
             </div>
@@ -63,4 +52,4 @@ const Members = () => {
   );
 };
 
-export default Members;
+export default ChangeEmail;

@@ -1,6 +1,6 @@
 @import 'src/styles/global/mixins';
 
-.purchase {
+.doneChangeEmail {
   width: fit-content;
   min-height: calc(100vh - 615px);
   margin: 40px auto 200px auto;
@@ -10,7 +10,7 @@
     color: var(--green-400);
   }
 
-  .subscriptionSection {
+  .doneSection {
     width: 752px;
     display: flex;
     justify-content: space-between;

@@ -1,4 +1,4 @@
-@import "src/styles/global/mixins";
+@import 'src/styles/global/mixins';
 
 .historyWrapper {
   max-width: 672px;
@@ -15,10 +15,10 @@
       align-items: center;
       gap: 4px;
       cursor: pointer;
-      transition: all 0.5s ease-out;
 
       .filterIcon {
         display: flex;
+        transition: all 0.3s ease-out;
 
         &.reversed {
           transform: rotate(180deg);

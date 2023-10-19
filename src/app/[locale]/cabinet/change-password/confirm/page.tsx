@@ -16,13 +16,13 @@ const Confirm = () => {
   return (
     <>
       <Breadcrumbs navLinks={confirmBreadcrumbs} />
-      <div className={s.confirmEmail}>
+      <div className={s.confirmChangePassword}>
         <div className={s.wrapper}>
-          <h1 className={s.heading}>{t('reset-page-heading')}</h1>
-          <p className={s.description}>{t('email-sent')}</p>
+          <h1 className={s.heading}>{t('change-password.confirm.main')}</h1>
+          <p className={s.description}>{t('change-password.confirm.sent')}</p>
           <Button href={routes.auth.signIn} variant={EButtonVariant.BACK}>
             <ArrowSquareLeftIcon />
-            {t('back-to-sign-in')}
+            {t('change-password.confirm.back')}
           </Button>
         </div>
         <div className={s.sticker}>
