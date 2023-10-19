@@ -108,9 +108,7 @@ textarea {
 select {
   @include bodyFontRegularS;
   @include input;
-  &:hover,
-  &:focus,
-  &:active,
+
   &:-webkit-autofill {
     background-color: var(--amber-400);
   }

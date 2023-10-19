@@ -48,15 +48,15 @@ export const SelectRaw: FC<TProps> = ({
       onClick={toggleSelect}
       onChange={handleChange}
       disabled={readonly}
-      className={cn(s.select, className, { [s.open]: isSelectOpen })}
+      className={cn(s.select, className)}
     >
       {placeholder && (
         <option value="" disabled hidden>
           {placeholder}
         </option>
       )}
-      {options?.map(option => (
-        <option key={option.value} value={option.value}>
+      {options?.map((option, i) => (
+        <option key={`options_${i}`} value={option.value}>
           {option.label}
         </option>
       ))}
